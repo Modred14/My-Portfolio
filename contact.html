@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favour Omirin -- Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
+    <script src="schema.js" type="application/ld+json"></script>
+    <script src="script.js" defer></script>
+    <script src="sidebar.js" defer></script>
+  </head>
+  <body class="contact">
+    <header class="header2">
+      <img
+        class="my-logo"
+        id="pollor"
+        src="./MY LOGO.png"
+        alt="my logo"
+        onclick="window.open('./home.html')"
+      />
+      <section class="menu2">
+        <a href="home.html" class="header-link">Home</a>
+        <a href="about.html" class="header-link">About</a>
+        <a href="resume.html" class="header-link">Resume</a>
+        <a href="portfolio.html" class="header-link">Portfolio</a>
+        <a href="blog.html" class="header-link">Blog</a>
+        <a href="contact.html" class="header-link">Contact</a>
+        <a href="mailto:favourdomirin@gmail.com" class="header-link">
+          Send me an email
+        </a>
+      </section>
+      <div class="menu5" onclick="openSideBar()" id="menu"><p>☰</p></div>
+      <div class="menuholder" id="menuholder"></div>
+    </header>
+    <div class="main">
+      <div class="contact-div">
+        <h1>Get in touch</h1>
+        <p class="okay">
+          Want to get in touch? I would love to hear from you. Here is how you
+          can reach me...
+        </p>
+        <div class="box-contain">
+          <div class="box1">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                      <img
+                        class="icon"
+                        id="ned"
+                        src="./iconmonstr-gmail-4-240.png"
+                        onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+                        alt=""
+                      />
+                      <p>Gmail</p>
+                    </div>
+                  </td>
+                  <td class="transparent-cell"></td>
+
+                  <td>
+                    <div>
+                      <img
+                        id="need"
+                        class="icon"
+                        src="./linkedln.png"
+                        onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+                        alt=""
+                      />
+                      <p>LinkedIn</p>
+                    </div>
+                  </td>
+                </tr>
+                <td class="transparent-cell"></td>
+                <tr>
+                  <td>
+                    <div>
+                      <img
+                        class="icon6"
+                        id="ned"
+                        src="./GitHub2.png"
+                        onclick="window.open('https://github.com/Modred14', '_blank')"
+                        alt=""
+                      />
+                      <p>Github</p>
+                    </div>
+                  </td>
+                  <td class="transparent-cell"></td>
+                  <td>
+                    <div>
+                      <img
+                        id="need"
+                        class="icon"
+                        src="./iconmonstr-facebook-4-240.png"
+                        onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+                        alt=""
+                      />
+                      <p>Facebook</p>
+                    </div>
+                  </td>
+                </tr>
+                <td class="transparent-cell"></td>
+                <tr>
+                  <td>
+                    <div>
+                      <img
+                        id="ned"
+                        class="icon"
+                        src="./iconmonstr-twitter-4-240.png"
+                        onclick="window.open('https://x.com/omirin_favour', '_blank')"
+                        alt=""
+                      />
+                      <p>X</p>
+                    </div>
+                  </td>
+                  <td class="transparent-cell"></td>
+                  <td>
+                    <div>
+                      <img
+                        id="need"
+                        class="icon"
+                        src="./iconmonstr-instagram-14-240.png"
+                        onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+                        alt=""
+                      />
+                      <p>Instagram</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      fetch("../sidebar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("menuholder").innerHTML = html;
+        });
+    </script>
+    <footer>
+      <section>
+        <img
+          class="icon2"
+          src="./GitHub.png"
+          onclick="window.open('https://github.com/Modred14', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-gmail-4-240.png"
+          onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./linkedln.png"
+          onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-instagram-14-240.png"
+          onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-facebook-4-240.png"
+          onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-twitter-4-240.png"
+          onclick="window.open('https://x.com/omirin_favour', '_blank')"
+          alt=""
+        />
+      </section>
+      <p class="copyright">© Favour Omirin 2024</p>
+    </footer>
+  </body>
+</html>

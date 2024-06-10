@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favour Omirin -- Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
+    <script src="sidebar.js" defer></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .hidden {
+        display: none;
+
+        /* margin-top: 0px; */
+      }
+      .hide {
+        display: none;
+        img {
+          display: none;
+        }
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        /* margin-top: 20px; */
+        margin-bottom: 30px;
+      }
+      .pagination button {
+        margin: 0 5px;
+        padding: 0px 13px;
+        cursor: pointer;
+      }
+      .pagination .page-number {
+        margin: 0 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border: none;
+        outline: none;
+      }
+      #noResults {
+        display: flex;
+        justify-content: center;
+        /* padding-top: 430px; */
+        img {
+          max-width: 500px;
+        }
+      }
+      .pagination .page-number.active {
+        background-color: #007bff;
+        color: white;
+      }
+      #searchBar {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: -30px;
+        height: 35px;
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body class="about-body">
+    <header class="header2">
+      <img
+        class="my-logo"
+        src="./MY LOGO.png"
+        alt="my logo"
+        onclick="window.open('./home.html')"
+      />
+      <section class="menu2">
+        <a href="home.html" class="header-link">Home</a>
+        <a href="about.html" class="header-link">About</a>
+        <a href="resume.html" class="header-link">Resume</a>
+        <a href="portfolio.html" class="header-link">Portfolio</a>
+        <a href="blog.html" class="header-link">Blog</a>
+        <a href="contact.html" class="header-link">Contact</a>
+        <a href="mailto:favourdomirin@gmail.com" class="header-link">
+          Send me an email
+        </a>
+      </section>
+      <div class="menu" onclick="openSideBar()" id="menu"><p>☰</p></div>
+      <div class="menuholder" id="menuholder"></div>
+    </header>
+    <div class="main">
+      <div class="space"></div>
+      <section class="about">
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="🔍Search articles..."
+          oninput="searchAndHighlight()"
+        />
+        <section id="bioContainer"></section>
+
+        <div id="contentContainer">
+          <div id="blogContainer"></div>
+
+          <div class="pagination hide" id="paginationContainer">
+            <button id="prevBtn" onclick="prevPage()">◄</button>
+            <div id="pageNumbers"></div>
+            <button id="nextBtn" onclick="nextPage()">►</button>
+          </div>
+
+          <div id="noResults" class="hide">
+            <img
+              src="./whau-removebg-preview.png"
+              alt="No search results found"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const bio = `
+        <section class="about-me">
+          <section class="image-about"><img src="./image2.png" alt="" /></section>
+          <section class="bio-about">
+            <p>Written by</p>
+            <a href="https://github.com/Modred14" target="_blank">Favour David Omirin,</a>
+            <p>
+              a passionate Frontend Engineer with a background in graphic design
+              and cryptocurrency based in Osun State, Nigeria. I specialize in
+              crafting intuitive and dynamic user experiences using HTML, CSS,
+              JavaScript, Node.js, React, Vue, and TypeScript.
+            </p>
+            <a class="blog-link" href="./blog.html">Click here to check out my blog</a>
+            <a class="blog-link2" href="./portfolio.html">Click here to check out my portfolio</a>
+            <a class="blog-link3" href="./about.html">Click here to read more about me</a>
+          </section>
+        </section>
+      `;
+
+      const data = [
+        {
+          title: "MY ALTSCHOOL SECOND SEMESTER EXPERIENCE",
+          date: "Thursday May 16, 2024",
+          readTime: "2 mins read",
+          content:
+            "The second semester at AltSchool was an intense but rewarding journey. We delved deeper into programming, focusing on Node.js, React, and more advanced JavaScript functionalities. This semester required a lot of dedication and hard work, and the results were beyond...",
+          link: "./blog/my-altschool-second-semester-experience.html",
+        },
+        {
+          title: "JAVASCRIPT - THE FOUNDATION OF WEB DEVELOPMENT",
+          date: "Monday March 4, 2024",
+          readTime: "5 mins read",
+          content:
+            "JavaScript is the main core of web development. It powers the dynamic behavior on most websites and is an essential skill for any aspiring web developer. As my instructor Setemi always says, 'If your legs in JavaScript are shaking, your future as a web developer...",
+          link: "./blog/javascript.html",
+        },
+        {
+          title: "MY ALTSCHOOL FIRST SEMESTER EXPERIENCE",
+          date: "Tuesday January 23, 2024",
+          readTime: "3 mins read",
+          content:
+            "AltSchool is known for its innovative and personalized approach to education, and I was excited to see what it had to offer. However, my journey was not without its challenges and surprises. Here's a look at my first semester experience...",
+          link: "./blog/my-altschool-first-semester-experience.html",
+        },
+        // Add more blog entries here
+      ];
+
+      const itemsPerPage = 5;
+      let currentPage = 1;
+      let filteredData = data;
+
+      function searchAndHighlight() {
+        const searchTerm = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        filteredData = data.filter(
+          (item) =>
+            item.title.toLowerCase().includes(searchTerm) ||
+            item.content.toLowerCase().includes(searchTerm)
+        );
+        currentPage = 1;
+        displayPage();
+        updatePagination();
+        toggleBioContainer();
+      }
+
+      function highlightTerm(text, term) {
+        const regex = new RegExp(`(${term})`, "gi");
+        return text.replace(regex, '<span class="highlight">$1</span>');
+      }
+
+      function displayPage() {
+        const blogContainer = document.getElementById("blogContainer");
+        const noResults = document.getElementById("noResults");
+        const paginationContainer = document.getElementById(
+          "paginationContainer"
+        );
+        blogContainer.innerHTML = "";
+
+        const searchTerm = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        if (filteredData.length === 0) {
+          noResults.classList.remove("hide");
+          paginationContainer.classList.add("hide");
+        } else {
+          paginationContainer.classList.remove("hide");
+          noResults.classList.add("hide");
+          filteredData.slice(start, end).forEach((item) => {
+            const title = highlightTerm(item.title, searchTerm);
+            const content = highlightTerm(item.content, searchTerm);
+
+            const blogHTML = `
+              <section class="blog">
+                <h1><a href="${item.link}">${title}</a></h1>
+                <section class="grid">
+                  <p>• 🗓️${item.date}</p>
+                  <p>• ⏳${item.readTime}</p>
+                </section>
+                <section class="purview">
+                  <p>${content}</p>
+                  <a href="${item.link}">read more</a>
+                </section>
+              </section>
+            `;
+            blogContainer.innerHTML += blogHTML;
+          });
+
+          if (filteredData.length <= itemsPerPage) {
+            paginationContainer.classList.remove("hide");
+          } else {
+            paginationContainer.classList.remove("hide");
+          }
+        }
+
+        document.getElementById("prevBtn").disabled = currentPage === 1;
+        document.getElementById("nextBtn").disabled =
+          end >= filteredData.length;
+      }
+
+      function nextPage() {
+        if (currentPage * itemsPerPage < filteredData.length) {
+          currentPage++;
+          displayPage();
+          updatePagination();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          displayPage();
+          updatePagination();
+        }
+      }
+
+      function updatePagination() {
+        const pageNumbers = document.getElementById("pageNumbers");
+        pageNumbers.innerHTML = "";
+
+        const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const button = document.createElement("button");
+          button.textContent = i;
+          button.className = "page-number";
+          button.onclick = () => goToPage(i);
+          if (i === currentPage) {
+            button.classList.add("active");
+          }
+          pageNumbers.appendChild(button);
+        }
+      }
+
+      function goToPage(pageNumber) {
+        currentPage = pageNumber;
+        displayPage();
+        updatePagination();
+      }
+
+      function toggleBioContainer() {
+        const bioContainer = document.getElementById("bioContainer");
+        const searchTerm = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        if (searchTerm.length > 0 || filteredData.length === 0) {
+          bioContainer.classList.add("hidden");
+        } else {
+          bioContainer.classList.remove("hidden");
+        }
+      }
+
+      window.onload = () => {
+        document.getElementById("bioContainer").innerHTML = bio;
+        displayPage();
+        updatePagination();
+      };
+      fetch("../sidebar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("menuholder").innerHTML = html;
+        });
+    </script>
+    <footer>
+      <section>
+        <img
+          class="icon2"
+          src="./GitHub.png"
+          onclick="window.open('https://github.com/Modred14', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-gmail-4-240.png"
+          onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./linkedln.png"
+          onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-instagram-14-240.png"
+          onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+          alt=""
+        />
+        <img
+          cFlass="icon"
+          src="./iconmonstr-facebook-4-240.png"
+          onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-twitter-4-240.png"
+          onclick="window.open('https://x.com/omirin_favour', '_blank')"
+          alt=""
+        />
+      </section>
+      <p class="copyright">© Favour Omirin 2024</p>
+    </footer>
+  </body>
+</html>

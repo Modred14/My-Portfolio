@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favour Omirin -- RESUME</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
+    <script src="schema.js" type="application/ld+json"></script>
+    <script src="script.js" defer></script>
+    <script src="sidebar.js" defer></script>
+  </head>
+  <body>
+    <section class="bg">
+      <header class="header2">
+        <img
+          class="my-logo"
+          id="relete"
+          src="./MY LOGO.png"
+          alt="my logo"
+          onclick="window.open('./home.html')"
+        />
+        <section class="menu2">
+          <a href="home.html" class="header-link">Home</a>
+          <a href="about.html" class="header-link">About</a>
+          <a href="resume.html" class="header-link">Resume</a>
+          <a href="portfolio.html" class="header-link">Portfolio</a>
+          <a href="blog.html" class="header-link">Blog</a>
+          <a href="contact.html" class="header-link">Contact</a>
+          <a href="mailto:favourdomirin@gmail.com" class="header-link">
+            Send me an email
+          </a>
+        </section>
+        <div class="menu" onclick="openSideBar()" id="menu"><p>☰</p></div>
+        <div class="menuholder" id="menuholder"></div>
+      </header>
+      <div class="main">
+      <section class="resume-design">
+        <section class="resume-style">
+          <p id="work" class="work"></p>
+          <p class="bio">Hi, I am Favour, a</p>
+          <p id="work2" class="work2"></p>
+          <p class="bio">
+            dedicated to crafting seamless and visually stunning user
+            experiences.
+          </p>
+          <button class="hire" onclick="hire()">HIRE ME</button>
+        </section>
+        <img src="image-bg.png" alt="Omirin img" />
+      </section>
+    
+    <section class="resume2">
+      <section class="resume-33">
+        <section class="resume-preview">
+          <p class="resume2-header">MY RESUME</p>
+          <section class="resume3">
+            <p class="bio2">I'm a</p>
+            <p id="work3" class="work3"></p>
+            <p class="bio2">
+              based in Nigeria, driven by a passion for translating creative
+              visions into clean, simple, and uniquely designed digital
+              experiences. With a love for both coding and design, I'm committed
+              to delivering seamless user interfaces that captivate and inspire.
+            </p>
+            <section class="resume4">
+              <button class="download">
+                <a
+                  href="./Omirin Favour resume.pdf"
+                  download="Omirin Favour resume.pdf"
+                  onclick="downloaded()"
+                  >DOWNLOAD RESUME</a
+                >
+              </button>
+            </section>
+            <section class="preview">
+              <a onclick="downloaded2()">Preview Resume</a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    </section>
+    </div>
+    <script>
+      fetch("../sidebar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("menuholder").innerHTML = html;
+        });
+    </script>
+    <footer>
+      <section>
+        <img class="icon2" src="./GitHub.png" onclick="window.open('https://github.com/Modred14', '_blank')" alt="">
+        <img class="icon" src="./iconmonstr-gmail-4-240.png" onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')" alt="">
+        <img class="icon" src="./linkedln.png" onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')" alt="">
+        <img class="icon" src="./iconmonstr-instagram-14-240.png" onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')" alt="">
+        <img class="icon" src="./iconmonstr-facebook-4-240.png" onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')" alt="">
+        <img class="icon" src="./iconmonstr-twitter-4-240.png" onclick="window.open('https://x.com/omirin_favour', '_blank')" alt="">
+    </section>     
+    <p class="copyright">© Favour Omirin 2024</p>
+    </footer>
+  </body>
+</html>
