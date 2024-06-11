@@ -795,7 +795,7 @@ table {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   img{
-    display: block;
+    display: inline;
     
   }
 }
@@ -830,7 +830,7 @@ footer {
     grid-template-columns: auto 500px;
     align-items: center;
     img{
-        display: block;
+        display: inline;
     }
 
   }
@@ -910,21 +910,19 @@ footer {
       /* padding-left: 25%; */
       /* margin: 0px 0; */
     }
-     .img1,
+  }  .img1,
     .img2,
     .img3 {
-      display: block;
+      display: inline;
       max-width: 100%;
       height: auto;
       /* display: inline; */
     }
-    .img12,
+   .img12,
     .img22,
     .img32 {
       display: none;
     }
-  }
-  
   .about-me {
     .route {
       text-overflow: wrap;
@@ -944,9 +942,9 @@ footer {
     align-items: center;
     justify-content: center;
      text-align: justify;
-  margin-right: -7%;
-  margin-left: -7%;
-  padding-left: 7%;
+    margin-right: -7%;
+    margin-left: -7%;
+    padding-left: 7%;
   padding-right: 7%;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
   border-radius: 8px;
