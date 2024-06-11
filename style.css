@@ -6,10 +6,11 @@ body {
   margin: 0;
   font-weight: 600;
   color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* font-synthesis: none; */
+  /* text-rendering: optimizeLegibility; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 .bio,
 .bio2 {
@@ -102,15 +103,7 @@ body {
   margin-top: -60px;
   margin-bottom: 0px;
 }
-.bg {
-  background-image: url("./bg.jpg");
-  background-size: cover;
-  /* margin-left: -10px;
-    margin-top: -10px;
-    margin-right: -10px; */
-  height: 584px;
-  background-repeat: no-repeat;
-}
+
 .resume-preview {
   width: 600px;
   font-size: 20px;
@@ -139,6 +132,7 @@ body {
   margin-left: -10px;
   margin-bottom: -10px;
   margin-right: -10px;
+  width: 100%;
   /* background-color: #f0f0f0;  */
   background-image: url(./office-table.jpg);
 }
@@ -452,6 +446,9 @@ td {
   margin-left: 30px;
   padding: 10px;
 }
+.resume2{
+
+}
 td div {
   /* padding-left: 150px;
     padding-right: 150px; */
@@ -543,14 +540,15 @@ table {
     width: 200px;
     border-radius: 50%;
   }
-  a {
+  .hi {
     text-decoration: underline;
     text-decoration-color: #19ff5d;
     text-decoration-thickness: 5px;
     transition: 0.5s;
+
     color: black;
   }
-  a:hover {
+  .hi:hover {
     background-color: rgb(25, 255, 93);
     transition: 0.5s;
   }
@@ -605,14 +603,15 @@ table {
     width: 200px;
     border-radius: 50%;
   }
-  a {
+  .hi {
     text-decoration: underline;
     text-decoration-color: #19ff5d;
     text-decoration-thickness: 5px;
     transition: 0.5s;
     color: black;
+    font-size: 20px;
   }
-  a:hover {
+  .hi:hover {
     background-color: rgb(25, 255, 93);
     transition: 0.5s;
   }
@@ -622,19 +621,21 @@ table {
   display: block;
   margin-top: 7px;
   font-size: 18px;
-  max-width: 260px;
+  /* background-color: aliceblue; */
+  /* text-decoration-color: aliceblue; */
+  /* max-width: 260px; */
 }
 .blog-link2 {
   display: block;
   margin-top: 10px;
   font-size: 18px;
-  max-width: 295px;
+  /* max-width: 295px; */
 }
 .blog-link3 {
   display: block;
   margin-top: 10px;
   font-size: 18px;
-  max-width: 275px;
+  /* max-width: 275px; */
 }
 .about {
   padding-top: 70px;
@@ -769,8 +770,20 @@ table {
     text-decoration: none;
   }
 }
-
+.height{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100;
+}
 .resume-design {
+    background-image: url("./bg.jpg");
+  background-size: cover;
+  /* margin-left: -10px;
+    margin-top: -10px;
+    margin-right: -10px; */
+  /* height: 584px; */
+  background-repeat: no-repeat;
   padding-top: 80px;
   display: grid;
   grid-template-columns: auto 700px;

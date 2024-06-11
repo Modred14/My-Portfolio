@@ -3,38 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./script.js" defer></script>
-    <script src="./login.js" defer></script>
-    <script src="./logout.js" defer></script>
-    <script src="./user.js" defer></script>
-    <script src="./sidebar.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Modred Codemy</title>
-    <link rel="icon" href="../logo.png" type="image/x-icon" />
+      <script src="./sidebar.js" defer></script>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .sidebar {
+        max-width: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease;
+        position: fixed;
+        top: 100px;
+        /* z-index: 50; */
+        left: 0;
+        height: 100%;
+        padding-top: 20px;
+        box-sizing: border-box;
+      }
+      .sidebar a {
+        transition: 0.3s;
+        padding-left: 30px;
+        padding-right: 20px;
+        /* padding-top: -100px; */
+      }
+      .sidebar a:hover {
+        background-color: #575757;
+      }
+
+    </style>
   </head>
-  <body class="pep">
-    <main>
-      <div id="opener">
-        <div
-          class="sidebar"
-          id="sidebar"
-          style="
-            max-width: 0;
-            overflow: hidden;
-            transition: max-width 0.3s ease;
-          "
-        >
-          <a href="home.html" class="header-link">Home</a>
-          <a href="about.html" class="header-link">About</a>
-          <a href="resume.html" class="header-link">Resume</a>
-          <a href="portfolio.html" class="header-link">Portfolio</a>
-          <a href="blog.html" class="header-link">Blog</a>
-          <a href="contact.html" class="header-link">Contact</a>
-          <a href="mailto:favourdomirin@gmail.com" class="header-link">
-            Send me an email
-          </a>
-        </div>
-      </div>
-    </main>
+  <body>
+    <!-- <button class="openbtn" onclick="openSidebar()">☰ Open Sidebar</button> -->
+    <div class="sidebar" id="sidebar">
+      <a href="home.html" class="header-link">Home</a>
+      <a href="about.html" class="header-link">About</a>
+      <a href="resume.html" class="header-link">Resume</a>
+      <a href="portfolio.html" class="header-link">Portfolio</a>
+      <a href="blog.html" class="header-link">Blog</a>
+      <a href="contact.html" class="header-link">Contact</a>
+      <a href="mailto:favourdomirin@gmail.com" class="header-link">Send me an email</a>
+    </div>
   </body>
 </html>
