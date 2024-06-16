@@ -672,6 +672,8 @@ body {
     background-color: rgb(255, 219, 164);
     height: 50px;
     width: 120px;
+    font-size: 13px;
+    color: #1e1e1e;
     font-weight: 600;
     transition: 0.5s;
   }
