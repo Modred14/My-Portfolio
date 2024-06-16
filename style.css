@@ -14,8 +14,11 @@ body {
     -moz-osx-font-smoothing: grayscale; */
     
   }
-  .copyright{
+  .copyright, .copyright2, .copyright3{
     color: #ffffff;
+  }
+  .copyright3{
+    margin-top: 10px;
   }
   .shadow {
     background-color: aliceblue;
