@@ -33,12 +33,21 @@
       }
       .pagination button {
         margin: 0 5px;
-        padding: 0px 13px;
+        background-color: #f0f0f0;
+        /* padding: 0px 13px; */
         cursor: pointer;
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
+      }
+      .pagination button:hover{
+        border-radius: 0;
+        background-color: #d0d0d0;
+        color: black;
       }
       .pagination .page-number {
         margin: 0 5px;
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
         cursor: pointer;
         background-color: #f0f0f0;
         border: none;
@@ -55,6 +64,11 @@
       .pagination .page-number.active {
         background-color: #007bff;
         color: white;
+        height: 40px;
+        width: 40px;
+      }
+      .pagination .page-number.active:hover{
+        border-radius: 0;
       }
       #searchBar {
         display: flex;
@@ -344,7 +358,7 @@
           alt=""
         />
       </section>
-      <h3 class="copyright3">© Favour Omirin 2024</h3>
+      <h4 class="copyright3">© Favour Omirin 2024</h3>
     </footer>
   </body>
 </html>
