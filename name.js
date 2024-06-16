@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function deleteComment(index) {
     const confirmed = confirm(
-      "This action will delete this comment. Click Cancel to stop"
+      "This action will delete this comment. Click Cancel to cancel."
     );
     if (confirmed) {
       comments.splice(index, 1);

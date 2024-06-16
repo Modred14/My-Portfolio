@@ -76,7 +76,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 30px;
-    padding: 60px;
+    padding: 7%;
     /* padding-left: 100px;
       padding-right: 100px; */
     /* margin-right: 12px; */
@@ -106,20 +106,20 @@
     }
  
 
-  #popo {
+  /* #popo {
     margin-bottom: -50px;
   }
   #ppp {
     margin-bottom: -30px;
-  }
-  .about-me {
+  } */
+  .about-me, .about-me2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
      text-align: justify;
-    margin-right: -7%;
-    margin-left: -7%;
+    /* margin-right: -7%;
+    margin-left: -7%; */
     padding-left: 7%;
   padding-right: 7%;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
@@ -426,10 +426,10 @@
         }
       }   
   }
-  #name-input,
+  /* #name-input,
   #comment-input {
     width: 400px;
-  }
+  } */
   .resume-style {
     margin-left: 50px;
     margin-right: 30px;
@@ -485,13 +485,17 @@
     a {
       font-size: 15px;
     }
+    .hi{
+      font-size: 15px;
+    }
   }
+ 
 }
 @media screen and (max-width: 650px) {
-  #name-input,
+  /* #name-input,
   #comment-input {
     width: 300px;
-  }
+  } */
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -522,7 +526,7 @@
     margin-left: 0;
   }
   .shadow {
-    padding: 30px;
+    padding: 7%;
   }.home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -558,11 +562,11 @@
   }
   .about-me {
     .route {
-      margin-top: -100px;
+      padding-top: -150px;
       font-size: 10px;
       margin-bottom: 30px;
       text-overflow: wrap;
-      margin-left: 30px;
+      /* margin-left: 30px; */
     }
   }.home-button {
     display: grid;
@@ -619,10 +623,10 @@
       transform: translateX(-100%);
     }
   }
-  #name-input,
+  /* #name-input,
   #comment-input {
     width: 250px;
-  }
+  } */
   .port {
     font-size: 40px;
   }
@@ -700,6 +704,7 @@
     a {
       font-size: 15px;
     }
+    
   }
 }
 .home-button {
@@ -726,10 +731,10 @@
     }
   }
 @media screen and (max-width: 440px) {
-  #name-input,
+  /* #name-input,
   #comment-input {
     width: 200px;
-  }
+  } */
   .home-button {
     display: grid;
     grid-template-columns: auto auto;

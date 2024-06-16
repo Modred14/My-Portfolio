@@ -9,10 +9,13 @@ body {
 .container {
   max-width: 1500px;
   margin: auto;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 7%;
+  margin-right: 7%;
   overflow: hidden;
-  padding: 30px;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background: #fff;
   margin-top: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -35,6 +38,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 90%;
   align-self: center;
   align-items: center;
   text-align: justify;
@@ -55,8 +59,12 @@ h2 {
   margin-top: -7px;
 }
 .comments-section {
-  padding: 30px;
+  background-color: #ebebeb;
+  /* padding: 30px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
+  padding: 30px;
   align-items: center;
   align-self: center;
   flex-direction: column;
@@ -65,7 +73,7 @@ h2 {
   /* max-width: 700px; */
   h2 {
     align-self: flex-start;
-    padding-left: 100px;
+    padding-left: 0.5%;
   }
 }
 
@@ -96,6 +104,7 @@ textarea {
   font-size: 16px;
   border: none;
   border-radius: 5px;
+  margin-top: 20px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
@@ -108,16 +117,17 @@ textarea {
 #comments-container {
   align-self: flex-start;
   padding-left: 10px;
-  max-width: 700px;
+  max-width: 1500px;
+  padding-right: 10px;
+  padding-bottom: 100px;
 }
 #comments-list {
   list-style-type: none;
-  padding: 0;
+  padding-top: 0;
 }
 
 #comments-list li {
   padding: 10px;
-  font-size: 22px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -127,9 +137,11 @@ textarea {
 
 #comments-list li .comment-text {
   margin-top: 5px;
+  max-width: 70%;
+  padding-right: 50px;
 }
 
-#no-comments {
+#no-comments, #comments-list {
   font-size: 16px;
   color: #666;
 }
@@ -142,8 +154,15 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
   padding: 5px 10px;
+  /* align-self: flex-end; */
 }
 
+#comments-list {
+  margin-left: -50px;
+  /* max-width: 90%; */
+  margin-top: -20px;
+  
+}
 #comments-list li .delete-button:hover {
   background-color: #d80000;
 }

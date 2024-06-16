@@ -2,17 +2,61 @@ body {
     overflow-x: hidden;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     /* line-height: 1.5; */
-    background-color: black;
+    /* background-color: black; */
     margin: 0;
     /* color: black; */
     font-weight: 600;
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
     /* font-synthesis: none; */
     /* text-rendering: optimizeLegibility; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
     
   }
+  .shadow {
+    background-color: aliceblue;
+  }
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 60px;
+    /* padding-left: 100px;
+      padding-right: 100px; */
+    /* margin-right: 12px; */
+    margin-bottom: 30px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      /* display: flex; */
+      margin-top: 20px;
+      /* align-items: center;
+          justify-items: center; */
+      /* padding-left: 25%; */
+      /* margin: 0px 0; */
+    }
+  }  .img1,
+    .img2,
+    .img3 {
+      display: none;
+      /* display: inline; */
+    }
+   .img12,
+    .img22,
+    .img32 {
+       display: inline;
+       max-width: 100%;
+
+    }
+    .img12{
+      height: 400px;
+    }
+    .img22{
+      height: 530px;
+    }
+    .img32{
+      height: 500px;
+    }
   .bio,
   .bio2 {
     display: inline;
@@ -199,14 +243,13 @@ body {
     color: #ffffff;
     font-size: 60px;
     font-weight: 700;
-    height: 700px;
+    height: 91.5vh;
     margin-bottom: -10px;
     margin-left: -10px;
     margin-right: -10px;
     padding-top: 65px;
     /* padding-left: 150px; */
     padding-bottom: 0;
-    margin-bottom: -50px;
     /* margin: 90px auto; */
     align-items: center;
     display: flex;
@@ -237,7 +280,7 @@ body {
     /* padding-top: 20px; */
     background-image: url(./code.jpg);
     background-repeat: no-repeat;
-    height: 600px;
+    height: 100vh;
   }
   /* style.css */
   
@@ -459,8 +502,9 @@ body {
     justify-content: center;
     font-size: 20px;
   }
+
   .about-me {
-    display: grid;
+    display: grid;  
     grid-template-columns: auto auto;
     grid-gap: 50px;
     background-color: aliceblue;
