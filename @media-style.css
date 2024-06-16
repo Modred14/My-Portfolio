@@ -231,6 +231,14 @@
     margin-right: -10px;
     z-index: 1050;
   }
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .resume-style {
     margin-left: 50px;
     /* margin-right: 50px; */
@@ -312,6 +320,14 @@
   .work {
     font-size: 40px;
   }
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -373,7 +389,14 @@
       transform: translateX(-100%);
     }
   }
-
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   tr {
     display: flex;
     flex-direction: column;
@@ -396,6 +419,14 @@
   }
 }
 @media screen and (max-width: 850px) {
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .resume-design {
     padding-top: 100px;
     max-width: 100%;
@@ -453,7 +484,14 @@
   .welcome {
     font-size: 25px;
     margin-bottom: 40px;
-  }
+  } #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-design {
     font-size: 35px;
   }
@@ -499,11 +537,26 @@
   }
  
 }
+#inline{
+  display: inline;
+  p{
+    display: inline;
+  }
+  .hi{
+    display: inline;
+  }}
 @media screen and (max-width: 650px) {
   /* #name-input,
   #comment-input {
     width: 300px;
-  } */
+  } */ #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -532,7 +585,14 @@
   td div {
     width: 300px;
     margin-left: 0;
-  }
+  } #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .shadow {
     padding: 7%;
   }.home-button {
@@ -605,7 +665,14 @@
   .welcome {
     font-size: 20px;
     margin-bottom: 50px;
-  }
+  } #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-design {
     font-size: 30px;
   }.home-button {
@@ -715,6 +782,14 @@
     
   }
 }
+#inline{
+  display: inline;
+  p{
+    display: inline;
+  }
+  .hi{
+    display: inline;
+  }}
 .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -743,6 +818,14 @@
   #comment-input {
     width: 200px;
   } */
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -772,6 +855,14 @@
     width: 250px;
     margin-left: 0;
   }
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -814,6 +905,14 @@
   .shadow {
     padding: 20px;
   }
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -842,7 +941,14 @@
   td div {
     width: 200px;
     margin-left: 0;
-  }
+  } #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
@@ -870,7 +976,14 @@
 @media screen and (max-width: 330px) {
   .port {
     font-size: 30px;
-  }
+  } #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }}
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
