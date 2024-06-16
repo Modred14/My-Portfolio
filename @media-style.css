@@ -15,10 +15,27 @@
     }
 
   }
+  .home-header {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    height: 91.5vh;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-top: 65px;
+    /* padding-left: 150px; */
+    padding-bottom: 0;
+    /* margin: 90px auto; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   .home-button {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 100px;
+    grid-gap: 50px;
     button {
       background-color: rgb(255, 219, 164);
       height: 50px;
@@ -40,29 +57,7 @@
   }
 }
 @media screen and (max-width: 1250px) {
-    .home-button {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 100px;
-        button {
-          background-color: rgb(255, 219, 164);
-          height: 50px;
-          width: 120px;
-          font-weight: 600;
-          transition: 0.5s;
-        }
-        button:hover {
-          background-color: rgb(91, 77, 57);
-          color: #ffffff;
-          transform: translateX(0);
-          transition: 0.5s;
-          border-radius: 10px;
-        }
-        button::before {
-          transition: transform 0.5s ease;
-          transform: translateX(-100%);
-        }
-      }  
+   
 .img-contain {
     display: flex;
     flex-direction: column;
@@ -179,12 +174,7 @@
     transition: 0.5s;
   }
   }
-  .about-me2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   .image-about {
     /* height: 50px; */
     margin-bottom: -150px;
@@ -200,29 +190,6 @@
 }
 
 @media screen and (max-width: 1150px) {
-    .home-button {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 100px;
-        button {
-          background-color: rgb(255, 219, 164);
-          height: 50px;
-          width: 120px;
-          font-weight: 600;
-          transition: 0.5s;
-        }
-        button:hover {
-          background-color: rgb(91, 77, 57);
-          color: #ffffff;
-          transform: translateX(0);
-          transition: 0.5s;
-          border-radius: 10px;
-        }
-        button::before {
-          transition: transform 0.5s ease;
-          transform: translateX(-100%);
-        }
-      }
     .blurred {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
@@ -328,29 +295,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
 }
 
 @media screen and (max-width: 900px) {
@@ -366,29 +311,7 @@
     width: 100%;
     margin-left: 40px;
   }
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
   #inline{
     display: inline;
     p{
@@ -436,34 +359,7 @@
         display: none;
         opacity: 0;
     }
-    /* display: grid;
-    grid-template-columns: auto 700px;
-    align-items: center;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
-    .home-button {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 100px;
-        button {
-          background-color: rgb(255, 219, 164);
-          height: 50px;
-          width: 120px;
-          font-weight: 600;
-          transition: 0.5s;
-        }
-        button:hover {
-          background-color: rgb(91, 77, 57);
-          color: #ffffff;
-          transform: translateX(0);
-          transition: 0.5s;
-          border-radius: 10px;
-        }
-        button::before {
-          transition: transform 0.5s ease;
-          transform: translateX(-100%);
-        }
-      }   
+    
   }
   /* #name-input,
   #comment-input {
@@ -498,29 +394,7 @@
   .my-logo {
     height: 60px;
   }
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
   .about,
   .container {
     margin-left: 50px;
@@ -557,29 +431,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
 }
 @media screen and (max-width: 570px) {
   td div {
@@ -595,28 +447,7 @@
     }}
   .shadow {
     padding: 7%;
-  }.home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
+  
   }
   .welcome {
     font-size: 25px;
@@ -636,28 +467,7 @@
       text-overflow: wrap;
       /* margin-left: 30px; */
     }
-  }.home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
+ 
   }
 }
 
@@ -675,28 +485,6 @@
     }}
   .home-design {
     font-size: 30px;
-  }.home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
   }
   /* #name-input,
   #comment-input {
@@ -713,27 +501,7 @@
     width: 25px;
     height: 25px;
   }
-  .home-button {
-    gap: 30px;
-    button {
-        background-color: rgb(255, 219, 164);
-        height: 50px;
-        width: 120px;
-        font-weight: 600;
-        transition: 0.5s;
-      }
-      button:hover {
-        background-color: rgb(91, 77, 57);
-        color: #ffffff;
-        transform: translateX(0);
-        transition: 0.5s;
-        border-radius: 10px;
-      }
-      button::before {
-        transition: transform 0.5s ease;
-        transform: translateX(-100%);
-      }
-  }
+  
   .home-header2 {
     display: flex;
     flex-direction: column;
@@ -790,29 +558,7 @@
   .hi{
     display: inline;
   }}
-.home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+
 @media screen and (max-width: 440px) {
   /* #name-input,
   #comment-input {
@@ -826,29 +572,6 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
 }
 @media screen and (max-width: 400px) {
   td div {
@@ -863,30 +586,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
-  .port {
+   .port {
     font-size: 35px;
   }
   .about,
@@ -913,29 +613,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
 }
 @media screen and (max-width: 330px) {
   td div {
@@ -949,29 +627,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
 }
 @media screen and (max-width: 330px) {
   .port {
@@ -984,29 +640,7 @@
     .hi{
       display: inline;
     }}
-  .home-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 100px;
-    button {
-      background-color: rgb(255, 219, 164);
-      height: 50px;
-      width: 120px;
-      font-weight: 600;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: rgb(91, 77, 57);
-      color: #ffffff;
-      transform: translateX(0);
-      transition: 0.5s;
-      border-radius: 10px;
-    }
-    button::before {
-      transition: transform 0.5s ease;
-      transform: translateX(-100%);
-    }
-  }
+  
   #searchBar {
     max-width: 300px;
   }
