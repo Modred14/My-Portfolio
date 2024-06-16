@@ -199,16 +199,16 @@ body {
   }
   .port-body {
     background-attachment: fixed;
-    background-image: url(./port.png);
+    background-image: url(./port3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 0px;
     p {
-      color: black;
+      color: white;
     }
     h1 {
-      color: black;
+      color: white;
     }
     footer {
       display: flex;
@@ -229,7 +229,7 @@ body {
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: -80px;
-    background: rgba(166, 166, 166, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     footer {
       display: flex;
       flex-direction: column;
@@ -241,7 +241,7 @@ body {
         align-items: flex-start;
         /* margin-top: -10px; */
         margin-bottom: 10px;
-        color: black;
+        color: white;
       }
     }
   }
