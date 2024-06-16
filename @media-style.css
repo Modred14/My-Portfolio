@@ -318,9 +318,9 @@
   .home-design {
     font-size: 45px;
   }
-  .port-style{
+  /* .port-style{
     margin: 0;
-  }
+  } */
   .top-videos {
     display: flex;
     flex-direction: column;
