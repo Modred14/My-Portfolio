@@ -112,6 +112,15 @@
   #ppp {
     margin-bottom: -30px;
   } */
+  #inline{
+    display: inline;
+    p{
+      display: inline;
+    }
+    .hi{
+      display: inline;
+    }
+  }
   .about-me, .about-me2 {
     display: flex;
     flex-direction: column;
@@ -134,10 +143,9 @@
   .image-about {
     margin-top: 50px;
     height: 250px;
-
-    border-radius: 50%;
+    border-radius: 125px;
   }
-
+ 
   .route {
     text-overflow: wrap;
     margin-left: 30px;
