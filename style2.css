@@ -18,7 +18,7 @@
     height: 90vh;
     margin: 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .image-no-search {
         display: flex;
         justify-content: center;
@@ -29,7 +29,7 @@
           /* max-width: 70%; */
              margin-left: 50px;
             /* margin-right: -20px; */
-            width: 80%;
+            width: 50%;
           /* padding-left: 30px;
           padding-right: 30px; */
         }
