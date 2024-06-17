@@ -18,11 +18,14 @@
     height: 90vh;
     margin: 0;
     width: 100%;
-    img{
-        width: 80%;
-    }
 }
 @media screen and (max-width: 600px) {
+    #noResults{
+        margin: 0;
+    }
+    #noResults div img{
+        width: 80%;
+    }
     .image-no-search {
         display: flex;
         justify-content: center;
@@ -31,9 +34,9 @@
        
         img {
           /* max-width: 70%; */
-             margin-left: 50px;
+             /* margin-left: 50px; */
             /* margin-right: -20px; */
-            width: 50%;
+            width: 100%;
           /* padding-left: 30px;
           padding-right: 30px; */
         }
