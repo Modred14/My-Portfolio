@@ -1,6 +1,4 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+
 body {
     overflow-x: hidden;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -98,7 +96,7 @@ height: auto;
   .main-about{
     max-width: 100%;
   }
-  #about-css{
+  .about-body{
     max-width: 100%;
   }
   .main {
