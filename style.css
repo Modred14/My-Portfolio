@@ -97,6 +97,9 @@ height: auto;
   .work {
     transition: 0.5s;
   }
+  .resume-style #work{
+    display: block;
+  }
   .transparent-cell {
     background-color: transparent;
     width: -100px;

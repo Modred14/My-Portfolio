@@ -200,7 +200,8 @@
     /* height: 50px; */
     height: auto;
     width: 250px;
-    margin-bottom: -50px;
+    margin-top: 30px;
+    margin-bottom: -40px;
   }
   .bio-about {
     padding-top: -150px;
