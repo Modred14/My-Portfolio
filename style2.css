@@ -24,11 +24,12 @@
         justify-content: center;
         /* padding-top: 430px; */
         margin: 0;
-        width: 80%;
+       
         img {
           /* max-width: 70%; */
-            margin-left: 0px;
-            margin-right: -20px;
+             margin-left: 50px;
+            /* margin-right: -20px; */
+            width: 80%;
           /* padding-left: 30px;
           padding-right: 30px; */
         }
