@@ -22,6 +22,7 @@
   /* .my-logo2{
     margin-top: -5px;
   } */
+
   .bg {
     margin-right: -20px;
   }
@@ -199,7 +200,7 @@
   .image-about {
     /* height: 50px; */
     height: auto;
-    width: 250px;
+    width: 200px;
     margin-top: 30px;
     margin-bottom: -40px;
   }
@@ -242,28 +243,7 @@
     height: 100vh;
 
   }
-  .hide{
-    display: none;
-    opacity: 0;
-    width: 0;
-    img{
-      display: none;
-      opacity: 0;
-      width: 0;
 
-    }
-  }
-  .hidden{
-    display: none;
-    opacity: 0;
-    width: 0;
-    img{
-      display: none;
-      opacity: 0;
-      width: 0;
-
-    }
-  }
   .sidebar {
     max-width: 0;
     overflow: hidden;
