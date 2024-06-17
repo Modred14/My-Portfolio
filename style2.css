@@ -24,7 +24,9 @@
         margin: 0;
     }
     #noResults div img{
-        width: 80%;
+        height: 200%;
+        width: 95%;
+        margin-left: -20px;
     }
     .image-no-search {
         display: flex;
@@ -43,3 +45,4 @@
       }
     
 }
+
