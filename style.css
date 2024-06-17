@@ -852,13 +852,14 @@ height: auto;
     /* height: 584px; */
     background-repeat: no-repeat;
     padding-top: 80px;
+    margin: 0;
     display: grid;
     grid-template-columns: auto 700px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     img{
       display: inline;
-      
+      margin-bottom: -10px;
     }
   }
   .menu,
