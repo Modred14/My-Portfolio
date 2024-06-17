@@ -17,6 +17,9 @@
     -moz-osx-font-smoothing: grayscale;
     
   }
+  .bg{
+    margin: 0;
+  }
   .about-body{
    margin: 0;
    overflow-x: hidden;
@@ -28,9 +31,7 @@
     margin-top: -5px;
   } */
 
-  .bg {
-    margin-right: -20px;
-  }
+  
   .resume-design {
     display: grid;
     grid-template-columns: auto 500px;
@@ -40,6 +41,13 @@
     }
 
   }
+
+  .resume2, .resume-33{
+    height: 800px;
+    margin-right: -10px;
+  }
+  .resume-preview {
+    width: 500px;}
   .home-header {
     background: rgba(0, 0, 0, 0.7);
     color: #ffffff;
@@ -399,14 +407,22 @@
     .hi{
       display: inline;
     }}
+    
+    
+  
   .resume-design {
     padding-top: 100px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    img{
+    height: 400px;
+    margin: 0;
+    /* img{
         display: none;
         opacity: 0;
+    } */
+    .my-img{
+      display: none;
     }
     
   }
