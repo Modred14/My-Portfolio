@@ -16,6 +16,9 @@
     -moz-osx-font-smoothing: grayscale; */
     
   }
+  .about-body{
+    margin: 0;
+}
   .my-logo {
     margin-top: -5px;
   }
