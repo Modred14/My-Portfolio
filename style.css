@@ -98,6 +98,7 @@ height: auto;
   }
   .about-body{
     max-width: 100%;
+    overflow-x: hidden;
   }
   .main {
     margin: 0;

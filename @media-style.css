@@ -19,6 +19,7 @@
   }
   .about-body{
    margin: 0;
+   overflow-x: hidden;
 }
   .my-logo {
     margin-top: -5px;
