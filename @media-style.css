@@ -163,6 +163,8 @@
   .image-about {
     margin-top: 50px;
     height: auto;
+    align-self: center;
+    left: 50%;
     width: 250px;
     border-radius: 125px;
   }
@@ -287,11 +289,13 @@
     display: block;
     opacity: 100%;
     font-weight: 1000;
+    color: black;
     font-size: 30px;
     margin-top: -10px;
   }
   .menu5 p {
     font-size: 30px;
+    color: black;
     margin-top: 30px;
   }
   .menu2 {
