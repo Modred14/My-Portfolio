@@ -18,6 +18,9 @@
     height: 90vh;
     margin: 0;
     width: 100%;
+    img{
+        width: 80%;
+    }
 }
 @media screen and (max-width: 600px) {
     .image-no-search {
