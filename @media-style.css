@@ -155,6 +155,7 @@
   .image-about {
     margin-top: 50px;
     height: auto;
+    width: 250px;
     border-radius: 125px;
   }
  
@@ -195,7 +196,7 @@
   .image-about {
     /* height: 50px; */
     height: auto;
-    /* width: ; */
+    width: 250px;
     margin-bottom: -100px;
   }
   .bio-about {
@@ -424,7 +425,7 @@
   .home-design {
     font-size: 35px;
   }
-  .my-logo {
+  .my-logo,.my-logo2 {
     height: 60px;
   }
   
