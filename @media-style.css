@@ -413,24 +413,26 @@
   .resume-design {
     padding-top: 100px;
     width: 105%;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     max-height: 450px;
     margin: 0;
-    /* img{
-        display: none;
-        opacity: 0;
-    } */
-    .my-img{
-      display: none;
-      opacity: 0;
-      width: 0px;
     img{
+      width: 2px;
+      margin-top: -50px;
       display: none;
       opacity: 0;
       width: 0px;
     }
+    
+    .resume-style .my-img img{
+      width: 2px;
+      margin-top: -50px;
+      display: none;
+      opacity: 0;
+      width: 0px;
     }
+    
    
   }
   .my-img{
