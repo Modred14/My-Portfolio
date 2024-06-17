@@ -10,11 +10,11 @@
     overflow-x: hidden;
     /* color: black; */
     font-weight: 600;
-    /* color-scheme: light dark; */
-    /* font-synthesis: none; */
-    /* text-rendering: optimizeLegibility; */
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     
   }
   .about-body{

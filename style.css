@@ -13,11 +13,11 @@ body {
     -webkit-border-radius: 10px; /* Safari and Chrome */
     -moz-border-radius: 10px;    /* Firefox */
     border-radius: 10px;   
-    /* color-scheme: light dark; */
-    /* font-synthesis: none; */
-    /* text-rendering: optimizeLegibility; */
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     
   }
   p{
@@ -93,6 +93,12 @@ height: auto;
   }
   .box1 {
     margin: 0;
+    max-width: 100%;
+  }
+  .main-about{
+    max-width: 100%;
+  }
+  #about-css{
     max-width: 100%;
   }
   .main {
