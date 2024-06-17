@@ -19,6 +19,15 @@
     margin: 0;
     width: 100%;
 }
+@media screen and (max-width:800px) {
+    .my-img{
+        img{
+          display: none;
+          opacity: 0;
+          /* width: 500px; */
+        }
+      }
+}
 @media screen and (max-width: 600px) {
     #noResults{
         margin: 0;

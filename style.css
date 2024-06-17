@@ -811,6 +811,13 @@ height: auto;
       transition: 1s;
     }
   }
+  .my-img{
+    img{
+      display: block;
+      opacity: 10;
+      /* width: 500px; */
+    }
+  }
   .download {
     margin-top: 20px;
     display: block;

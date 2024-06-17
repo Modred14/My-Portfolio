@@ -236,7 +236,7 @@
     /* width: 1800px; */
     /* padding-right: 70px;  */
     margin-right: -10px;
-    z-index: 1050;
+    z-index: 3500;
   }
   #inline{
     display: inline;
@@ -409,13 +409,13 @@
     }}
     
     
-  
+
   .resume-design {
     padding-top: 100px;
-    max-width: 100%;
+    width: 105%;
     display: flex;
     flex-direction: column;
-    height: 400px;
+    max-height: 450px;
     margin: 0;
     /* img{
         display: none;
@@ -426,6 +426,13 @@
       opacity: 0;
       width: 0px;
     }
+    img{
+      display: none;
+      opacity: 0;
+      width: 0px;
+    }
+  }
+  .my-img{
     img{
       display: none;
       opacity: 0;
