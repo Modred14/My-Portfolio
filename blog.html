@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style2.css">
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
+    <script src="./blog/hello.js" defer></script>
     <style>
       /* *,
       *::before,
@@ -242,8 +243,8 @@
               <section class="blog">
                 <h1><a href="${item.link}">${title}</a></h1>
                 <section class="grid">
-                  <p>• 🗓️${item.date}</p>
-                  <p>• ⏳${item.readTime}</p>
+                  <h3 class="tiny">• 🗓️${item.date}</h3>
+                  <h3 class="tiny">• ⏳${item.readTime}</h3>
                 </section>
                 <section class="purview">
                   <p>${content}</p>

@@ -11,9 +11,17 @@
     <script src="schema.js" type="application/ld+json"></script>
     <script src="script.js" defer></script>
     <script src="sidebar.js" defer></script>
+    <style>
+      .hider{
+        display: none;
+        img{
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body style="overflow-x: hidden;">
-    <section class="bg">
+    <section class="bg" id="resume-bg">
       <header class="header2">
         <img
           class="my-logo2"
@@ -93,6 +101,17 @@
         .then((html) => {
           document.getElementById("menuholder").innerHTML = html;
         });
+        const bg = document.getElementById("resume-bg");
+        const style = window.getComputedStyle(bg);
+        const width = parseInt(style.width, 10);
+        const myimg = document.getElementById("my-img")
+
+        if (width <= 850) {
+          myimg.classList.add("hider");
+        }
+        else{
+          myimg.classList.remove("hider");
+        }
     </script>
     <footer style="z-index: 1000;">
       <section>

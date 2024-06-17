@@ -174,7 +174,7 @@
     height: auto;
     align-self: center;
     left: 50%;
-    width: 250px;
+    /* width: 250px; */
     border-radius: 125px;
   }
  
@@ -210,6 +210,9 @@
     background-color: rgb(25, 255, 93);
     transition: 0.5s;
   }
+  }
+  body.android .main .about .about-me .image-about{
+    margin-bottom: -90px;
   }
 
   .image-about {
@@ -408,7 +411,12 @@
       display: inline;
     }}
     
-    
+  .tiny{
+    font-size: 15px;
+  }  .grid {
+    max-width: 1000px;
+    font-size: 10px;
+  }
 
   .resume-design {
     padding-top: 100px;
@@ -615,10 +623,7 @@
     opacity: 0;
     animation: fadeIn 0.5s forwards;
   }
-  .grid {
-    /* max-width: 400px; */
-    font-size: 10px;
-  }
+ 
 }
 @media screen and (max-width: 490px) {
   .about,
