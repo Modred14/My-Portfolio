@@ -17,8 +17,11 @@
     
   }
   .my-logo {
-    margin-top: 5px;
+    margin-top: -5px;
   }
+  /* .my-logo2{
+    margin-top: -5px;
+  } */
   .bg {
     margin-right: -20px;
   }
@@ -299,9 +302,9 @@
   #pollor {
     margin-bottom: 0px;
   }
-  .my-logo2 {
+  /* .my-logo2 {
     margin-top: -10px;
-  }
+  } */
   #relete {
     margin-top: -10px;
   }
