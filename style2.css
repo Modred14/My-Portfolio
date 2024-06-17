@@ -1,5 +1,6 @@
 .about-body{
     margin: 0;
+    overflow-x: hidden;
 }
 .hidden{
     display: none;
@@ -26,7 +27,7 @@
         width: 80%;
         img {
           /* max-width: 70%; */
-            margin-left: -20px;
+            margin-left: 0px;
             margin-right: -20px;
           /* padding-left: 30px;
           padding-right: 30px; */
