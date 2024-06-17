@@ -587,6 +587,7 @@ height: auto;
   }
   .about-body {
     background-color: #971717;
+    margin: 0;
   }
   .about-me2 {
     display: grid;

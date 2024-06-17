@@ -6,22 +6,23 @@
     <title>Favour Omirin -- Blog</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="@media-style.css" />
+    <link rel="stylesheet" href="./style2.css">
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
     <style>
       .highlight {
         background-color: yellow;
       }
-      .hidden {
+      /* .hidden {
         display: none;
         opacity: 0;
         img {
     display: none;
     opacity: 0;
     width: 0;
-  }
+  } */
         /* margin-top: 0px; */
-      }
+      /* }
       .hide {
         display: none;
         opacity: 0;
@@ -30,14 +31,14 @@
           opacity: 0;
           width: 0;
         }
-      }
-      .pagination {
+      } */
+      .hey {
         display: flex;
         justify-content: center;
         /* margin-top: 20px; */
         margin-bottom: 30px;
       }
-      .pagination button {
+      #paginationContainer button {
         margin: 0 5px;
         background-color: #f0f0f0;
         padding: 0px;
@@ -46,12 +47,12 @@
         height: 40px;
         width: 40px;
       }
-      .pagination button:hover{
+      #paginationContainer button:hover{
         border-radius: 0;
         background-color: #d0d0d0;
         color: black;
       }
-      .pagination .page-number {
+      #paginationContainer .page-number {
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
@@ -59,7 +60,7 @@
         border: none;
         outline: none;
       }
-      #noResults {
+      .image-no-search {
         display: flex;
         justify-content: center;
         /* padding-top: 430px; */
@@ -67,13 +68,13 @@
           max-width: 500px;
         }
       }
-      .pagination .page-number.active {
+      #paginationContainer .page-number.active {
         background-color: #007bff;
         color: white;
         height: 40px;
         width: 40px;
       }
-      .pagination .page-number.active:hover{
+      #paginationContainer .page-number.active:hover{
         border-radius: 0;
       }
       #searchBar {
@@ -124,18 +125,20 @@
         <div id="contentContainer">
           <div id="blogContainer"></div>
 
-          <div class="pagination hide" id="paginationContainer">
+          <div id="paginationContainer">
+            <div class="hey">
             <button id="prevBtn" onclick="prevPage()">◄</button>
             <div id="pageNumbers"></div>
             <button id="nextBtn" onclick="nextPage()">►</button>
-          </div>
+          </div></div>
 
-          <div id="noResults" class="hide">
+          <div id="noResults">
+            <div class="image-no-search">
             <img
               src="./whau-removebg-preview.png"
               alt="No search results found"
             />
-          </div>
+          </div></div>
         </div>
       </section>
     </div>
