@@ -18,6 +18,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     
   }
+  a{
+    text-decoration: underline;
+  }
   p{
     display: inline;
   }
@@ -830,9 +833,9 @@ height: auto;
     justify-content: center; /* Centers items vertically */
     a {
       text-align: center;
-      color: black;
-      text-decoration: none;
+      text-decoration: none;  
     }
+    
   }
   .height{
       display: flex;
