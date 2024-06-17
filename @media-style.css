@@ -235,7 +235,7 @@
 
   }
   .sidebar {
-    /* width: 250px; */
+    max-width: 0;
     overflow: hidden;
     transition: max-width 0.3s ease;
     position: fixed;
