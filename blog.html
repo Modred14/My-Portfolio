@@ -10,28 +10,16 @@
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
     <style>
+      /* *,
+      *::before,
+      *::after {
+  box-sizing: border-box;
+} */
+
       .highlight {
         background-color: yellow;
       }
-      /* .hidden {
-        display: none;
-        opacity: 0;
-        img {
-    display: none;
-    opacity: 0;
-    width: 0;
-  } */
-        /* margin-top: 0px; */
-      /* }
-      .hide {
-        display: none;
-        opacity: 0;
-        img {
-          display: none;
-          opacity: 0;
-          width: 0;
-        }
-      } */
+      
       .hey {
         display: flex;
         justify-content: center;
@@ -64,8 +52,12 @@
         display: flex;
         justify-content: center;
         /* padding-top: 430px; */
+        margin: 0;
+        max-width: 100%;
         img {
-          max-width: 500px;
+          width: 500px;
+          /* padding-left: 30px;
+          padding-right: 30px; */
         }
       }
       #paginationContainer .page-number.active {
@@ -89,6 +81,7 @@
     </style>
   </head>
   <body class="about-body">
+    <div id="aboutpage">
     <header class="header2">
       <img
         class="my-logo2"
@@ -142,6 +135,7 @@
         </div>
       </section>
     </div>
+  </div>
     <script>
       const bio = `
         <section class="about-me">
@@ -220,6 +214,10 @@
         const paginationContainer = document.getElementById(
           "paginationContainer"
         );
+        const aboutpage = document.getElementById(
+          "aboutpage"
+        );
+        
         blogContainer.innerHTML = "";
 
         const searchTerm = document
@@ -230,8 +228,10 @@
 
         if (filteredData.length === 0) {
           noResults.classList.remove("hide");
+          aboutpage.classList.add("heee")
           paginationContainer.classList.add("hide");
         } else {
+          aboutpage.classList.remove("heee")
           paginationContainer.classList.remove("hide");
           noResults.classList.add("hide");
           filteredData.slice(start, end).forEach((item) => {
