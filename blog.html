@@ -81,7 +81,7 @@
       }
     </style>
   </head>
-  <body id="text-container" class="about-body">
+  <body id="text-contain" class="about-body">
     <div id="aboutpage">
       <header class="header2">
         <img
@@ -105,7 +105,7 @@
         <div class="menu5" onclick="openSideBar()" id="menu"><p>☰</p></div>
         <div class="menuholder" id="menuholder"></div>
       </header>
-      <div class="main">
+      <div class="main" id="main">
         <div class="space"></div>
         <section class="about">
           <input
@@ -114,10 +114,10 @@
             placeholder="🔍Search articles..."
             oninput="searchAndHighlight()"
           />
-          <section id="bioContainer"></section>
+          <section class="justified-text" id="bioContainer"></section>
 
-          <div id="contentContainer">
-            <div id="blogContainer"></div>
+          <div  id="contentContainer">
+            <div class="justified-text" id="blogContainer"></div>
 
             <div id="paginationContainer">
               <div class="hey">
@@ -152,7 +152,7 @@
               crafting intuitive and dynamic user experiences using HTML, CSS,
               JavaScript, Node.js, React, Vue, and TypeScript.
             </p>
-            <div class="justified-text">
+            <div>
             <a class="blog-link" href="./blog.html">Click here to check out my blog</a>
             <a class="blog-link2" href="./portfolio.html">Click here to check out my portfolio</a>
             <a class="blog-link3" href="./about.html">Click here to read more about me</a>

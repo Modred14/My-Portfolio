@@ -111,6 +111,9 @@ height: auto;
     max-width: 100%;
     overflow-x: hidden;
   }
+  #main{
+    min-height: 100vh;
+  }
   .main {
     margin: 0;
   }

@@ -57,7 +57,9 @@
       </p>
 
       <h2>Why Mastering JavaScript is Crucial</h2>
-      <p class="justified-text">Mastering JavaScript is crucial for several reasons:</p>
+      <p class="justified-text">
+        Mastering JavaScript is crucial for several reasons:
+      </p>
       <ul>
         <li>
           <p class="justified-text">
@@ -227,15 +229,15 @@
 
           <section class="bio-about2">
             <section class="inline">
-              <p>Written by</p>
+              <p style="display: inline">Written by</p>
               <a
+                style="display: inline"
                 class="hi"
                 href="https://github.com/Modred14"
                 target="_blank"
-                class="g0t"
                 >Favour David Omirin,</a
               >
-              <p class="justified-text">
+              <p style="display: inline" class="justified-text">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
                 specialize in crafting dynamic user experiences using HTML, CSS,
@@ -266,22 +268,22 @@
     <br />
     <br />
     <script>
-     document.addEventListener("DOMContentLoaded", () => {
-        const paragraphs = document.querySelectorAll('.justified-text');
+      document.addEventListener("DOMContentLoaded", () => {
+        const paragraphs = document.querySelectorAll(".justified-text");
 
-        paragraphs.forEach(paragraph => {
+        paragraphs.forEach((paragraph) => {
           const originalText = paragraph.textContent;
-          const words = originalText.split(' ');
+          const words = originalText.split(" ");
 
-          paragraph.innerHTML = '';
+          paragraph.innerHTML = "";
 
-          words.forEach(word => {
+          words.forEach((word) => {
             if (word.length > 5) {
-              let hyphenatedWord = '';
+              let hyphenatedWord = "";
               for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
                 if ((i + 1) % 5 === 0 && i < word.length - 1) {
-                  hyphenatedWord += '&shy;';
+                  hyphenatedWord += "&shy;";
                 }
               }
               paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
