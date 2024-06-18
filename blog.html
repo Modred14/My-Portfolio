@@ -145,6 +145,7 @@
         <section class="about-me">
           <section class="image-about"><img style="width: 200px; border-radius: 65%;" src="./image2.png" alt="" /></section>
           <section class="bio-about">
+            <div class="justified-text">
             <p>Written by</p>
             <a class="hi" href="https://github.com/Modred14" target="_blank">Favour David Omirin,</a>
             <p class="justified-text">
@@ -157,6 +158,7 @@
             <a class="blog-link" href="./blog.html">Click here to check out my blog</a>
             <a class="blog-link2" href="./portfolio.html">Click here to check out my portfolio</a>
             <a class="blog-link3" href="./about.html">Click here to read more about me</a>
+          </div>
           </div>
             </section>
         </section>
@@ -244,6 +246,7 @@
 
             const blogHTML = `
               <section class="blog">
+                <div class="justified-text">
                 <h1><a class="justified-text" href="${item.link}">${title}</a></h1>
                 <section class="grid">
                   <h3 class="tiny">• 🗓️${item.date}</h3>
@@ -253,6 +256,7 @@
                   <p class="justified-text">${content}</p>
                   <a href="${item.link}">read more</a>
                 </section>
+                </div>
               </section>
             `;
             blogContainer.innerHTML += blogHTML;
