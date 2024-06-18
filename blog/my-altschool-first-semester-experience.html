@@ -195,7 +195,11 @@
               let hyphenatedWord = "";
               for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
-                if ((i + 1) % 5 === 0 && i < word.length - 1) {
+                if (
+                  word[i] !== "-" &&
+                  (i + 1) % 5 === 0 &&
+                  i < word.length - 1
+                ) {
                   hyphenatedWord += "&shy;";
                 }
               }
