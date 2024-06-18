@@ -24,7 +24,7 @@
       <p>• 🗓️Tuesday January 23, 2024</p>
       <p>• ⏳3 mins read</p>
       <br />
-      <p>
+      <p class="justified-text">
         AltSchool is known for its innovative and personalized approach to
         education, and I was excited to see what it had to offer. However, my
         journey was not without its challenges and surprises. Here's a look at
@@ -32,7 +32,7 @@
       </p>
 
       <h2>Expectations vs. Reality</h2>
-      <p>
+      <p class="justified-text">
         At first, when I started this course, I didn't fully grasp what I was
         getting into. I expected a unique learning environment, but I didn't
         realize how much focus and understanding it would demand from me.
@@ -42,7 +42,7 @@
       </p>
 
       <h2>Learning Environment</h2>
-      <p>
+      <p class="justified-text">
         The learning environment at AltSchool is certainly different from
         traditional schools. It promotes collaboration and creative thinking,
         with technology playing a key role in our daily activities. This setup
@@ -51,7 +51,7 @@
       </p>
 
       <h2>Curriculum and Projects</h2>
-      <p>
+      <p class="justified-text">
         The curriculum is both flexible and challenging, allowing us to explore
         subjects in depth while covering necessary academic ground. One of the
         most significant moments for me was encountering JavaScript. It was
@@ -63,7 +63,7 @@
       </p>
 
       <h2>Community and Support</h2>
-      <p>
+      <p class="justified-text">
         The sense of community at AltSchool is strong, with peers and
         instructors creating a supportive environment. My instructors were not
         just teachers but mentors who genuinely cared about my progress. This
@@ -73,7 +73,7 @@
       </p>
 
       <h2>Challenges and Triumphs</h2>
-      <p>
+      <p class="justified-text">
         The major challenge for me was adapting to the self-directed learning
         approach. Balancing assignments and practice with a deeper focus on
         understanding was tough. However, the support from the AltSchool
@@ -83,7 +83,7 @@
       </p>
 
       <h2>Personal Growth</h2>
-      <p>
+      <p class="justified-text">
         This first semester at AltSchool has been a period of immense personal
         growth. I've learned to manage my time better, focus more deeply on my
         studies, and embrace challenges as opportunities for improvement. The
@@ -91,7 +91,7 @@
       </p>
 
       <h2>Conclusion</h2>
-      <p>
+      <p class="justified-text">
         Reflecting on my first semester, I realize how much I've grown both
         academically and personally. AltSchool has provided a unique and
         supportive learning environment that has helped me navigate challenges
@@ -140,7 +140,7 @@
               <a class="hi" href="https://github.com/Modred14" target="_blank" class="g0t"
                 >Favour David Omirin,</a
               >
-              <p>
+              <p class="justified-text">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
                 specialize in crafting dynamic user experiences using HTML, CSS,
@@ -173,28 +173,31 @@
     <br />
     <br />
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('text-container');
-    const originalText = container.textContent;
-    const words = originalText.split(' ');
+ document.addEventListener("DOMContentLoaded", () => {
+        const paragraphs = document.querySelectorAll('.justified-text');
 
-    container.innerHTML = '';
+        paragraphs.forEach(paragraph => {
+          const originalText = paragraph.textContent;
+          const words = originalText.split(' ');
 
-    words.forEach(word => {
-        if (word.length > 5) {
-            let hyphenatedWord = '';
-            for (let i = 0; i < word.length; i++) {
-                if (i > 0 && i % 5 === 0) {
-                    hyphenatedWord += '-';
-                }
+          paragraph.innerHTML = '';
+
+          words.forEach(word => {
+            if (word.length > 5) {
+              let hyphenatedWord = '';
+              for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
+                if ((i + 1) % 5 === 0 && i < word.length - 1) {
+                  hyphenatedWord += '&shy;';
+                }
+              }
+              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+            } else {
+              paragraph.innerHTML += `<span>${word}</span> `;
             }
-            container.innerHTML += `<span>${hyphenatedWord}</span> `;
-        } else {
-            container.innerHTML += `<span>${word}</span> `;
-        }
-    });
-});
+          });
+        });
+      });
 
     </script>
   </body>

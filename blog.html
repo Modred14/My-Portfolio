@@ -6,7 +6,7 @@
     <title>Favour Omirin -- Blog</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="@media-style.css" />
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style2.css" />
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
     <script src="./blog/hello.js" defer></script>
@@ -20,7 +20,7 @@
       .highlight {
         background-color: yellow;
       }
-      
+
       .hey {
         display: flex;
         justify-content: center;
@@ -36,7 +36,7 @@
         height: 40px;
         width: 40px;
       }
-      #paginationContainer button:hover{
+      #paginationContainer button:hover {
         border-radius: 0;
         background-color: #d0d0d0;
         color: black;
@@ -67,7 +67,7 @@
         height: 40px;
         width: 40px;
       }
-      #paginationContainer .page-number.active:hover{
+      #paginationContainer .page-number.active:hover {
         border-radius: 0;
       }
       #searchBar {
@@ -81,62 +81,64 @@
       }
     </style>
   </head>
-  <body  id="text-container" class="about-body">
+  <body id="text-container" class="about-body">
     <div id="aboutpage">
-    <header class="header2">
-      <img
-        class="my-logo2"
-        id="pollor"
-        src="./MY LOGO.png"
-        alt="my logo"
-        onclick="window.open('./home.html')"
-      />
-      <section class="menu2">
-        <a href="home.html" class="header-link">Home</a>
-        <a href="about.html" class="header-link">About</a>
-        <a href="resume.html" class="header-link">Resume</a>
-        <a href="portfolio.html" class="header-link">Portfolio</a>
-        <a href="blog.html" class="header-link">Blog</a>
-        <a href="contact.html" class="header-link">Contact</a>
-        <a href="mailto:favourdomirin@gmail.com" class="header-link">
-          Send me an email
-        </a>
-      </section>
-      <div class="menu5" onclick="openSideBar()" id="menu"><p>☰</p></div>
-      <div class="menuholder" id="menuholder"></div>
-    </header>
-    <div class="main">
-      <div class="space"></div>
-      <section class="about">
-        <input
-          type="text"
-          id="searchBar"
-          placeholder="🔍Search articles..."
-          oninput="searchAndHighlight()"
+      <header class="header2">
+        <img
+          class="my-logo2"
+          id="pollor"
+          src="./MY LOGO.png"
+          alt="my logo"
+          onclick="window.open('./home.html')"
         />
-        <section id="bioContainer"></section>
+        <section class="menu2">
+          <a href="home.html" class="header-link">Home</a>
+          <a href="about.html" class="header-link">About</a>
+          <a href="resume.html" class="header-link">Resume</a>
+          <a href="portfolio.html" class="header-link">Portfolio</a>
+          <a href="blog.html" class="header-link">Blog</a>
+          <a href="contact.html" class="header-link">Contact</a>
+          <a href="mailto:favourdomirin@gmail.com" class="header-link">
+            Send me an email
+          </a>
+        </section>
+        <div class="menu5" onclick="openSideBar()" id="menu"><p>☰</p></div>
+        <div class="menuholder" id="menuholder"></div>
+      </header>
+      <div class="main">
+        <div class="space"></div>
+        <section class="about">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="🔍Search articles..."
+            oninput="searchAndHighlight()"
+          />
+          <section id="bioContainer"></section>
 
-        <div id="contentContainer">
-          <div id="blogContainer"></div>
+          <div id="contentContainer">
+            <div id="blogContainer"></div>
 
-          <div id="paginationContainer">
-            <div class="hey">
-            <button id="prevBtn" onclick="prevPage()">◄</button>
-            <div id="pageNumbers"></div>
-            <button id="nextBtn" onclick="nextPage()">►</button>
-          </div></div>
+            <div id="paginationContainer">
+              <div class="hey">
+                <button id="prevBtn" onclick="prevPage()">◄</button>
+                <div id="pageNumbers"></div>
+                <button id="nextBtn" onclick="nextPage()">►</button>
+              </div>
+            </div>
 
-          <div id="noResults">
-            <div class="image-no-search">
-            <img
-              src="./whau-removebg-preview.png"
-              alt="No search results found"
-            />
-          </div></div>
-        </div>
-      </section>
+            <div id="noResults">
+              <div class="image-no-search">
+                <img
+                  src="./whau-removebg-preview.png"
+                  alt="No search results found"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
     <script>
       const bio = `
         <section class="about-me">
@@ -144,16 +146,18 @@
           <section class="bio-about">
             <p>Written by</p>
             <a class="hi" href="https://github.com/Modred14" target="_blank">Favour David Omirin,</a>
-            <p>
+            <p class="justified-text">
               a passionate Frontend Engineer with a background in graphic design
               and cryptocurrency based in Osun State, Nigeria. I specialize in
               crafting intuitive and dynamic user experiences using HTML, CSS,
               JavaScript, Node.js, React, Vue, and TypeScript.
             </p>
+            <div class="justified-text">
             <a class="blog-link" href="./blog.html">Click here to check out my blog</a>
             <a class="blog-link2" href="./portfolio.html">Click here to check out my portfolio</a>
             <a class="blog-link3" href="./about.html">Click here to read more about me</a>
-          </section>
+          </div>
+            </section>
         </section>
       `;
 
@@ -215,10 +219,8 @@
         const paginationContainer = document.getElementById(
           "paginationContainer"
         );
-        const aboutpage = document.getElementById(
-          "aboutpage"
-        );
-        
+        const aboutpage = document.getElementById("aboutpage");
+
         blogContainer.innerHTML = "";
 
         const searchTerm = document
@@ -229,10 +231,10 @@
 
         if (filteredData.length === 0) {
           noResults.classList.remove("hide");
-          aboutpage.classList.add("heee")
+          aboutpage.classList.add("heee");
           paginationContainer.classList.add("hide");
         } else {
-          aboutpage.classList.remove("heee")
+          aboutpage.classList.remove("heee");
           paginationContainer.classList.remove("hide");
           noResults.classList.add("hide");
           filteredData.slice(start, end).forEach((item) => {
@@ -241,13 +243,13 @@
 
             const blogHTML = `
               <section class="blog">
-                <h1><a href="${item.link}">${title}</a></h1>
+                <h1><a class="justified-text" href="${item.link}">${title}</a></h1>
                 <section class="grid">
                   <h3 class="tiny">• 🗓️${item.date}</h3>
                   <h3 class="tiny">• ⏳${item.readTime}</h3>
                 </section>
                 <section class="purview">
-                  <p>${content}</p>
+                  <p class="justified-text">${content}</p>
                   <a href="${item.link}">read more</a>
                 </section>
               </section>
@@ -330,28 +332,30 @@
           document.getElementById("menuholder").innerHTML = html;
         });
         document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('text-container');
-    const originalText = container.textContent;
-    const words = originalText.split(' ');
+        const paragraphs = document.querySelectorAll('.justified-text');
 
-    container.innerHTML = '';
+        paragraphs.forEach(paragraph => {
+          const originalText = paragraph.textContent;
+          const words = originalText.split(' ');
 
-    words.forEach(word => {
-        if (word.length > 5) {
-            let hyphenatedWord = '';
-            for (let i = 0; i < word.length; i++) {
-                if (i > 0 && i % 5 === 0) {
-                    hyphenatedWord += '-';
-                }
+          paragraph.innerHTML = '';
+
+          words.forEach(word => {
+            if (word.length > 5) {
+              let hyphenatedWord = '';
+              for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
+                if ((i + 1) % 5 === 0 && i < word.length - 1) {
+                  hyphenatedWord += '&shy;';
+                }
+              }
+              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+            } else {
+              paragraph.innerHTML += `<span>${word}</span> `;
             }
-            container.innerHTML += `<span>${hyphenatedWord}</span> `;
-        } else {
-            container.innerHTML += `<span>${word}</span> `;
-        }
-    });
-});
-
+          });
+        });
+      });
     </script>
     <footer>
       <section>
@@ -392,7 +396,7 @@
           alt=""
         />
       </section>
-      <h4 class="copyright3">© Favour Omirin 2024</h3>
+      <h4 class="copyright3">© Favour Omirin 2024</h4>
     </footer>
   </body>
 </html>

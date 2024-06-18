@@ -101,28 +101,6 @@
         // Add interaction event listener to play videos
         document.body.addEventListener("click", playVideos, { once: true });
       });
-      document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('text-container');
-    const originalText = container.textContent;
-    const words = originalText.split(' ');
-
-    container.innerHTML = '';
-
-    words.forEach(word => {
-        if (word.length > 5) {
-            let hyphenatedWord = '';
-            for (let i = 0; i < word.length; i++) {
-                if (i > 0 && i % 5 === 0) {
-                    hyphenatedWord += '-';
-                }
-                hyphenatedWord += word[i];
-            }
-            container.innerHTML += `<span>${hyphenatedWord}</span> `;
-        } else {
-            container.innerHTML += `<span>${word}</span> `;
-        }
-    });
-});
 
     </script>
     <footer>

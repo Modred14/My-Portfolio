@@ -21,27 +21,27 @@
         <p>• 🗓️Thursday  May 16, 2024</p>
         <p>• ⏳2 mins read</p>
         <br>
-        <p>
+        <p class="justified-text">
             The second semester at AltSchool was an intense but rewarding journey. We delved deeper into programming, focusing on Node.js, React, and more advanced JavaScript functionalities. This semester required a lot of dedication and hard work, and the results were beyond my expectations.
         </p>
         
         <h2>Coursework and Projects</h2>
-        <p>
+        <p class="justified-text">
             This semester, the curriculum was packed with challenging yet exciting content. We explored the back-end with Node.js, built dynamic user interfaces with React, and enhanced our understanding of JavaScript. Each module came with its own set of projects, pushing us to apply what we learned in practical, real-world scenarios.
         </p>
         
         <h2>Hard Work Pays Off</h2>
-        <p>
+        <p class="justified-text">
             I practiced hard throughout this second semester, dedicating countless hours to coding, debugging, and refining my projects. My efforts paid off in a big way. To my surprise and delight, I scored 100 out of 100 this semester. It was a testament to the power of perseverance and hard work.
         </p>
         
         <h2>The Importance of Community</h2>
-        <p>
+        <p class="justified-text">
             One crucial lesson I learned is that being a programmer is not a solitary endeavor. To succeed, you cannot be a lone ranger. You need friends and mentors. Throughout the semester, I encountered numerous errors and challenges. My friends and my instructor, <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>, played a vital role in helping me tackle these issues. Their support and guidance were instrumental in my success.
         </p>
         
         <h2>Conclusion</h2>
-        <p>
+        <p class="justified-text">
             Reflecting on this semester, I am filled with gratitude and pride. The journey was tough, but the rewards were worth it. I have grown not only as a programmer but also as a member of a vibrant and supportive community. As I move forward, I am excited to continue learning and growing, knowing that I have a solid foundation and a great support system to rely on.
         </p>
         
@@ -82,7 +82,7 @@
           <a class="hi" href="https://github.com/Modred14" target="_blank"
             class="g0t">Favour David Omirin,</a
           >
-          <p>
+          <p class="justified-text">
             a passionate Frontend Engineer with a background in graphic design
             and cryptocurrency based in Osun State, Nigeria. I specialize in
             crafting dynamic user experiences using HTML, CSS,
@@ -109,27 +109,30 @@
   <br>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('text-container');
-    const originalText = container.textContent;
-    const words = originalText.split(' ');
+        const paragraphs = document.querySelectorAll('.justified-text');
 
-    container.innerHTML = '';
+        paragraphs.forEach(paragraph => {
+          const originalText = paragraph.textContent;
+          const words = originalText.split(' ');
 
-    words.forEach(word => {
-        if (word.length > 5) {
-            let hyphenatedWord = '';
-            for (let i = 0; i < word.length; i++) {
-                if (i > 0 && i % 5 === 0) {
-                    hyphenatedWord += '-';
-                }
+          paragraph.innerHTML = '';
+
+          words.forEach(word => {
+            if (word.length > 5) {
+              let hyphenatedWord = '';
+              for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
+                if ((i + 1) % 5 === 0 && i < word.length - 1) {
+                  hyphenatedWord += '&shy;';
+                }
+              }
+              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+            } else {
+              paragraph.innerHTML += `<span>${word}</span> `;
             }
-            container.innerHTML += `<span>${hyphenatedWord}</span> `;
-        } else {
-            container.innerHTML += `<span>${word}</span> `;
-        }
-    });
-});
+          });
+        });
+      });
 
   </script>
 </body>

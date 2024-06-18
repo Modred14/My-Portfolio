@@ -118,9 +118,9 @@
             alt="JavaScript Code"
           />
           <div>
-            <p>I'm a</p>
-            <p id="work"></p>
-            <p>
+            <p class="justified-text">I'm a</p>
+            <p class="justified-text" id="work"></p>
+            <p class="justified-text">
               (a Computer Programmer). My journey into the tech industry began
               with a passion for creating visually compelling designs. As a
               child, I was always drawn to art, spending countless hours
@@ -151,7 +151,7 @@
           </div>
         </div>
         <h3>Blending Design and Development</h3>
-        <p>
+        <p class="justified-text">
           
           Over time, my skills in both design and development grew significantly. I started taking on freelance projects, which provided me with valuable real-world experience and a deeper understanding of the importance of user experience. These projects taught me that creating a website or an application isn't just about making it visually appealing; it's about ensuring that it is intuitive and enjoyable for users. I realized that a beautiful design means little if it doesn't offer a seamless and engaging user experience.
 <br><br>
@@ -164,7 +164,7 @@
         </div>
         
         <h3>Collaboration and Communication</h3>
-       <div class="img-contain"> <p id="ppp">
+       <div class="img-contain"> <p class="justified-text" id="ppp">
           One of the turning points in my career was when I began collaborating closely with designers. My background in graphic design proved to be a significant asset during these collaborations. I could communicate effectively with designers, understand their vision, and translate their visual concepts into seamless web interfaces. This synergy between design and development was pivotal in my growth as a web developer.
 <br><br>
 Working alongside designers allowed me to appreciate the intricate details that go into creating a compelling user experience. I learned to interpret their creative ideas and implement them technically, ensuring that the final product remained true to the original vision. This ability to bridge the gap between design and development became one of my greatest strengths.
@@ -187,7 +187,7 @@ This experience reinforced my belief in the importance of collaboration and comm
           />
         </div>
         <h3>Expanding My Skill Set: Node.js, React, Vue, and TypeScript</h3>
-        <p>
+        <p class="justified-text">
           As my journey continued, I expanded my technical skill set to include
           Node.js, React, Vue, and TypeScript. Learning these technologies was a
           transformative experience, and I was fortunate to enhance my skills at
@@ -204,7 +204,7 @@ This experience reinforced my belief in the importance of collaboration and comm
  <br>       </p>
         <img src="./image5.png" class="jjj" style="width: 1500px" alt="JavaScript Code" />
         <h3>Fascination with Blockchain and Cryptocurrency</h3>
-        <p>
+        <p class="justified-text">
           My interest in technology didn't stop at web development; I became increasingly fascinated with the world of cryptocurrency and blockchain technology. The concept of a decentralized, secure digital economy intrigued me, sparking a desire to delve deeper into these cutting-edge technologies. I began exploring how blockchain and cryptocurrency could be integrated into web applications, which opened up new avenues for innovation in my projects.
 <br><br>
 This exploration added a unique dimension to my work, allowing me to create applications that stood out due to their incorporation of secure and decentralized features. The challenge of building decentralized applications (dApps) was both exciting and demanding, pushing me to expand my skill set and deepen my understanding of blockchain technology.
@@ -216,7 +216,7 @@ By integrating these technologies into my projects, I was able to offer innovati
 <img src="./blockchain.png" style="width: 1500px" class="jjj" alt="JavaScript Code" />
 </p>
         <h3>Commitment to Lifelong Learning</h3>
-        <p>
+        <p class="justified-text">
           Throughout my career, I have consistently demonstrated my ability to adapt to new technologies and methodologies. Whether it's learning a new programming language, adopting a new framework, or understanding emerging trends in the tech industry, I have always been committed to lifelong learning and professional growth. This adaptability is a testament to my dedication and passion for what I do.
 <br><br>
           For instance, when JavaScript frameworks like React and Angular gained popularity, I eagerly dove into mastering them. This not only expanded my skill set but also allowed me to build more dynamic and responsive web applications. Similarly, when blockchain technology began to emerge as a significant force in the tech world, I took the initiative to educate myself on its principles and applications. This proactive approach enabled me to integrate blockchain into my projects, setting them apart with innovative features.
@@ -240,13 +240,13 @@ By integrating these technologies into my projects, I was able to offer innovati
           style="width: 1500px"
           alt="JavaScript Code"
         />
-        <p>
+        <p class="justified-text">
           I thrive in environments that challenge me and offer opportunities to contribute to cutting-edge projects. Working on projects that sit at the intersection of web development and blockchain technology excites me the most. These projects not only push the boundaries of what is possible but also allow me to be part of the technological revolution that is reshaping the world.
 <br><br>
           The fusion of web development and blockchain technology presents a unique opportunity to create innovative solutions that address real-world challenges. Whether it's implementing blockchain-based authentication systems for enhanced security or developing decentralized applications (dApps) that revolutionize industries, I am passionate about leveraging the power of both disciplines to drive meaningful change.
        <br><br>   
           What excites me most about these projects is the potential to explore uncharted territory and pioneer new approaches to problem-solving. The dynamic nature of blockchain technology means that there are always new concepts to explore and opportunities to innovate. Whether it's optimizing smart contracts for efficiency or integrating blockchain with emerging technologies like AI and IoT, I thrive on the challenge of pushing the boundaries of innovation.
-          <br><br> </div></p><p>
+          <br><br> </div></p><p class="justified-text">
           Moreover, being part of projects at the forefront of technological advancement not only keeps me engaged and motivated but also provides a platform to collaborate with like-minded professionals and contribute to the collective advancement of the field. This intersection of web development and blockchain technology represents the vanguard of the digital age, and I am excited to be at the forefront, driving progress and shaping the future.
         </p><br>
         
@@ -254,7 +254,7 @@ By integrating these technologies into my projects, I was able to offer innovati
        
         <h3>Looking Forward</h3>
          <div class="img-contain">
-          <p id="ppp">
+          <p class="justified-text" id="ppp">
      
 Connecting with like-minded professionals and companies that are at the forefront of technology and design is something I continually seek. Collaboration and innovation are at the heart of my work, and I believe that together, we can create remarkable digital experiences. My journey is far from over, and I am excited about the future and the opportunities it holds.
 <br><br>
@@ -289,27 +289,30 @@ As I look towards the future, I am excited about the endless possibilities that 
           document.getElementById("menuholder").innerHTML = html;
         });
         document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('about-css');
-    const originalText = container.textContent;
-    const words = originalText.split(' ');
+        const paragraphs = document.querySelectorAll('.justified-text');
 
-    container.innerHTML = '';
+        paragraphs.forEach(paragraph => {
+          const originalText = paragraph.textContent;
+          const words = originalText.split(' ');
 
-    words.forEach(word => {
-        if (word.length > 5) {
-            let hyphenatedWord = '';
-            for (let i = 0; i < word.length; i++) {
-                if (i > 0 && i % 5 === 0) {
-                    hyphenatedWord += '-';
-                }
+          paragraph.innerHTML = '';
+
+          words.forEach(word => {
+            if (word.length > 5) {
+              let hyphenatedWord = '';
+              for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
+                if ((i + 1) % 5 === 0 && i < word.length - 1) {
+                  hyphenatedWord += '&shy;';
+                }
+              }
+              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+            } else {
+              paragraph.innerHTML += `<span>${word}</span> `;
             }
-            container.innerHTML += `<span>${hyphenatedWord}</span> `;
-        } else {
-            container.innerHTML += `<span>${word}</span> `;
-        }
-    });
-});
+          });
+        });
+      });
 
     </script>
   </body>

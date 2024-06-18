@@ -18,6 +18,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     
   }
+  .justified-text {
+    text-align: justify;
+    word-break: break-word;
+  }
+
   a{
     text-decoration: underline;
   }
@@ -294,7 +299,7 @@ height: auto;
   .grid {
     display: grid;
     grid-template-columns: auto auto;
-    max-width: 310px;
+    max-width: 400px;
     grid-gap: 10px;
     font-size: 14px;
     margin-top: -30px;
