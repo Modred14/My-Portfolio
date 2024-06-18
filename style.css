@@ -23,6 +23,9 @@ body {
   }
   p{
     display: inline;
+    /* text-align: justify; 
+    width: 100%; Adjust as needed */
+    /* overflow: hidden; */
   }
   .copyright, .copyright2, .copyright3{
     color: #ffffff;

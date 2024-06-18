@@ -288,6 +288,29 @@ As I look towards the future, I am excited about the endless possibilities that 
         .then((html) => {
           document.getElementById("menuholder").innerHTML = html;
         });
+        document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById('about-css');
+    const originalText = container.textContent;
+    const words = originalText.split(' ');
+
+    container.innerHTML = '';
+
+    words.forEach(word => {
+        if (word.length > 5) {
+            let hyphenatedWord = '';
+            for (let i = 0; i < word.length; i++) {
+                if (i > 0 && i % 5 === 0) {
+                    hyphenatedWord += '-';
+                }
+                hyphenatedWord += word[i];
+            }
+            container.innerHTML += `<span>${hyphenatedWord}</span> `;
+        } else {
+            container.innerHTML += `<span>${word}</span> `;
+        }
+    });
+});
+
     </script>
   </body>
   <footer>

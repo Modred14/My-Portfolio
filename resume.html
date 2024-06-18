@@ -17,7 +17,7 @@
       }
     </style>
   </head>
-  <body style="overflow-x: hidden;">
+  <body style="overflow-x: hidden" id="text-container">
     <section class="bg" id="resume-bg">
       <header class="header2">
         <img
@@ -45,7 +45,7 @@
         <div class="height">
           <section class="resume-design">
             <section class="resume-style">
-              <p id="work" style="margin-bottom: 10px;" class="work"></p>
+              <p id="work" style="margin-bottom: 10px" class="work"></p>
               <p class="bio">Hi, I am Favour, a</p>
               <p id="work2" class="work2"></p>
               <p class="bio">
@@ -56,7 +56,7 @@
             </section>
             <div class="my-img" id="my-img">
               <img
-                style="z-index: 500;"
+                style="z-index: 500"
                 class="img-g"
                 src="image-bg.png"
                 alt="Omirin img"
@@ -126,8 +126,30 @@
 
         checkWidth();
         window.addEventListener("resize", checkWidth);
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.getElementById("text-container");
+          const originalText = container.textContent;
+          const words = originalText.split(" ");
+
+          container.innerHTML = "";
+
+          words.forEach((word) => {
+            if (word.length > 5) {
+              let hyphenatedWord = "";
+              for (let i = 0; i < word.length; i++) {
+                if (i > 0 && i % 5 === 0) {
+                  hyphenatedWord += "-";
+                }
+                hyphenatedWord += word[i];
+              }
+              container.innerHTML += `<span>${hyphenatedWord}</span> `;
+            } else {
+              container.innerHTML += `<span>${word}</span> `;
+            }
+          });
+        });
       </script>
-      <footer style="z-index: 1000;">
+      <footer style="z-index: 1000">
         <section>
           <img
             class="icon2"
@@ -168,5 +190,6 @@
         </section>
         <h4 class="copyright">© Favour Omirin 2024</h4>
       </footer>
+    </section>
   </body>
 </html>
