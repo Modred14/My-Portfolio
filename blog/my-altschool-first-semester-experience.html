@@ -105,7 +105,9 @@
       <section class="comments-section">
         <h2>Comments</h2>
         <div id="comments-container">
-          <p id="no-comments">No comments yet. We'd love to hear from you! Be the first to comment</p>
+          <p id="no-comments">
+            No comments yet. We'd love to hear from you! Be the first to comment
+          </p>
           <ul id="comments-list" style="display: none"></ul>
         </div>
         <form id="comment-form">
@@ -131,16 +133,24 @@
       <section>
         <section class="about-me2">
           <section class="image-about">
-            <img style="width: 200px; border-radius: 65%;" src="../image2.png" alt="" />
+            <img
+              style="width: 200px; border-radius: 65%"
+              src="../image2.png"
+              alt=""
+            />
           </section>
 
           <section class="bio-about2">
             <section class="inline">
-              <p  style="display: inline;">Written by</p>
-              <a style="display: inline;" class="hi" href="https://github.com/Modred14" target="_blank"
+              <p style="display: inline">Written by</p>
+              <a
+                style="display: inline"
+                class="hi"
+                href="https://github.com/Modred14"
+                target="_blank"
                 >Favour David Omirin,</a
               >
-              <p  style="display: inline;" class="justified-text">
+              <p style="display: inline" class="justified-text">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
                 specialize in crafting dynamic user experiences using HTML, CSS,
@@ -156,39 +166,37 @@
                 >Click here to read more about me</a
               >
               <a
-              id="colorLink"
-              class="route"
-              href="./my-altschool-second-semester-experience.html"
-              >← My AltSchool Second Semester Experience</a
-            >
+                id="colorLink"
+                class="route"
+                href="./my-altschool-second-semester-experience.html"
+                >← My AltSchool Second Semester Experience</a
+              >
               <br />
               <br />
             </section>
           </section>
-         
         </section>
       </section>
-     
     </div>
     <br />
     <br />
     <script>
- document.addEventListener("DOMContentLoaded", () => {
-        const paragraphs = document.querySelectorAll('.justified-text');
+      document.addEventListener("DOMContentLoaded", () => {
+        const paragraphs = document.querySelectorAll(".justified-text");
 
-        paragraphs.forEach(paragraph => {
+        paragraphs.forEach((paragraph) => {
           const originalText = paragraph.textContent;
-          const words = originalText.split(' ');
+          const words = originalText.split(" ");
 
-          paragraph.innerHTML = '';
+          paragraph.innerHTML = "";
 
-          words.forEach(word => {
+          words.forEach((word) => {
             if (word.length > 5) {
-              let hyphenatedWord = '';
+              let hyphenatedWord = "";
               for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
                 if ((i + 1) % 5 === 0 && i < word.length - 1) {
-                  hyphenatedWord += '&shy;';
+                  hyphenatedWord += "&shy;";
                 }
               }
               paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
@@ -198,7 +206,6 @@
           });
         });
       });
-
     </script>
   </body>
 </html>

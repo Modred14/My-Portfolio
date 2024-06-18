@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
-.container p{
+.container p {
   display: block;
   text-align: justify;
 }
@@ -144,12 +144,13 @@ textarea {
   padding-right: 50px;
 }
 
-#no-comments{
+#no-comments {
   margin-top: -10px;
 }
-#no-comments, #comments-list {
+#no-comments,
+#comments-list {
   font-size: 16px;
-  
+
   color: #666;
 }
 
@@ -160,7 +161,7 @@ textarea {
   /* border: none; */
   border-radius: 5px;
   cursor: pointer;
-  
+
   padding: 5px 10px;
   height: 30px;
   font-weight: 300;
@@ -172,7 +173,6 @@ textarea {
   margin-left: -50px;
   /* max-width: 90%; */
   margin-top: -20px;
-  
 }
 #comments-list li .delete-button:hover {
   background-color: #d80000;

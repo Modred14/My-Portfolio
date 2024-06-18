@@ -15,8 +15,10 @@
       *::before,
       *::after {
   box-sizing: border-box;
-} */ p {
-  color: #313131}
+} */
+      p {
+        color: #313131;
+      }
 
       .highlight {
         background-color: yellow;
@@ -117,7 +119,7 @@
           />
           <section class="justified-text" id="bioContainer"></section>
 
-          <div  id="contentContainer">
+          <div id="contentContainer">
             <div class="justified-text" id="blogContainer"></div>
 
             <div id="paginationContainer">
@@ -336,22 +338,22 @@
         .then((html) => {
           document.getElementById("menuholder").innerHTML = html;
         });
-        document.addEventListener("DOMContentLoaded", () => {
-        const paragraphs = document.querySelectorAll('.justified-text');
+      document.addEventListener("DOMContentLoaded", () => {
+        const paragraphs = document.querySelectorAll(".justified-text");
 
-        paragraphs.forEach(paragraph => {
+        paragraphs.forEach((paragraph) => {
           const originalText = paragraph.textContent;
-          const words = originalText.split(' ');
+          const words = originalText.split(" ");
 
-          paragraph.innerHTML = '';
+          paragraph.innerHTML = "";
 
-          words.forEach(word => {
+          words.forEach((word) => {
             if (word.length > 5) {
-              let hyphenatedWord = '';
+              let hyphenatedWord = "";
               for (let i = 0; i < word.length; i++) {
                 hyphenatedWord += word[i];
                 if ((i + 1) % 5 === 0 && i < word.length - 1) {
-                  hyphenatedWord += '&shy;';
+                  hyphenatedWord += "&shy;";
                 }
               }
               paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
