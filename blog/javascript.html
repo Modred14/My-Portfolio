@@ -8,7 +8,7 @@
     <script src="../schema.js" type="application/ld+json"></script>
     <link rel="stylesheet" href="./style.css" />
     <script src="../name.js" defer></script>
-    <link rel="stylesheet" href="../@media.css">
+    <link rel="stylesheet" href="../@media.css" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../@media-style.css" />
     <script src="hello.js" defer></script>
@@ -25,15 +25,16 @@
       <p>• 🗓️Monday March 4, 2024</p>
       <p>• ⏳5 mins read</p>
       <br />
-<div class="justified-text">
-      <p class="justified-text" style="display: inline">
-        JavaScript is the main core of web development. It powers the dynamic
-        behavior on most websites and is an essential skill for any aspiring web
-        developer. As my instructor
-        <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
-        always says, "If your legs in JavaScript are shaking, your future as a
-        web developer is uncertain."
-      </p></div>
+      <div class="justified-text">
+        <p class="justified-text" style="display: inline">
+          JavaScript is the main core of web development. It powers the dynamic
+          behavior on most websites and is an essential skill for any aspiring
+          web developer. As my instructor
+          <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
+          always says, "If your legs in JavaScript are shaking, your future as a
+          web developer is uncertain."
+        </p>
+      </div>
       <br /><br />
       <img src="./image1.png" style="width: 1500px" alt="JavaScript Code" />
       <h2>The Role of JavaScript in Frontend Development</h2>
@@ -179,17 +180,18 @@
 
       <h2>Conclusion</h2>
       <div class="justified-text">
-      <p class="justified-text" style="display: inline">
-        JavaScript is undeniably the foundation of web development. Mastering it
-        opens up numerous opportunities and is essential for building dynamic,
-        responsive web applications. Remember, the journey may be challenging,
-        but with perseverance, practice, and the support of a strong community,
-        success is within reach. As you embark on your JavaScript learning
-        journey, keep in mind the words of my instructor,
-        <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
-        : "If your legs in JavaScript are shaking, your future as a web
-        developer is uncertain."
-      </p></div>
+        <p class="justified-text" style="display: inline">
+          JavaScript is undeniably the foundation of web development. Mastering
+          it opens up numerous opportunities and is essential for building
+          dynamic, responsive web applications. Remember, the journey may be
+          challenging, but with perseverance, practice, and the support of a
+          strong community, success is within reach. As you embark on your
+          JavaScript learning journey, keep in mind the words of my instructor,
+          <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
+          : "If your legs in JavaScript are shaking, your future as a web
+          developer is uncertain."
+        </p>
+      </div>
       <br />
       <br />
       <section class="comments-section">
@@ -221,119 +223,118 @@
       <br />
       <br />
       <section>
-        <section class="about-me2">
-          <section class="image-about">
+        <div class="about-me2">
+          <div class="image-about" style="display: inline">
             <img
               style="width: 200px; border-radius: 65%"
               src="../image2.png"
-              alt=""
+              alt="Profile Image"
             />
-          </section>
+          </div>
+          <div class="bio-about" style="display: inline">
+            <p style="display: inline">Written by</p>
+            <a class="hi" href="https://github.com/Modred14" target="_blank"
+              ><p style="display: inline">Favour David Omirin,</p></a
+            >
+            <p style="display: inline" class="justified-text">
+              a passionate Frontend Engineer with a background in graphic design
+              and cryptocurrency based in Osun State, Nigeria. I specialize in
+              crafting intuitive and dynamic user experiences using HTML, CSS,
+              JavaScript, Node.js, React, Vue, and TypeScript.
+            </p>
+            <a class="blog-link" href="../blog.html"
+              ><p>Click here to check out my blog</p></a
+            >
+            <a class="blog-link2" href="../portfolio.html"
+              ><p>Click here to check out my portfolio</p></a
+            >
+            <a class="blog-link3" href="../about.html"
+              ><p>Click here to read more about me</p></a
+            >
+            <a
+              id="colorLink"
+              class="route"
+              href="./my-altschool-first-semester-experience.html"
+              >← My AltSchool First Semester Experience</a
+            >
+          </div>
+          <div>
+            
 
-          <section class="bio-about2">
-            <section class="inline" id="inline">
-              <p style="display: inline">Written by</p>
-              <a
-                style="display: inline"
-                class="hi"
-                href="https://github.com/Modred14"
-                target="_blank"
-                ><p>Favour David Omirin,</p></a
-              >
-              <p style="display: inline">
-                a passionate Frontend Engineer with a background in graphic
-                design and cryptocurrency based in Osun State, Nigeria. I
-                specialize in crafting dynamic user experiences using HTML, CSS,
-                JavaScript, Node.js, React, Vue, and TypeScript.
-              </p>
-              <a class="blog-link" href="../blog.html"
-                ><p>Click here to check out my blog</p></a
-              >
-              <a class="blog-link2" href="../portfolio.html"
-                ><p>Click here to check out my portfolio</p></a
-              >
-              <a class="blog-link3" href="../about.html"
-                ><p>Click here to read more about me</p></a
-              >
-              <a id="colorLink" class="route" href="./my-altschool-first-semester-experience.html"
-                >← My AltSchool First Semester Experience</a
-              >
-              <br />
-              <br />
-            </section>
-          </section>
-        </section>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const paragraphs = document.querySelectorAll(".justified-text");
+
+                paragraphs.forEach((paragraph) => {
+                  const originalHTML = paragraph.innerHTML;
+                  const tempContainer = document.createElement("div");
+                  tempContainer.innerHTML = originalHTML;
+
+                  const nodes = Array.from(tempContainer.childNodes);
+
+                  paragraph.innerHTML = "";
+
+                  nodes.forEach((node) => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const words = node.textContent.split(" ");
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          paragraph.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else if (
+                      node.nodeType === Node.ELEMENT_NODE &&
+                      node.nodeName === "A"
+                    ) {
+                      paragraph.appendChild(node);
+                      const words = node.innerHTML.split(" ");
+
+                      node.innerHTML = "";
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          node.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          node.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else {
+                      paragraph.appendChild(node);
+                    }
+                  });
+                });
+              });
+            </script>
+            
+          </div>
+        </div>
       </section>
-    </div>
-    
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const paragraphs = document.querySelectorAll(".justified-text");
-
-  paragraphs.forEach((paragraph) => {
-    const originalHTML = paragraph.innerHTML;
-    const tempContainer = document.createElement("div");
-    tempContainer.innerHTML = originalHTML;
-
-    const nodes = Array.from(tempContainer.childNodes);
-
-    paragraph.innerHTML = "";
-
-    nodes.forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        const words = node.textContent.split(" ");
-
-        words.forEach((word) => {
-          if (word.length > 5) {
-            let hyphenatedWord = "";
-            for (let i = 0; i < word.length; i++) {
-              hyphenatedWord += word[i];
-              if (
-                word[i] !== "-" &&
-                (i + 1) % 5 === 0 &&
-                i < word.length - 1
-              ) {
-                hyphenatedWord += "&shy;";
-              }
-            }
-            paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
-          } else {
-            paragraph.innerHTML += `<span>${word}</span> `;
-          }
-        });
-      } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === "A") {
-        paragraph.appendChild(node);
-        const words = node.innerHTML.split(" ");
-
-        node.innerHTML = "";
-
-        words.forEach((word) => {
-          if (word.length > 5) {
-            let hyphenatedWord = "";
-            for (let i = 0; i < word.length; i++) {
-              hyphenatedWord += word[i];
-              if (
-                word[i] !== "-" &&
-                (i + 1) % 5 === 0 &&
-                i < word.length - 1
-              ) {
-                hyphenatedWord += "&shy;";
-              }
-            }
-            node.innerHTML += `<span>${hyphenatedWord}</span> `;
-          } else {
-            node.innerHTML += `<span>${word}</span> `;
-          }
-        });
-      } else {
-        paragraph.appendChild(node);
-      }
-    });
-  });
-});
-
-    </script>
-    <br />
-    <br />
+    </div><br />
+            <br />
   </body>
 </html>

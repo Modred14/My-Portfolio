@@ -8,7 +8,7 @@
     <script src="../schema.js" type="application/ld+json"></script>
     <script src="../name.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="../@media.css">
+    <link rel="stylesheet" href="../@media.css" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../@media-style.css" />
     <script src="hello.js" defer></script>
@@ -132,30 +132,26 @@
       <br />
       <br />
       <section>
-        <section class="about-me2">
-          <section class="image-about">
-            <img
-              style="width: 200px; border-radius: 65%"
-              src="../image2.png"
-              alt=""
-            />
-          </section>
-
-          <section class="bio-about2">
-            <section class="inline" id="inline">
+        <section>
+          <div class="about-me2">
+            <div class="image-about" style="display: inline">
+              <img
+                style="width: 200px; border-radius: 65%"
+                src="../image2.png"
+                alt="Profile Image"
+              />
+            </div>
+            <div class="bio-about" style="display: inline">
               <p style="display: inline">Written by</p>
-              <a
-                style="display: inline"
-                class="hi"
-                href="https://github.com/Modred14"
-                target="_blank"
-                ><p>Favour David Omirin,</p></a
+              <a class="hi" href="https://github.com/Modred14" target="_blank"
+                ><p style="display: inline">Favour David Omirin,</p></a
               >
-              <p style="display: inline">
+              <p style="display: inline" class="justified-text">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
-                specialize in crafting dynamic user experiences using HTML, CSS,
-                JavaScript, Node.js, React, Vue, and TypeScript.
+                specialize in crafting intuitive and dynamic user experiences
+                using HTML, CSS, JavaScript, Node.js, React, Vue, and
+                TypeScript.
               </p>
               <a class="blog-link" href="../blog.html"
                 ><p>Click here to check out my blog</p></a
@@ -166,48 +162,54 @@
               <a class="blog-link3" href="../about.html"
                 ><p>Click here to read more about me</p></a
               >
-              <a id="colorLink" class="route" href="./my-altschool-second-semester-experience.html"
+              <a
+                id="colorLink"
+                class="route"
+                href="./my-altschool-second-semester-experience.html"
                 >← My AltSchool Second Semester Experience</a
               >
-              <br />
-              <br />
-            </section>
-          </section>
+            </div>
+            <div>
+              
+              
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const paragraphs =
+                    document.querySelectorAll(".justified-text");
+
+                  paragraphs.forEach((paragraph) => {
+                    const originalText = paragraph.textContent;
+                    const words = originalText.split(" ");
+
+                    paragraph.innerHTML = "";
+
+                    words.forEach((word) => {
+                      if (word.length > 5) {
+                        let hyphenatedWord = "";
+                        for (let i = 0; i < word.length; i++) {
+                          hyphenatedWord += word[i];
+                          if (
+                            word[i] !== "-" &&
+                            (i + 1) % 5 === 0 &&
+                            i < word.length - 1
+                          ) {
+                            hyphenatedWord += "&shy;";
+                          }
+                        }
+                        paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+                      } else {
+                        paragraph.innerHTML += `<span>${word}</span> `;
+                      }
+                    });
+                  });
+                });
+              </script>
+            </div>
+          </div>
         </section>
       </section>
     </div>
     <br />
     <br />
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const paragraphs = document.querySelectorAll(".justified-text");
-
-        paragraphs.forEach((paragraph) => {
-          const originalText = paragraph.textContent;
-          const words = originalText.split(" ");
-
-          paragraph.innerHTML = "";
-
-          words.forEach((word) => {
-            if (word.length > 5) {
-              let hyphenatedWord = "";
-              for (let i = 0; i < word.length; i++) {
-                hyphenatedWord += word[i];
-                if (
-                  word[i] !== "-" &&
-                  (i + 1) % 5 === 0 &&
-                  i < word.length - 1
-                ) {
-                  hyphenatedWord += "&shy;";
-                }
-              }
-              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
-            } else {
-              paragraph.innerHTML += `<span>${word}</span> `;
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>
