@@ -491,8 +491,11 @@
   }
 }
 @media screen and (max-width: 700px) {
- 
-  
+  .port-style{
+    /* padding-left: 1%; */
+    padding-right: 1%;
+    margin-left: -4%;
+  }
   .welcome {
     font-size: 25px;
     margin-bottom: 40px;
