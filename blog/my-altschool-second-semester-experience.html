@@ -48,16 +48,17 @@
         work.
       </p>
 
-      <h2>The Importance of Community</h2>
-      <p class="justified-text" style="display: inline;">
+      <h2>The Importance of Community</h2><div class="justified-text">
+      <p class="justified-text" style="display: inline;text-align: justify;">
         One crucial lesson I learned is that being a programmer is not a
         solitary endeavor. To succeed, you cannot be a lone ranger. You need
         friends and mentors. Throughout the semester, I encountered numerous
-        errors and challenges. My friends and my instructor,</p>
-        <a style="display: inline;" href="https://github.com/oluwasetemi" target="_blank">Setemi,</a><p style="display: inline;" class="justified-text">
+        errors and challenges. My friends and my instructor,
+        <a style="display: inline;text-align: justify;" href="https://github.com/oluwasetemi" target="_blank">Setemi,</a>
         played a vital role in helping me tackle these issues. Their support and
         guidance were instrumental in my success.
       </p>
+      </div>
 
       <h2>Conclusion</h2>
       <p class="justified-text">
@@ -107,7 +108,6 @@
               alt=""
             />
           </section>
-
           <section class="bio-about2">
             <section class="inline" id="inline">
               <p style="display: inline">Written by</p>
@@ -118,7 +118,7 @@
                 target="_blank"
                 ><p>Favour David Omirin,</p></a
               >
-              <p class="justified-text" style="display: inline">
+              <p style="display: inline">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
                 specialize in crafting dynamic user experiences using HTML, CSS,
@@ -143,35 +143,71 @@
 
 
           <script>
-            document.addEventListener("DOMContentLoaded", () => {
-              const paragraphs = document.querySelectorAll(".justified-text");
+document.addEventListener("DOMContentLoaded", () => {
+  const paragraphs = document.querySelectorAll(".justified-text");
 
-              paragraphs.forEach((paragraph) => {
-                const originalText = paragraph.textContent;
-                const words = originalText.split(" ");
+  paragraphs.forEach((paragraph) => {
+    const originalHTML = paragraph.innerHTML;
+    const tempContainer = document.createElement("div");
+    tempContainer.innerHTML = originalHTML;
 
-                paragraph.innerHTML = "";
+    const nodes = Array.from(tempContainer.childNodes);
 
-                words.forEach((word) => {
-                  if (word.length > 5) {
-                    let hyphenatedWord = "";
-                    for (let i = 0; i < word.length; i++) {
-                      hyphenatedWord += word[i];
-                      if (
-                        word[i] !== "-" &&
-                        (i + 1) % 5 === 0 &&
-                        i < word.length - 1
-                      ) {
-                        hyphenatedWord += "&shy;";
-                      }
-                    }
-                    paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
-                  } else {
-                    paragraph.innerHTML += `<span>${word}</span> `;
-                  }
-                });
-              });
-            });
+    paragraph.innerHTML = "";
+
+    nodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const words = node.textContent.split(" ");
+
+        words.forEach((word) => {
+          if (word.length > 5) {
+            let hyphenatedWord = "";
+            for (let i = 0; i < word.length; i++) {
+              hyphenatedWord += word[i];
+              if (
+                word[i] !== "-" &&
+                (i + 1) % 5 === 0 &&
+                i < word.length - 1
+              ) {
+                hyphenatedWord += "&shy;";
+              }
+            }
+            paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+          } else {
+            paragraph.innerHTML += `<span>${word}</span> `;
+          }
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === "A") {
+        paragraph.appendChild(node);
+        const words = node.innerHTML.split(" ");
+
+        node.innerHTML = "";
+
+        words.forEach((word) => {
+          if (word.length > 5) {
+            let hyphenatedWord = "";
+            for (let i = 0; i < word.length; i++) {
+              hyphenatedWord += word[i];
+              if (
+                word[i] !== "-" &&
+                (i + 1) % 5 === 0 &&
+                i < word.length - 1
+              ) {
+                hyphenatedWord += "&shy;";
+              }
+            }
+            node.innerHTML += `<span>${hyphenatedWord}</span> `;
+          } else {
+            node.innerHTML += `<span>${word}</span> `;
+          }
+        });
+      } else {
+        paragraph.appendChild(node);
+      }
+    });
+  });
+});
+
           </script>
         </section>
       </section>

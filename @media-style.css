@@ -265,9 +265,7 @@
     padding-left: 20px;
     
   }
-  body.ios .sidebar{
-    margin-top: 10px;
-  }
+  
   .sidebar {
     max-width: 0;
     overflow: hidden;
@@ -282,7 +280,7 @@
   }
   .sidebar .beb{
     padding-left: 0px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   hr {
     border: 0;
@@ -322,6 +320,12 @@
     font-weight: 1000;
     font-size: 30px;
     margin-top: -10px;
+  }
+  body.android #menu{
+    font-size: 30px;
+  }
+  body.ios #menu{
+    font-size: 30px;
   }
   .menu5 {
     /* margin-left: -500px; */
@@ -598,6 +602,7 @@
     display: inline;
     p {
       display: inline;
+      text-align: justify;
     }
     .hi {
       display: inline;

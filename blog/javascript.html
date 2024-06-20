@@ -25,19 +25,15 @@
       <p>• 🗓️Monday March 4, 2024</p>
       <p>• ⏳5 mins read</p>
       <br />
-
+<div class="justified-text">
       <p class="justified-text" style="display: inline">
         JavaScript is the main core of web development. It powers the dynamic
         behavior on most websites and is an essential skill for any aspiring web
         developer. As my instructor
-      </p>
-      <p style="display: inline">
         <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
-      </p>
-      <p style="display: inline" class="justified-text">
         always says, "If your legs in JavaScript are shaking, your future as a
         web developer is uncertain."
-      </p>
+      </p></div>
       <br /><br />
       <img src="./image1.png" style="width: 1500px" alt="JavaScript Code" />
       <h2>The Role of JavaScript in Frontend Development</h2>
@@ -182,6 +178,7 @@
       <img src="./image4.jpg" style="width: 1500px" alt="Celebrating Success" />
 
       <h2>Conclusion</h2>
+      <div class="justified-text">
       <p class="justified-text" style="display: inline">
         JavaScript is undeniably the foundation of web development. Mastering it
         opens up numerous opportunities and is essential for building dynamic,
@@ -189,15 +186,10 @@
         but with perseverance, practice, and the support of a strong community,
         success is within reach. As you embark on your JavaScript learning
         journey, keep in mind the words of my instructor,
-      </p>
-
-      <p style="display: inline">
         <a href="https://github.com/oluwasetemi" target="_blank">Setemi</a>
-      </p>
-      <p class="justified-text" style="display: inline">
         : "If your legs in JavaScript are shaking, your future as a web
         developer is uncertain."
-      </p>
+      </p></div>
       <br />
       <br />
       <section class="comments-section">
@@ -248,7 +240,7 @@
                 target="_blank"
                 ><p>Favour David Omirin,</p></a
               >
-              <p class="justified-text" style="display: inline">
+              <p style="display: inline">
                 a passionate Frontend Engineer with a background in graphic
                 design and cryptocurrency based in Osun State, Nigeria. I
                 specialize in crafting dynamic user experiences using HTML, CSS,
@@ -275,35 +267,71 @@
     </div>
     
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const paragraphs = document.querySelectorAll(".justified-text");
+document.addEventListener("DOMContentLoaded", () => {
+  const paragraphs = document.querySelectorAll(".justified-text");
 
-        paragraphs.forEach((paragraph) => {
-          const originalText = paragraph.textContent;
-          const words = originalText.split(" ");
+  paragraphs.forEach((paragraph) => {
+    const originalHTML = paragraph.innerHTML;
+    const tempContainer = document.createElement("div");
+    tempContainer.innerHTML = originalHTML;
 
-          paragraph.innerHTML = "";
+    const nodes = Array.from(tempContainer.childNodes);
 
-          words.forEach((word) => {
-            if (word.length > 5) {
-              let hyphenatedWord = "";
-              for (let i = 0; i < word.length; i++) {
-                hyphenatedWord += word[i];
-                if (
-                  word[i] !== "-" &&
-                  (i + 1) % 5 === 0 &&
-                  i < word.length - 1
-                ) {
-                  hyphenatedWord += "&shy;";
-                }
+    paragraph.innerHTML = "";
+
+    nodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const words = node.textContent.split(" ");
+
+        words.forEach((word) => {
+          if (word.length > 5) {
+            let hyphenatedWord = "";
+            for (let i = 0; i < word.length; i++) {
+              hyphenatedWord += word[i];
+              if (
+                word[i] !== "-" &&
+                (i + 1) % 5 === 0 &&
+                i < word.length - 1
+              ) {
+                hyphenatedWord += "&shy;";
               }
-              paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
-            } else {
-              paragraph.innerHTML += `<span>${word}</span> `;
             }
-          });
+            paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+          } else {
+            paragraph.innerHTML += `<span>${word}</span> `;
+          }
         });
-      });
+      } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName === "A") {
+        paragraph.appendChild(node);
+        const words = node.innerHTML.split(" ");
+
+        node.innerHTML = "";
+
+        words.forEach((word) => {
+          if (word.length > 5) {
+            let hyphenatedWord = "";
+            for (let i = 0; i < word.length; i++) {
+              hyphenatedWord += word[i];
+              if (
+                word[i] !== "-" &&
+                (i + 1) % 5 === 0 &&
+                i < word.length - 1
+              ) {
+                hyphenatedWord += "&shy;";
+              }
+            }
+            node.innerHTML += `<span>${hyphenatedWord}</span> `;
+          } else {
+            node.innerHTML += `<span>${word}</span> `;
+          }
+        });
+      } else {
+        paragraph.appendChild(node);
+      }
+    });
+  });
+});
+
     </script>
     <br />
     <br />
