@@ -56,6 +56,7 @@
               Couldn't load this video. Please ensure you have a stable
               internet connection.
             </video>
+            <img id="image1" src="./IMG_9562.HEIC" style="display: none;">
           </section>
           <section class="top-video" onclick="vue()">
             <div>
@@ -71,6 +72,7 @@
               Couldn't load this video. Please ensure you have a stable
               internet connection.
             </video>
+            <img id="image2" src="./IMG_9562.HEIC" style="display: none;">
           </section>
         </div>
         <div class="bottom-video">
@@ -89,6 +91,7 @@
               Couldn't load this video. Please ensure you have a stable
               internet connection.
             </video>
+            <img id="image3" src="./IMG_9563.HEIC" style="display: none;">
             <br /><br /><br /><br /><br /><br />
           </section>
         </div>
@@ -106,21 +109,23 @@
       }
       return 'unknown';
     }
-// console.log(detectOS())
+
     document.addEventListener("DOMContentLoaded", function () {
       const os = detectOS();
       const videos = document.querySelectorAll("video");
+      const images = document.querySelectorAll("img[id^='image']");
 
-      videos.forEach(video => {
-        if (os === 'Android') {
+      videos.forEach((video, index) => {
+        if (os === 'iOS') {
+          video.style.display = 'none';
+          images[index].style.display = 'block';
+        } else {
           video.setAttribute('autoplay', '');
           video.setAttribute('muted', '');
           video.setAttribute('playsinline', '');
           video.play().catch((error) => {
             console.error("Video play error:", error);
           });
-        } else if (os === 'iOS') {
-          video.setAttribute('controls', '');
         }
       });
     });
