@@ -416,9 +416,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
+  }
+  td{
+    margin-left: 0;
     margin-right: 0;
   }
   td div {
+    margin-left: 0;
     margin-right: 0;
   }
   .okay {
