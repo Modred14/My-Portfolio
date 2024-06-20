@@ -178,7 +178,7 @@
 
     .route {
       text-overflow: wrap;
-      margin-left: 30px;
+      /* margin-left: 30px; */
       text-decoration-color: blueviolet;
       text-decoration-thickness: 2px;
       color: blueviolet;
@@ -279,6 +279,7 @@
   }
   .sidebar .beb{
     padding-left: 0px;
+    margin-top: 15px;
   }
   hr {
     border: 0;
@@ -293,7 +294,8 @@
     transition: 0.3s;
     padding-left: 50px;
     margin-left: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
+    margin-top: 0;
     padding-right: 10px;
     text-decoration: none;
     text-decoration-color: rgb(0, 174, 58);
@@ -301,9 +303,9 @@
 
     /* padding-top: -100px; */
   }
-  .sidebar div:hover {
-    background-color: #575757;
-  }
+  /* .sidebar div:hover {
+    /* background-color: #575757; */
+
   .sidebar .beb a:hover{
     background-color: transparent;
   }
@@ -489,6 +491,8 @@
   }
 }
 @media screen and (max-width: 700px) {
+ 
+  
   .welcome {
     font-size: 25px;
     margin-bottom: 40px;
@@ -512,17 +516,9 @@
 
   .about,
   .container {
-    margin-left: 50px;
-    margin-right: 50px;
-    p {
-      font-size: 20px;
-    }
-    a {
-      font-size: 20px;
-    }
-    .hi {
-      font-size: 20px;
-    }
+    margin-left: 7%;
+    margin-right: 7%;
+
   }
 }
 #inline {
@@ -656,14 +652,9 @@
 @media screen and (max-width: 490px) {
   .about,
   .container {
-    margin-left: 25px;
-    margin-right: 25px;
-    p {
-      font-size: 20px;
-    }
-    a {
-      font-size: 20px;
-    }
+    margin-left: 7%;
+    margin-right: 7%;
+   
   }
 }
 #inline {
@@ -707,17 +698,6 @@
   }
   .port {
     font-size: 35px;
-  }
-  .about,
-  .container {
-    margin-left: 25px;
-    margin-right: 25px;
-    p {
-      font-size: 20px;
-    }
-    a {
-      font-size: 20px;
-    }
   }
 }
 @media screen and (max-width: 370px) {

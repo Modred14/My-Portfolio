@@ -6,6 +6,7 @@
     <title>Favour Omirin -- Blog</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="@media-style.css" />
+    <link rel="stylesheet" href="@media.css">
     <link rel="stylesheet" href="./style2.css" />
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
@@ -145,7 +146,7 @@
           <section class="bio-about">
             <div class="justified-text">
             <p>Written by</p>
-            <a class="hi" href="https://github.com/Modred14" target="_blank">Favour David Omirin,</a>
+            <a class="hi" href="https://github.com/Modred14" target="_blank"><p>Favour David Omirin,</p></a>
             <p class="justified-text">
               a passionate Frontend Engineer with a background in graphic design
               and cryptocurrency based in Osun State, Nigeria. I specialize in
@@ -153,9 +154,9 @@
               JavaScript, Node.js, React, Vue, and TypeScript.
             </p>
             <div>
-            <a class="blog-link" href="./blog.html">Click here to check out my blog</a>
-            <a class="blog-link2" href="./portfolio.html">Click here to check out my portfolio</a>
-            <a class="blog-link3" href="./about.html">Click here to read more about me</a>
+            <a class="blog-link" href="./blog.html"><p>Click here to check out my blog</p></a>
+            <a class="blog-link2" href="./portfolio.html"><p>Click here to check out my portfolio</p></a>
+            <a class="blog-link3" href="./about.html"><p>Click here to read more about me</p></a>
           </div>
           </div>
             </section>
@@ -245,7 +246,7 @@
             const blogHTML = `
               <section class="blog">
                 <div class="justified-text">
-                <h1><a class="justified-text" href="${item.link}">${title}</a></h1>
+                <h1 class="blogtitle"><a class="blogtitle" href="${item.link}">${title}</a></h1>
                 <section class="grid">
                   <h3 class="tiny">• 🗓️${item.date}</h3>
                   <h3 class="tiny">• ⏳${item.readTime}</h3>
