@@ -221,6 +221,7 @@
 
   .image-about {
     /* height: 50px; */
+    margin-top: 30px;
     height: auto;
     width: 200px;
   }
