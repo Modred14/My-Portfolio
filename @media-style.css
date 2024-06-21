@@ -213,13 +213,16 @@
   /* body.android .main .about .about-me .image-about {
     margin-bottom: -90px;
   } */
+  .ios .menu5 p{
+    font-size: 30px;
+  }
+  .android .image-about{
+  margin-bottom: -50px;}
 
   .image-about {
     /* height: 50px; */
     height: auto;
     width: 200px;
-    /* margin-top: 30px; */
-    margin-bottom: -50px;
   }
   .bio-about {
     margin-top: 0;
