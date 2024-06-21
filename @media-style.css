@@ -216,8 +216,8 @@
   .ios .menu5 p {
     font-size: 30px;  
   }
-  /* .android .image-about{
-  margin-bottom: -50px;} */
+  .android .image-about{
+  margin-bottom: -50px;}
 
   .image-about {
     /* height: 50px; */

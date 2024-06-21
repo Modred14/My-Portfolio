@@ -1,5 +1,18 @@
 {
   "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "This website showcases my skills, experiences, and thoughts on various topics. Explore my work, read my blog, and connect with me!",
+  "main": "about.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
