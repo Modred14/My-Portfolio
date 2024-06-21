@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
               method: 'DELETE',
           });
           fetchComments();
+          alert(`You have succesfully deleted the comment.`)
       }
   }
 
