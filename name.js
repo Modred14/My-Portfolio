@@ -47,6 +47,7 @@ document.getElementById("colorLink").addEventListener("click", function () {
   }, 200);
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const commentForm = document.getElementById("comment-form");
   const nameInput = document.getElementById("name-input");
