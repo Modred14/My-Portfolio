@@ -444,7 +444,7 @@ p {
   width: 55%;
   transition: 0.5s;
 }
-.top-video video {
+.top-video video, .top-video img {
   width: 94%;
   transition: 0.5s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
@@ -461,7 +461,7 @@ p {
   width: 100%;
   transition: 0.5s;
 }
-.bottom-video video {
+.bottom-video video, .bottom-video img {
   width: 98%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
