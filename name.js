@@ -78,6 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
           fetchComments();
           nameInput.value = "";
           commentInput.value = "";
+          if(response.ok){
+          alert("Your comment has been submitted successfully.")}
+          else{
+            alert("There was an error submitting your comment. Please try again.")
+          }
       }
   });
 
