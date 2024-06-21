@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentsList = document.getElementById("comments-list");
   const noCommentsText = document.getElementById("no-comments");
 
-  const baseURL = 'https://favour-omirin.onrender.com';  // Your Render URL
+  const baseURL = 'https://favour-omirin.onrender.com'; 
 
   async function fetchComments() {
       const response = await fetch(`${baseURL}/comments`);
