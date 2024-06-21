@@ -55,60 +55,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const noCommentsText = document.getElementById("no-comments");
 
   async function fetchComments() {
-      const response = await fetch('http://localhost:3000/comments');
-      const comments = await response.json();
-      updateComments(comments);
+    const response = await fetch('http://localhost:3000/comments');
+    const comments = await response.json();
+    updateComments(comments);
   }
 
   commentForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const name = nameInput.value.trim();
-      const commentText = commentInput.value.trim();
-      if (name && commentText) {
-          const response = await fetch('http://localhost:3000/comments', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ name, text: commentText }),
-          });
-          const newComment = await response.json();
-          fetchComments();
-          nameInput.value = "";
-          commentInput.value = "";
-      }
+    event.preventDefault();
+    const name = nameInput.value.trim();
+    const commentText = commentInput.value.trim();
+    if (name && commentText) {
+      const response = await fetch('http://localhost:3000/comments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, text: commentText }),
+      });
+      const newComment = await response.json();
+      fetchComments();
+      nameInput.value = "";
+      commentInput.value = "";
+    }
   });
 
-  async function deleteComment(index) {
-      const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
-      if (confirmed) {
-          await fetch(`http://localhost:3000/comments/${index}`, {
-              method: 'DELETE',
-          });
-          fetchComments();
-      }
+  async function deleteComment(id) {
+    const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
+    if (confirmed) {
+      await fetch(`http://localhost:3000/comments/${id}`, {
+        method: 'DELETE',
+      });
+      fetchComments();
+    }
   }
 
   function updateComments(comments) {
-      if (comments.length === 0) {
-          noCommentsText.style.display = "block";
-          commentsList.style.display = "none";
-      } else {
-          noCommentsText.style.display = "none";
-          commentsList.style.display = "block";
-          commentsList.innerHTML = comments
-              .map(
-                  (comment, index) =>
-                      `<li>
-                          <div>
-                              <span class="comment-author">${comment.name}:</span>
-                              <span class="comment-text">${comment.text}</span>
-                          </div>
-                          <button class="delete-button" onclick="deleteComment(${index})">Delete</button>
-                      </li>`
-              )
-              .join("");
-      }
+    if (comments.length === 0) {
+      noCommentsText.style.display = "block";
+      commentsList.style.display = "none";
+    } else {
+      noCommentsText.style.display = "none";
+      commentsList.style.display = "block";
+      commentsList.innerHTML = comments
+        .map(
+          (comment) =>
+            `<li>
+              <div>
+                <span class="comment-author">${comment.name}:</span>
+                <span class="comment-text">${comment.text}</span>
+              </div>
+              <button class="delete-button" onclick="deleteComment('${comment._id}')">Delete</button>
+            </li>`
+        )
+        .join("");
+    }
   }
 
   window.deleteComment = deleteComment;
