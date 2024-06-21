@@ -54,8 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentsList = document.getElementById("comments-list");
   const noCommentsText = document.getElementById("no-comments");
 
+  const baseURL = 'https://favour-omirin.onrender.com';  // Your Render URL
+
   async function fetchComments() {
-      const response = await fetch('http://localhost:3000/comments');
+      const response = await fetch(`${baseURL}/comments`);
       const comments = await response.json();
       updateComments(comments);
   }
@@ -65,14 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const name = nameInput.value.trim();
       const commentText = commentInput.value.trim();
       if (name && commentText) {
-          const response = await fetch('http://localhost:3000/comments', {
+          const response = await fetch(`${baseURL}/comments`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
               },
               body: JSON.stringify({ name, text: commentText }),
           });
-          const newComment = await response.json();
+          await response.json();
           fetchComments();
           nameInput.value = "";
           commentInput.value = "";
@@ -82,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function deleteComment(index) {
       const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
       if (confirmed) {
-          await fetch(`http://localhost:3000/comments/${index}`, {
+          await fetch(`${baseURL}/comments/${index}`, {
               method: 'DELETE',
           });
           fetchComments();
