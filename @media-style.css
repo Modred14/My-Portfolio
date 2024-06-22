@@ -213,14 +213,14 @@
   /* body.android .main .about .about-me .image-about {
     margin-bottom: -90px;
   } */
-  body.ios .menu5 p {
-    font-size: 30px;
-    height: 30px;  
-  }
   body.ios .menu5 {
     font-size: 30px;
-    /* height: 30px;   */
   }
+  
+  body.ios .menu5 p {
+    font-size: 30px;
+  }
+  
   /* .android .image-about{
   margin-bottom: -50px;} */
 
