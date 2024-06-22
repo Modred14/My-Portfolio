@@ -170,7 +170,7 @@
     }
     .image-about {
       margin-top: 50px;
-      height: auto;
+      height: 150px;
       align-self: center;
       left: 50%;
       /* width: 250px; */
@@ -216,8 +216,8 @@
   .ios .menu5 p {
     font-size: 30px;  
   }
-  .android .image-about{
-  margin-bottom: -50px;}
+  /* .android .image-about{
+  margin-bottom: -50px;} */
 
   .image-about {
     /* height: 50px; */
