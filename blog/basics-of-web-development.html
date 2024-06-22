@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics Of Web Development</title>
+    <link rel="shortcut icon" href="../image.jpg" type="image/x-icon" />
+    <script src="../schema.js" type="application/ld+json"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../name.js" defer></script>
+    <link rel="stylesheet" href="../@media.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../@media-style.css" />
+    <script src="hello.js" defer></script>
+    <script src="../server.js" defer></script>
+  </head>
+  <body class="blogger" id="text-container">
+    <div class="container">
+      <div class="header-link-blog">
+        <a href="../blog.html">← Return to Blog</a>
+        <a href="./hello-world.html" class="next">Next Article →</a>
+      </div>
+      <h1>BASICS OF WEB DEVELOPMENT</h1>
+      <p>• 🗓️Friday June 14, 2024</p>
+      <p>• ⏳5 mins read</p>
+      <br />
+      <div class="justified-text">
+        <p class="justified-text" style="display: inline">
+          Web development is the foundation of the modern digital world. Whether
+          you're browsing social media, shopping online, or reading this blog
+          post, web development is at the heart of your experience. This guide
+          will walk you through the basics of web development, covering HTML,
+          CSS, and JavaScript—the core technologies used to create websites and
+          web applications.
+        </p>
+      </div>
+      <br />
+      <h2>What is Web Development?</h2>
+      <p class="justified-text" style="display: inline">
+        Web development refers to the creation and maintenance of websites. It
+        involves several aspects, including web design, web content development,
+        client-side/server-side scripting, and network security configuration.
+        There are two main areas in web development:
+      </p>
+      <ul>
+        <li>
+          <p class="justified-text">
+            <strong>Frontend Development:</strong> This is what users interact
+            with directly in their browser. It includes everything that users
+            experience visually on the website—text, images, sliders, buttons,
+            etc.
+          </p>
+        </li>
+        <li>
+          <p class="justified-text">
+            <strong>Backend Development:</strong> This is what happens behind
+            the scenes. It involves the server, database, and application logic.
+          </p>
+        </li>
+      </ul>
+      <p class="justified-text" style="display: inline">
+        In this post, we'll focus on frontend development.
+      </p>
+      <h2>HTML: The Structure of the Web</h2>
+      <p class="justified-text" style="display: inline">
+        HTML (HyperText Markup Language) is the standard markup language used to
+        create web pages. It describes the structure of a webpage and its
+        content. HTML consists of a series of elements that enclose different
+        parts of the content to make it appear or act in a certain way.
+      </p>
+      <p class="justified-text">
+        <b>Basic HTML Structure </b><br />
+        Here's a simple example of an HTML document:
+      </p>
+      <div class="vsc">
+        <div id="container" style="width: 80%"></div>
+      </div>
+      <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+    
+     <script>
+        function displayMessage() {
+          alert("Hello! You clicked the button.");
+        }
+
+        require.config({
+          paths: { vs: "https://unpkg.com/monaco-editor@latest/min/vs" },
+        });
+        require(["vs/editor/editor.main"], function () {
+          monaco.editor.create(document.getElementById("container"), {
+            value: ["","<!DOCTYPE html>", "<html lang=\"en\">","<head>",  "    <meta charset=\"UTF-8\">", "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+                "    <title>My First Web Page</title>","</head>","<body>","    <h1>Hello World!</h1>","    <p>This is my first web page.</p>","</body >", "</html>",
+            ].join(
+              "\n"
+            ),
+            language: "html",
+          });
+          monaco.editor.setTheme("vs-dark");
+        });
+      </script>  
+      <br />
+
+      <div class="justified-text">
+       <ul>
+            
+          <li><p class="justified-text"><b>DOCTYPE html:</b> Declares the document type and version of HTML.
+          </p></li>
+         <li><p class="justified-text"><b>html:</b> The root element of the HTML page</p></li>  
+         <li> <p class="justified-text"><b>head:</b> Contains meta-information about the HTML document (e.g.,
+          title, charset).</p></li>
+         <li><p class="justified-text"> <b>title:</b> Specifies the title of the webpage, shown in the
+          browser's title bar or tab. </p></li>
+         <li> <p class="justified-text"><b>body:</b> Contains the content of the HTML document, such as text,
+          images, and other elements.</p></li>
+        </p></ul>
+        <br /><br />
+        <h2>CSS: Styling the Web</h2>
+        <p class="justified-text">
+          <b>Basic CSS Syntax</b><br />CSS is written in rulesets that consist
+          of a selector and a declaration block:
+        </p>
+        <div class="vsc"><div id="container1" style="width: 80%"></div></div>
+        <!-- <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script> -->
+        <script>
+          function displayMessage() {
+            alert("Hello! You clicked the button.");
+          }
+
+          require.config({
+            paths: { vs: "https://unpkg.com/monaco-editor@latest/min/vs" },
+          });
+          require(["vs/editor/editor.main"], function () {
+            monaco.editor.create(document.getElementById("container1"), {
+              value: ["",  "selector {", "   property: value;", "}"].join(
+                "\n"
+              ),
+              language: "css",
+            });
+            monaco.editor.setTheme("vs-dark");
+          });
+        </script>
+        <h2>JavaScript: Bringing Interactivity to the Web</h2>
+        <p class="justified-text">JavaScript is a programming language that allows you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. <br><b>Basic JavaScript Example</b><br>Here’s how to add interactivity to an HTML document using JavaScript:</p>
+        <div class="vsc">
+            <div id="container2" style="width: 80%"></div>
+          </div>
+          
+        
+         <script>
+    
+            require.config({
+              paths: { vs: "https://unpkg.com/monaco-editor@latest/min/vs" },
+            });
+            require(["vs/editor/editor.main"], function () {
+              monaco.editor.create(document.getElementById("container2"), {
+                value: ["", "<!DOCTYPE html>", "<html lang=\"en\">","<head>",  "    <meta charset=\"UTF-8\">", "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+                    "    <title>Interactive Web Page</title>","</head>","<body>","    <h1>Hello World!</h1>","    <p>This is my first interactive web page.</p>","    <button onclick=\"displayMessage()\">Click Me</button>;","    <script>","        function displayMessage() {","           alert('Hello! You clicked the button.');","        }","    <script/>","</body >", "</html>",
+                ].join(
+                  "\n"
+                ),
+                language: "html",
+              });
+              monaco.editor.setTheme("vs-dark");
+            });
+            </script>
+                <ul>
+                    <li><p class="justified-text"><b>button:</b> An HTML element that users can click. </p></li>
+                        <li><p class="justified-text"><b>onclick="displayMessage()":</b> An event handler that calls the displayMessage function when the button is clicked.</p></li>
+                            <li><p class="justified-text"><b>displayMessage():</b> A JavaScript function that displays an alert message.</p></li>
+        </ul>
+        <h2>Conclusion</h2>
+<p class="justified-text">Learning web development can be an exciting journey. By understanding the basics of HTML, CSS, and JavaScript, you can start creating your own web pages and even web applications. Keep experimenting and building projects to enhance your skills. Happy coding!</p>
+        
+        <br />
+        <br />
+        <section class="comments-section">
+          <h2>Comments</h2>
+          <div id="comments-container">
+            <p id="no-comments">
+              No comments yet. We'd love to hear from you! Be the first to
+              comment
+            </p>
+            <ul id="comments-list" style="display: none"></ul>
+          </div>
+          <form id="comment-form">
+            <div class="background">
+              <p>Add your comment</p>
+              <input
+                type="text"
+                id="name-input"
+                placeholder="Your name"
+                required
+              />
+              <textarea
+                id="comment-input"
+                placeholder="Write a comment..."
+                required
+              ></textarea>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+        <br />
+        <br />
+        <section>
+          <div class="about-me2">
+            <div class="image-about" style="display: inline">
+              <img
+                style="width: 200px; border-radius: 65%"
+                src="../image2.png"
+                alt="Profile Image"
+              />
+            </div>
+            <div class="bio-about" style="display: inline">
+              <p style="display: inline">Written by</p>
+              <a class="hi" href="https://github.com/Modred14" target="_blank"
+                ><p style="display: inline">Favour David Omirin,</p></a
+              >
+              <p style="display: inline" class="justified-text">
+                a passionate Frontend Engineer with a background in graphic
+                design and cryptocurrency based in Osun State, Nigeria. I
+                specialize in crafting intuitive and dynamic user experiences
+                using HTML, CSS, JavaScript, Node.js, React, Vue, and
+                TypeScript.
+              </p>
+              <a class="blog-link" href="../blog.html"
+                ><p>Click here to check out my blog</p></a
+              >
+              <a class="blog-link2" href="../portfolio.html"
+                ><p>Click here to check out my portfolio</p></a
+              >
+              <a class="blog-link3" href="../about.html"
+                ><p>Click here to read more about me</p></a
+              >
+              <a id="colorLink" class="route" href="./hello-world.html">← My Blog: Journey Into Frontend Engineering</a>
+            </div>
+          </div>
+          <div>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const paragraphs = document.querySelectorAll(".justified-text");
+
+                paragraphs.forEach((paragraph) => {
+                  const originalHTML = paragraph.innerHTML;
+                  const tempContainer = document.createElement("div");
+                  tempContainer.innerHTML = originalHTML;
+
+                  const nodes = Array.from(tempContainer.childNodes);
+
+                  paragraph.innerHTML = "";
+
+                  nodes.forEach((node) => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const words = node.textContent.split(" ");
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          paragraph.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else if (
+                      node.nodeType === Node.ELEMENT_NODE &&
+                      node.nodeName === "A"
+                    ) {
+                      paragraph.appendChild(node);
+                      const words = node.innerHTML.split(" ");
+
+                      node.innerHTML = "";
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          node.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          node.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else {
+                      paragraph.appendChild(node);
+                    }
+                  });
+                });
+              });
+            </script>
+          </div>
+        </section>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>

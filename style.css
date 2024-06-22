@@ -576,7 +576,7 @@ table {
   .image-about {
     margin-top: 50px;
     height: 250px;
-
+    align-self: center;
     border-radius: 50%;
   }
 
@@ -639,7 +639,7 @@ table {
   .image-about {
     margin-top: 50px;
     height: 250px;
-
+    align-items: center;
     border-radius: 50%;
   }
 
@@ -718,6 +718,8 @@ table {
   p {
     display: inline;
     text-align: justify;
+    /* margin-top: 0; */
+    padding-top: 0;
   }
 }
 button {

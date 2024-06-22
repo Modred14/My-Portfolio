@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog: Journey Into Frontend Engineering</title>
+    <link rel="shortcut icon" href="../image.jpg" type="image/x-icon" />
+    <script src="../schema.js" type="application/ld+json"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../name.js" defer></script>
+    <link rel="stylesheet" href="../@media.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../@media-style.css" />
+    <script src="hello.js" defer></script>
+    <script src="../server.js" defer></script>
+  </head>
+  <body class="blogger" id="text-container">
+    <div class="container">
+      <div class="header-link-blog">
+        <a href="../blog.html">← Return to Blog</a>
+        <a href="./my-altschool-first-semester-experience.html" class="next"
+          >Next Article →</a
+        >
+      </div>
+      <h1>MY BLOG: JOURNEY INTO FRONTEND ENGINEERING</h1>
+      <p>• 🗓️Saturday January 20, 2024</p>
+      <p>• ⏳2 mins read</p>
+      <br />
+      <div class="justified-text">
+        <p class="justified-text" style="display: inline">Hello, everyone! Welcome to my blog where I'll be documenting my journey into the exciting world of frontend engineering. Whether you're a seasoned developer or just getting started, I hope you'll find my experiences, insights, and tips useful and inspiring. It all start with "Hello World!"</p>
+            </div>
+      <br />
+      <div class="vsc">
+      <div id="container" style="width: 80%;"></div></div>
+      <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+      <script>
+        require.config({
+          paths: { vs: "https://unpkg.com/monaco-editor@latest/min/vs" },
+        });
+        require(["vs/editor/editor.main"], function () {
+          monaco.editor.create(document.getElementById("container"), {
+            value: [
+              "",
+              "",
+              "function helloWorld() {",
+              '\tconsole.log("Hello world!");',
+              "}",
+            ].join("\n"),
+            language: "javascript",
+          });
+          monaco.editor.setTheme("vs-dark");
+        });
+      </script>
+      <br />
+    
+      <div class="justified-text">
+        <p class="justified-text" style="display: inline">Embarking on this journey, I aim to delve into the fundamentals of frontend development, exploring the core technologies such as HTML, CSS, and JavaScript. As I progress, I plan to dive into more advanced topics like modern JavaScript frameworks (React, TypeScript, Vue), responsive design, accessibility, and performance optimization I'll be sharing my learning process, challenges, and solutions.</p>
+<br><br>
+        <p class="justified-text" style="display: inline">Thank you for joining me on this adventure. I look forward to sharing my journey with you and, hopefully, learning from you as well. Stay tuned for more updates, and let's make this journey together towards becoming proficient frontend engineers!</p>
+      </div>
+      <br />
+      <br />
+      <section class="comments-section">
+        <h2>Comments</h2>
+        <div id="comments-container">
+          <p id="no-comments">
+            No comments yet. We'd love to hear from you! Be the first to comment
+          </p>
+          <ul id="comments-list" style="display: none"></ul>
+        </div>
+        <form id="comment-form">
+          <div class="background">
+            <p>Add your comment</p>
+            <input
+              type="text"
+              id="name-input"
+              placeholder="Your name"
+              required
+            />
+            <textarea
+              id="comment-input"
+              placeholder="Write a comment..."
+              required
+            ></textarea>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+      <br />
+      <br />
+      <section>
+        <div class="about-me2">
+          <div class="image-about" style="display: inline">
+            <img
+              style="width: 200px; border-radius: 65%"
+              src="../image2.png"
+              alt="Profile Image"
+            />
+          </div>
+          <div class="bio-about" style="display: inline">
+            <p style="display: inline">Written by</p>
+            <a class="hi" href="https://github.com/Modred14" target="_blank"
+              ><p style="display: inline">Favour David Omirin,</p></a
+            >
+            <p style="display: inline" class="justified-text">
+              a passionate Frontend Engineer with a background in graphic design
+              and cryptocurrency based in Osun State, Nigeria. I specialize in
+              crafting intuitive and dynamic user experiences using HTML, CSS,
+              JavaScript, Node.js, React, Vue, and TypeScript.
+            </p>
+            <a class="blog-link" href="../blog.html"
+              ><p>Click here to check out my blog</p></a
+            >
+            <a class="blog-link2" href="../portfolio.html"
+              ><p>Click here to check out my portfolio</p></a
+            >
+            <a class="blog-link3" href="../about.html"
+              ><p>Click here to read more about me</p></a
+            >
+            <a
+              id="colorLink"
+              class="route"
+              href="./my-altschool-first-semester-experience.html"
+              >← My AltSchool First Semester Experience</a
+            >
+          </div>
+          <div>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const paragraphs = document.querySelectorAll(".justified-text");
+
+                paragraphs.forEach((paragraph) => {
+                  const originalHTML = paragraph.innerHTML;
+                  const tempContainer = document.createElement("div");
+                  tempContainer.innerHTML = originalHTML;
+
+                  const nodes = Array.from(tempContainer.childNodes);
+
+                  paragraph.innerHTML = "";
+
+                  nodes.forEach((node) => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const words = node.textContent.split(" ");
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          paragraph.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else if (
+                      node.nodeType === Node.ELEMENT_NODE &&
+                      node.nodeName === "A"
+                    ) {
+                      paragraph.appendChild(node);
+                      const words = node.innerHTML.split(" ");
+
+                      node.innerHTML = "";
+
+                      words.forEach((word) => {
+                        if (word.length > 5) {
+                          let hyphenatedWord = "";
+                          for (let i = 0; i < word.length; i++) {
+                            hyphenatedWord += word[i];
+                            if (
+                              word[i] !== "-" &&
+                              (i + 1) % 5 === 0 &&
+                              i < word.length - 1
+                            ) {
+                              hyphenatedWord += "&shy;";
+                            }
+                          }
+                          node.innerHTML += `<span>${hyphenatedWord}</span> `;
+                        } else {
+                          node.innerHTML += `<span>${word}</span> `;
+                        }
+                      });
+                    } else {
+                      paragraph.appendChild(node);
+                    }
+                  });
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+    </div>
+    <br />
+    <br />
+  </body>
+</html>
