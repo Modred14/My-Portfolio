@@ -892,6 +892,7 @@ button::before {
   display: none;
   opacity: 0%;
   color: black;
+  font-size: 30px;
 }
 footer {
   display: flex;
