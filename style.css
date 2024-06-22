@@ -893,6 +893,8 @@ button::before {
   opacity: 0%;
   color: black;
   font-size: 30px;
+  p{
+  font-size: 30px;}
 }
 footer {
   display: flex;
