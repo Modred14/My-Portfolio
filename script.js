@@ -36,10 +36,11 @@ const wo = document.getElementById("work3");
 let currentWorIndex = 0;
 function workCo() {
   wo.textContent = work3[currentWorIndex];
-  currentWorIndex = (currentWorIndex + 1) % work2.length;
+  currentWorIndex = (currentWorIndex + 1) % work3.length;
 }
 workCo();
 setInterval(workCo, 5000);
+
 
 function hire() {
   window.location.href = "mailto:favourdomirin@gmail.com";

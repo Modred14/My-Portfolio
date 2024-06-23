@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         span.innerText = letter;
       }
-      span.style.animationDelay = `${index * 0.7}s`;
+      span.style.animationDelay = `${index * 0.5}s`;
       wordElement.appendChild(span);
     });
   }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentWord = currentWord === fullName ? firstName : fullName;
       animateWord(currentWord);
       cycleWords();
-    }, currentWord.length * 100 + 9000); // Length of word * animation delay + pause time
+    }, currentWord.length * 100 + 6000); // Length of word * animation delay + pause time
   }
 
   animateWord(currentWord);

@@ -20,7 +20,10 @@ body {
   text-align: justify;
   word-break: break-word;
 }
-
+h1{
+  text-align: start;
+  /* margin-bottom: ; */
+}
 a {
   text-decoration: underline;
 }
@@ -61,11 +64,19 @@ p {
     /* margin: 0px 0; */
   }
 }
+.lol{
+  display: flex;
+  flex-direction: column;
+}
 .img1,
 .img2,
 .img3 {
   display: none;
   /* display: inline; */
+}
+.img44{
+  display: inline;
+  max-width: 100%;
 }
 .img12,
 .img22,
@@ -76,13 +87,13 @@ p {
   max-width: 100%;
 }
 .img12 {
-  height: 400px;
+  height: 500px;
 }
 .img22 {
-  height: 530px;
+  height: 400px;
 }
 .img32 {
-  height: 500px;
+  height: 450px;
 }
 .jj {
   height: auto;
@@ -639,7 +650,7 @@ table {
   .image-about {
     margin-top: 50px;
     height: 250px;
-    align-items: center;
+    align-self: center;
     border-radius: 50%;
   }
 
