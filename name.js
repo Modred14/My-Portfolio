@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const replyFormHTML = `
     <div class="modal"  id="modal-${index}" onclick="handleOutsideClick(event, ${index})">
     <div class="animate">
-    <div class="jmodal-content">
+    <div class="modal-content">
     <section class="comments-section2">
     <div class="reply">
       <form class="reply-form" id="comment-form" onsubmit="submitReply(event, ${index})">
