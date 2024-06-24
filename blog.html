@@ -70,23 +70,35 @@
       #paginationContainer .page-number.active:hover {
         border-radius: 0;
       }
-      #searchBar {
-        display: flex;
-        justify-content: center;
-        align-self: flex-end;
-        margin-left: auto;
-        margin-bottom: 20px;
-        margin-top: -30px;
-        height: 35px;
-        max-width: 200px;
-        width: 100%; /* Ensure it fits within its container */
+
+.about {
+  overflow: hidden; /* Prevent overflow within the about section */
+  max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
+}
+
+#searchBar {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: -30px;
+  height: 35px;
+  width: 100%; /* Ensure it fits within its container */
+  max-width: 200px; /* Limit the maximum width */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Additional CSS to handle overflow issues */
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow on the body */
 }
 
 .about {
   overflow: hidden; /* Prevent overflow within the about section */
   max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
 }
+
 .search-container {
   display: flex;
   justify-content: center;
