@@ -47,6 +47,13 @@ document.getElementById("colorLink").addEventListener("click", function () {
   }, 200);
 });
 
+document.getElementById("colorLink").addEventListener("click", function () {
+  var link = this;
+  setTimeout(function () {
+    link.classList.add("clicked");
+  }, 200);
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const commentForm = document.getElementById("comment-form");
   const nameInput = document.getElementById("name-input");
@@ -109,18 +116,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  async function deleteReply(commentIndex, replyIndex) {
+    const confirmed = confirm("This action will delete this reply. Click Cancel to cancel.");
+    if (confirmed) {
+      try {
+        const response = await fetch(`${baseURL}/comments/${commentIndex}/replies/${replyIndex}`, {
+          method: 'DELETE',
+        });
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+        fetchComments();
+        alert(`You have successfully deleted the reply.`);
+      } catch (error) {
+        console.error('Error deleting reply:', error);
+      }
+    }
+  }
+
   function showReplyForm(index) {
     const replyFormHTML = `
-      <div class="reply-form">
-        <input type="text" id="reply-name-${index}" placeholder="Your name" required>
-        <textarea id="reply-text-${index}" placeholder="Your reply" required></textarea>
-        <button onclick="submitReply(${index})">Submit</button>
-      </div>
+      <form class="reply-form" onsubmit="submitReply(event, ${index})">
+        <div class="background">
+          <input
+            type="text"
+            id="reply-name-${index}" 
+            placeholder="Your name"
+            required
+          />
+          <textarea
+            id="reply-text-${index}" placeholder="Your reply" 
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </div>
+      </form>
     `;
     document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
   }
 
-  async function submitReply(index) {
+  async function submitReply(event, index) {
+    event.preventDefault();
     const name = document.getElementById(`reply-name-${index}`).value.trim();
     const replyText = document.getElementById(`reply-text-${index}`).value.trim();
     if (name && replyText) {
@@ -161,10 +195,11 @@ document.addEventListener("DOMContentLoaded", () => {
               <button class="reply-button" onclick="showReplyForm(${index})">Reply</button>
               <button class="delete-button" onclick="deleteComment(${index})">Delete</button>
               <ul class="replies">
-                ${comment.replies ? comment.replies.map(reply => `
+                ${comment.replies ? comment.replies.map((reply, replyIndex) => `
                   <li>
                     <span class="reply-author">${reply.name}:</span>
                     <span class="reply-text">${reply.text}</span>
+                    <button class="delete-button" style="display: block; margin-left: -10px; margin-top: -1px;" onclick="deleteReply(${index}, ${replyIndex})">Delete</button>
                   </li>
                 `).join('') : ''}
               </ul>
@@ -177,5 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.deleteComment = deleteComment;
   window.showReplyForm = showReplyForm;
   window.submitReply = submitReply;
+  window.deleteReply = deleteReply;
   fetchComments();
 });
+

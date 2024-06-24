@@ -134,9 +134,10 @@ textarea {
   border-bottom: 1px solid #ccc;
 }
 
-#comments-list li .comment-author {
+#comments-list li .comment-author, .reply-author {
   font-weight: bold;
 }
+
 
 #comments-list li .comment-text {
   margin-top: 5px;
