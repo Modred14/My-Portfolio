@@ -134,21 +134,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showReplyForm(index) {
     const replyFormHTML = `
-      <form class="reply-form" onsubmit="submitReply(event, ${index})">
+    <section class="comments-section2">
+    <div class="reply">
+      <form class="reply-form" id="comment-form" onsubmit="submitReply(event, ${index})">
         <div class="background">
+        <div class="input1">
           <input
             type="text"
             id="reply-name-${index}" 
+            class="name-input"
             placeholder="Your name"
             required
           />
+          </div>
+          <div class="input2">
           <textarea
             id="reply-text-${index}" placeholder="Your reply" 
+            class="reply-input"
             required
-          ></textarea>
-          <button type="submit">Send</button>
+          ></textarea></div>
+          <button type="submit" class="hollla" style="padding:5px; font-size:15px; width: 50px;height: 30px;">Send</button>
         </div>
       </form>
+      </div>
+      </section>
     `;
     document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
   }
