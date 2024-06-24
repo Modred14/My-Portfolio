@@ -147,19 +147,19 @@ body.no-scroll {
     opacity: 0;
   }
   40% {
-    top: 30%;
+    top: 35%;
     opacity: 0.5;
   }
   60% {
-    top: 10%;
+    top: 15%;
     opacity: 0.8;
   }
   80% {
-    top: 25%;
+    top: 30%;
     opacity: 0.9;
   }
   100% {
-    top: 20%;
+    top: 25%;
     opacity: 1;
   }
 }
