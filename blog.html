@@ -71,9 +71,27 @@
         border-radius: 0;
       }
 
+
+
+
+/* Additional CSS to handle overflow issues */
+
+
 .about {
   overflow: hidden; /* Prevent overflow within the about section */
   max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow in the search container */
+  max-width: 100%; /* Ensure it doesn't expand beyond the viewport */
+}
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow on the body */
+  margin: 0;
+  padding: 0;
 }
 
 #searchBar {
@@ -89,21 +107,20 @@
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-/* Additional CSS to handle overflow issues */
-body {
-  overflow-x: hidden; /* Prevent horizontal overflow on the body */
-}
-
-.about {
+.about, .search-container {
   overflow: hidden; /* Prevent overflow within the about section */
   max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  overflow: hidden; /* Prevent overflow in the search container */
-  max-width: 100%; /* Ensure it doesn't expand beyond the viewport */
+.header2, .main, .menu2, .menu5, .menuholder, .image-no-search, .hey, .justified-text, #paginationContainer, #contentContainer {
+  max-width: 100%; /* Ensure all containers do not expand beyond the viewport */
+  overflow: hidden; /* Prevent overflow within these elements */
+}
+
+@media screen and (max-width: 480px) {
+  #searchBar {
+    max-width: 150px; /* Adjust as needed for smaller screens */
+  }
 }
 
     </style>
