@@ -144,7 +144,7 @@ h2 {
 
 @keyframes drop{
   0%{
-    top: -40%;opacity: 1;
+    top: -70%;opacity: 1;
   }
   100%{
     top: 100%;opacity: 0;

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         span.innerText = letter;
       }
-      span.style.animationDelay = `${index * 0.5}s`;
+      span.style.animationDelay = `${index * 0.6}s`;
       wordElement.appendChild(span);
     });
   }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentWord = currentWord === fullName ? firstName : fullName;
       animateWord(currentWord);
       cycleWords();
-    }, currentWord.length * 100 + 6000); // Length of word * animation delay + pause time
+    }, currentWord.length * 100 + 7500); // Length of word * animation delay + pause time
   }
 
   animateWord(currentWord);
@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = nameInput.value.trim();
     const commentText = commentInput.value.trim();
     if (name && commentText) {
+      const sendButton = event.target.querySelector('button[type="submit"]');
+      sendButton.innerHTML = '<div class="spinner"></div>';
       try {
         const response = await fetch(`${baseURL}/comments`, {
           method: 'POST',
@@ -90,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error('Error submitting comment:', error);
         alert("There was an error submitting your comment. Please try again.");
+      }finally {
+        sendButton.innerHTML = 'Send'; 
       }
     }
   });
@@ -128,9 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showReplyForm(index) {
     const replyFormHTML = `
-    <div class="modal"  id="modal-${index}">
+    <div class="modal"  id="modal-${index}" onclick="handleOutsideClick(event, ${index})">
     <div class="animate">
-    <div class=".modal-content">
+    <div class="jmodal-content">
     <section class="comments-section2">
     <div class="reply">
       <form class="reply-form" id="comment-form" onsubmit="submitReply(event, ${index})">
@@ -161,13 +165,22 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
     document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
+    document.getElementById(`modal-${index}`).addEventListener('click', (event) => handleOutsideClick(event, index));
   }
-
+  function handleOutsideClick(event, index) {
+    const modal = document.getElementById(`modal-${index}`);
+    const content = modal.querySelector('.jmodal-content');
+    if (!content.contains(event.target)) {
+      closeModal(index);
+    }
+  }
   async function submitReply(event, index) {
     event.preventDefault();
     const name = document.getElementById(`reply-name-${index}`).value.trim();
     const replyText = document.getElementById(`reply-text-${index}`).value.trim();
     if (name && replyText) {
+      const sendButton = event.target.querySelector('button[type="submit"]');
+      sendButton.innerHTML = '<div class="spinner"></div>';
       try {
         const response = await fetch(`${baseURL}/comments/${index}/replies`, {
           method: 'POST',
@@ -183,6 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         console.error('Error submitting reply:', error);
         alert("There was an error submitting your reply. Please try again.");
+      }finally {
+        sendButton.innerHTML = 'Send'; 
       }
     }
   }
@@ -193,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.remove();
     });
   }
+  
   function updateComments(comments) {
     if (comments.length === 0) {
       noCommentsText.style.display = "block";
@@ -233,3 +249,21 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchComments();
 });
 
+const style = document.createElement('style');
+style.textContent = `
+.spinner {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 2px solid #000;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+`;
+document.head.append(style);
