@@ -125,21 +125,27 @@ h2 {
 }
 @keyframes jump {
   0% {
-    top: -32%;opacity: 0;
+    top: -32%;
+    opacity: 0;
   }
-  50%{
-    top: 40%;opacity: 0.5;
+  40% {
+    top: 40%;
+    opacity: 0.5;
   }
-  60%{
-    top: 25%;opacity: 0.6;
+  60% {
+    top: 20%;
+    opacity: 0.8;
   }
-  80%{
-    top: 35%;opacity: 0.8;
+  80% {
+    top: 35%;
+    opacity: 0.9;
   }
-  100%{
-    top: 30%;opacity: 1;
+  100% {
+    top: 30%;
+    opacity: 1;
   }
 }
+
 .close-animation {
   animation: drop 0.5s forwards;
 }
