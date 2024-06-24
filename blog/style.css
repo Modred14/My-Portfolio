@@ -156,16 +156,31 @@ textarea {
 
 #comments-list li .delete-button {
   margin-top: 10px;
-  background-color: #ff4d4d;
-  color: #fff;
-  /* border: none; */
+  background-color: transparent;
+  color: #ff0000;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   height: 30px;
-  font-weight: 300;
+  font-weight: 700;
   width: 60px;
+  margin-left: -20px;
+  /* align-self: flex-end; */
+}
+
+#comments-list li .reply-button {
+  margin-top: 10px;
+  background-color: transparent;
+  color: #363636;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* padding: px 10px; */
+  height: 30px;
+  font-weight: 700;
+  width: 60px;
+  margin-left: -13px;
   /* align-self: flex-end; */
 }
 
@@ -175,12 +190,17 @@ textarea {
   margin-top: -20px;
 }
 #comments-list li .delete-button:hover {
-  background-color: #d80000;
+  color: #a40101;
 }
+#comments-list li .reply-button:hover {
+  color: #4e4e4e;
+}
+
 .about-me2 {
   padding-left: 120px;
   max-width: 1280px;
 }
+
 .hi {
   font-size: 21px;
 }

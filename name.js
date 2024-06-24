@@ -54,71 +54,128 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentsList = document.getElementById("comments-list");
   const noCommentsText = document.getElementById("no-comments");
 
-  const baseURL = 'https://favour-omirin.onrender.com'; 
+  const baseURL = 'https://favour-omirin.onrender.com';
 
   async function fetchComments() {
+    try {
       const response = await fetch(`${baseURL}/comments`);
+      if (!response.ok) throw new Error(`Error: ${response.status}`);
       const comments = await response.json();
       updateComments(comments);
+    } catch (error) {
+      console.error('Error fetching comments:', error);
+    }
   }
 
   commentForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const name = nameInput.value.trim();
-      const commentText = commentInput.value.trim();
-      if (name && commentText) {
-          const response = await fetch(`${baseURL}/comments`, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ name, text: commentText }),
-          });
-          await response.json();
-          fetchComments();
-          nameInput.value = "";
-          commentInput.value = "";
-          if(response.ok){
-          alert("Your comment has been submitted successfully.")}
-          else{
-            alert("There was an error submitting your comment. Please try again.")
-          }
+    event.preventDefault();
+    const name = nameInput.value.trim();
+    const commentText = commentInput.value.trim();
+    if (name && commentText) {
+      try {
+        const response = await fetch(`${baseURL}/comments`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, text: commentText }),
+        });
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+        await response.json();
+        fetchComments();
+        nameInput.value = "";
+        commentInput.value = "";
+        alert("Your comment has been submitted successfully.");
+      } catch (error) {
+        console.error('Error submitting comment:', error);
+        alert("There was an error submitting your comment. Please try again.");
       }
+    }
   });
 
   async function deleteComment(index) {
-      const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
-      if (confirmed) {
-          await fetch(`${baseURL}/comments/${index}`, {
-              method: 'DELETE',
-          });
-          fetchComments();
-          alert(`You have succesfully deleted the comment.`)
+    const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
+    if (confirmed) {
+      try {
+        const response = await fetch(`${baseURL}/comments/${index}`, {
+          method: 'DELETE',
+        });
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+        fetchComments();
+        alert(`You have successfully deleted the comment.`);
+      } catch (error) {
+        console.error('Error deleting comment:', error);
       }
+    }
+  }
+
+  function showReplyForm(index) {
+    const replyFormHTML = `
+      <div class="reply-form">
+        <input type="text" id="reply-name-${index}" placeholder="Your name" required>
+        <textarea id="reply-text-${index}" placeholder="Your reply" required></textarea>
+        <button onclick="submitReply(${index})">Submit</button>
+      </div>
+    `;
+    document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
+  }
+
+  async function submitReply(index) {
+    const name = document.getElementById(`reply-name-${index}`).value.trim();
+    const replyText = document.getElementById(`reply-text-${index}`).value.trim();
+    if (name && replyText) {
+      try {
+        const response = await fetch(`${baseURL}/comments/${index}/replies`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, text: replyText }),
+        });
+        if (!response.ok) throw new Error(`Error: ${response.status}`);
+        await response.json();
+        fetchComments();
+        alert("Your reply has been submitted successfully.");
+      } catch (error) {
+        console.error('Error submitting reply:', error);
+        alert("There was an error submitting your reply. Please try again.");
+      }
+    }
   }
 
   function updateComments(comments) {
-      if (comments.length === 0) {
-          noCommentsText.style.display = "block";
-          commentsList.style.display = "none";
-      } else {
-          noCommentsText.style.display = "none";
-          commentsList.style.display = "block";
-          commentsList.innerHTML = comments
-              .map(
-                  (comment, index) =>
-                      `<li>
-                          <div>
-                              <span class="comment-author">${comment.name}:</span>
-                              <span class="comment-text">${comment.text}</span>
-                          </div>
-                          <button class="delete-button" onclick="deleteComment(${index})">Delete</button>
-                      </li>`
-              )
-              .join("");
-      }
+    if (comments.length === 0) {
+      noCommentsText.style.display = "block";
+      commentsList.style.display = "none";
+    } else {
+      noCommentsText.style.display = "none";
+      commentsList.style.display = "block";
+      commentsList.innerHTML = comments
+        .map(
+          (comment, index) =>
+            `<li id="comment-${index}">
+              <div>
+                <span class="comment-author">${comment.name}:</span>
+                <span class="comment-text">${comment.text}</span>
+              </div>
+              <button class="reply-button" onclick="showReplyForm(${index})">Reply</button>
+              <button class="delete-button" onclick="deleteComment(${index})">Delete</button>
+              <ul class="replies">
+                ${comment.replies ? comment.replies.map(reply => `
+                  <li>
+                    <span class="reply-author">${reply.name}:</span>
+                    <span class="reply-text">${reply.text}</span>
+                  </li>
+                `).join('') : ''}
+              </ul>
+            </li>`
+        )
+        .join("");
+    }
   }
 
   window.deleteComment = deleteComment;
+  window.showReplyForm = showReplyForm;
+  window.submitReply = submitReply;
   fetchComments();
 });
