@@ -47,12 +47,6 @@ document.getElementById("colorLink").addEventListener("click", function () {
   }, 200);
 });
 
-document.getElementById("colorLink").addEventListener("click", function () {
-  var link = this;
-  setTimeout(function () {
-    link.classList.add("clicked");
-  }, 200);
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const commentForm = document.getElementById("comment-form");
@@ -134,10 +128,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showReplyForm(index) {
     const replyFormHTML = `
+    <div class="modal"  id="modal-${index}">
+    <div class="animate">
+    <div class=".modal-content">
     <section class="comments-section2">
     <div class="reply">
       <form class="reply-form" id="comment-form" onsubmit="submitReply(event, ${index})">
-        <div class="background">
+        <div class="background" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <span class="close" onclick="closeModal(${index})">&times;</span>
         <div class="input1">
           <input
             type="text"
@@ -158,6 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
       </form>
       </div>
       </section>
+      </div>
+      </div>
+      </div>
     `;
     document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
   }
@@ -185,7 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-
+  function closeModal(index) {
+    const modal = document.getElementById(`modal-${index}`);
+    modal.classList.add("close-animation");
+    modal.addEventListener("animationend", () => {
+      modal.remove();
+    });
+  }
   function updateComments(comments) {
     if (comments.length === 0) {
       noCommentsText.style.display = "block";
@@ -222,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showReplyForm = showReplyForm;
   window.submitReply = submitReply;
   window.deleteReply = deleteReply;
+  window.closeModal = closeModal;
   fetchComments();
 });
 
