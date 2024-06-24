@@ -123,6 +123,24 @@ h2 {
   width: 100%;
   animation: jump 1s forwards 0.1s ease-in;
 }
+.name-input, .reply-input {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
+.name-input:focus, .reply-input:focus {
+  outline: none;
+}
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.jmodal-content {
+  overflow-x: hidden;
+}
 @keyframes jump {
   0% {
     top: -32%;
