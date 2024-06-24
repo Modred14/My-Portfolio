@@ -78,7 +78,21 @@
         margin-top: -30px;
         height: 35px;
         max-width: 400px;
-      }
+        width: 100%; /* Ensure it fits within its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.about {
+  overflow: hidden; /* Prevent overflow within the about section */
+  max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow in the search container */
+  max-width: 100%; /* Ensure it doesn't expand beyond the viewport */
+}
+
     </style>
   </head>
   <body id="text-contain" class="about-body">
@@ -108,12 +122,15 @@
       <div class="main" id="main">
         <div class="space"></div>
         <section class="about">
-          <input
-            type="text"
-            id="searchBar"
-            placeholder="🔍Search articles..."
-            oninput="searchAndHighlight()"
-          />
+          <section class="search-container">
+            <input
+              type="text"
+              id="searchBar"
+              placeholder="🔍Search articles..."
+              oninput="searchAndHighlight()"
+            />
+          </section>
+          
           <section class="justified-text" id="bioContainer"></section>
 
           <div id="contentContainer">

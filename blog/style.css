@@ -147,19 +147,19 @@ body.no-scroll {
     opacity: 0;
   }
   40% {
-    top: 40%;
+    top: 30%;
     opacity: 0.5;
   }
   60% {
-    top: 20%;
+    top: 10%;
     opacity: 0.8;
   }
   80% {
-    top: 35%;
+    top: 25%;
     opacity: 0.9;
   }
   100% {
-    top: 30%;
+    top: 20%;
     opacity: 1;
   }
 }
@@ -207,13 +207,17 @@ input,
 textarea {
   max-width: 100%;
   overflow: hidden;
+  font-size: 16px;
 }
 .input2, .input1{
   max-width: 100%;
   padding-right: 10px;
   overflow: hidden;
-  font-size: 16px;
   margin: 0;
+}
+.input2 textarea{
+  height: 100px;
+  /* margin-right: -20px; */
 }
 
 #name-input,#comment-input{
