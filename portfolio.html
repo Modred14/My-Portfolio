@@ -1,182 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Favour Omirin -- Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="@media-style.css" />
-  <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
-  <script src="schema.js" type="application/ld+json"></script>
-  <script src="script.js" defer></script>
-  <script src="name.js" defer></script>
-  <script src="./blog/hello.js" defer></script>
-  <script src="sidebar.js" defer></script>
-</head>
-<body class="port-body" id="text-container">
-  <header class="header2">
-    <img
-      class="my-logo2"
-      id="pollor"
-      src="./MY LOGO.png"
-      alt="my logo"
-      onclick="window.open('./home.html')"
-    />
-    <section class="menu2">
-      <a href="home.html" class="header-link">Home</a>
-      <a href="about.html" class="header-link">About</a>
-      <a href="resume.html" class="header-link">Resume</a>
-      <a href="portfolio.html" class="header-link">Portfolio</a>
-      <a href="blog.html" class="header-link">Blog</a>
-      <a href="contact.html" class="header-link">Contact</a>
-      <a href="mailto:favourdomirin@gmail.com" class="header-link">
-        Send me an email
-      </a>
-    </section>
-    <div class="menu5" onclick="openSideBar()" style="color: black" id="menu">
-      <p style="font-size: 30px;">☰</p>
-    </div>
-    <div class="menuholder" id="menuholder"></div>
-  </header>
-  <div class="main">
-    <div class="port-style">
-      <section>
-        <section class="port"><h1>MY PORTFOLIO</h1></section>
-        <div class="top-videos">
-          <section class="top-video" onclick="react()">
-            <div>
-              <h1>Repository Navigator React App</h1>
-              <p>
-                This website was created using react framework. Click on the
-                video below to open it and check the portfolio.
-              </p>
-            </div>
-            <br>
-            <video id="video1" loop>
-              <source src="./2024-06-07 16-38-29.mkv" type="video/mp4">
-              Couldn't load this video. Please ensure you have a stable
-              internet connection.
-            </video>
-            <img id="image1" src="./WhatsApp Image 2024-06-20 at 07.43.54.jpeg" style="display: none;">
-          </section>
-          <section class="top-video" onclick="vue()">
-            <div>
-              <h1>Repository Navigator Vue App</h1>
-              <p>
-                This website was created using vuejs framework. Click on the
-                video below to open it and check the portfolio.
-              </p>
-            </div>
-            <br>
-            <video id="video2" loop>
-              <source src="./2024-06-07 16-40-05.mkv" type="video/mp4">
-              Couldn't load this video. Please ensure you have a stable
-              internet connection.
-            </video>
-            <img id="image2" src="././WhatsApp Image 2024-06-20 at 07.43.54.jpeg" style="display: none;">
-          </section>
-        </div>
-        <div class="bottom-video">
-          <section style="margin-left: 9%;" class="bottom-videos" onclick="github()">
-            <div>
-              <h1>My Github profile</h1>
-              <p>
-                This is my github profile. Click on the video below to open it
-                and check my profile, there you will see full details about my
-                repositories.
-              </p>
-            </div>
-            <br>
-            <video id="video3" loop>
-              <source src="./2024-06-07 16-42-48.mkv" type="video/mp4">
-              Couldn't load this video. Please ensure you have a stable
-              internet connection.
-            </video>
-            <img id="image3" src="./WhatsApp Image 2024-06-20 at 05.03.31.jpeg" style="display: none;">
-            <br /><br /><br /><br /><br /><br />
-          </section>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favour Omirin -- Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="@media-style.css" />
+    <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
+    <script src="schema.js" type="application/ld+json"></script>
+    <script src="script.js" defer></script>
+    <script src="name.js" defer></script>
+    <script src="./blog/hello.js" defer></script>
+    <script src="sidebar.js" defer></script>
+  </head>
+  <body class="port-body" id="text-container">
+    <header class="header2">
+      <img
+        class="my-logo2"
+        id="pollor"
+        src="./MY LOGO.png"
+        alt="my logo"
+        onclick="window.open('./home.html')"
+      />
+      <section class="menu2">
+        <a href="home.html" class="header-link">Home</a>
+        <a href="about.html" class="header-link">About</a>
+        <a href="resume.html" class="header-link">Resume</a>
+        <a href="portfolio.html" class="header-link">Portfolio</a>
+        <a href="blog.html" class="header-link">Blog</a>
+        <a href="contact.html" class="header-link">Contact</a>
+        <a href="mailto:favourdomirin@gmail.com" class="header-link">
+          Send me an email
+        </a>
       </section>
+      <div class="menu5" onclick="openSideBar()" style="color: black" id="menu">
+        <p style="font-size: 30px">☰</p>
+      </div>
+      <div class="menuholder" id="menuholder"></div>
+    </header>
+    <div class="main">
+      <div class="port-style">
+        <section>
+          <section class="port"><h1>MY PORTFOLIO</h1></section>
+          <div class="top-videos">
+            <section class="top-video" onclick="react()">
+              <div>
+                <h1>Repository Navigator React App</h1>
+                <p>
+                  This website was created using react framework. Click on the
+                  video below to open it and check the portfolio.
+                </p>
+              </div>
+              <br />
+              <video id="video1" loop>
+                <source src="./2024-06-07 16-38-29.mkv" type="video/mp4" />
+                Couldn't load this video. Please ensure you have a stable
+                internet connection.
+              </video>
+              <img
+                id="image1"
+                src="./WhatsApp Image 2024-06-20 at 07.43.54.jpeg"
+                style="display: none"
+              />
+            </section>
+            <section class="top-video" onclick="vue()">
+              <div>
+                <h1>Repository Navigator Vue App</h1>
+                <p>
+                  This website was created using vuejs framework. Click on the
+                  video below to open it and check the portfolio.
+                </p>
+              </div>
+              <br />
+              <video id="video2" loop>
+                <source src="./2024-06-07 16-40-05.mkv" type="video/mp4" />
+                Couldn't load this video. Please ensure you have a stable
+                internet connection.
+              </video>
+              <img
+                id="image2"
+                src="././WhatsApp Image 2024-06-20 at 07.43.54.jpeg"
+                style="display: none"
+              />
+            </section>
+          </div>
+          <div class="bottom-video">
+            <section
+              style="margin-left: 9%"
+              class="bottom-videos"
+              onclick="github()"
+            >
+              <div>
+                <h1>My Github profile</h1>
+                <p>
+                  This is my github profile. Click on the video below to open it
+                  and check my profile, there you will see full details about my
+                  repositories.
+                </p>
+              </div>
+              <br />
+              <video id="video3" loop>
+                <source src="./2024-06-07 16-42-48.mkv" type="video/mp4" />
+                Couldn't load this video. Please ensure you have a stable
+                internet connection.
+              </video>
+              <img
+                id="image3"
+                src="./WhatsApp Image 2024-06-20 at 05.03.31.jpeg"
+                style="display: none"
+              />
+              <br /><br /><br /><br /><br /><br />
+            </section>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-  <script>
-    function detectOS() {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return 'iOS';
-      }
-      if (/android/i.test(userAgent)) {
-        return 'Android';
-      }
-      return 'unknown';
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const os = detectOS();
-      const videos = document.querySelectorAll("video");
-      const images = document.querySelectorAll("img[id^='image']");
-
-      videos.forEach((video, index) => {
-        if (os === 'iOS') {
-          video.style.display = 'none';
-          images[index].style.display = 'block';
-        } else {
-          video.setAttribute('autoplay', '');
-          video.setAttribute('muted', '');
-          video.setAttribute('playsinline', '');
-          video.play().catch((error) => {
-            console.error("Video play error:", error);
-          });
+    <script>
+      function detectOS() {
+        const userAgent =
+          navigator.userAgent || navigator.vendor || window.opera;
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
         }
-      });
-    });
+        if (/android/i.test(userAgent)) {
+          return "Android";
+        }
+        return "unknown";
+      }
 
-    fetch("../sidebar.html")
-      .then((response) => response.text())
-      .then((html) => {
-        document.getElementById("menuholder").innerHTML = html;
+      document.addEventListener("DOMContentLoaded", function () {
+        const os = detectOS();
+        const videos = document.querySelectorAll("video");
+        const images = document.querySelectorAll("img[id^='image']");
+
+        videos.forEach((video, index) => {
+          if (os === "iOS") {
+            video.style.display = "none";
+            images[index].style.display = "block";
+          } else {
+            video.setAttribute("autoplay", "");
+            video.setAttribute("muted", "");
+            video.setAttribute("playsinline", "");
+            video.play().catch((error) => {
+              console.error("Video play error:", error);
+            });
+          }
+        });
       });
-  </script>
-  <footer>
-    <section>
-      <img
-        class="icon2"
-        src="./GitHub.png"
-        onclick="window.open('https://github.com/Modred14', '_blank')"
-        alt=""
-      />
-      <img
-        class="icon"
-        src="./iconmonstr-gmail-4-240.png"
-        onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
-        alt=""
-      />
-      <img
-        class="icon"
-        src="./linkedln.png"
-        onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
-        alt=""
-      />
-      <img
-        class="icon"
-        src="./iconmonstr-instagram-14-240.png"
-        onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
-        alt=""
-      />
-      <img
-        class="icon"
-        src="./iconmonstr-facebook-4-240.png"
-        onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
-        alt=""
-      />
-      <img
-        class="icon"
-        src="./iconmonstr-twitter-4-240.png"
-        onclick="window.open('https://x.com/omirin_favour', '_blank')"
-        alt=""
-      />
-    </section>
-    <h4 class="copyright">© Favour Omirin 2024</h4>
-  </footer>
-</body>
+
+      fetch("../sidebar.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("menuholder").innerHTML = html;
+        });
+    </script>
+    <footer>
+      <section>
+        <img
+          class="icon2"
+          src="./GitHub.png"
+          onclick="window.open('https://github.com/Modred14', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-gmail-4-240.png"
+          onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./linkedln.png"
+          onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-instagram-14-240.png"
+          onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-facebook-4-240.png"
+          onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-twitter-4-240.png"
+          onclick="window.open('https://x.com/omirin_favour', '_blank')"
+          alt=""
+        />
+      </section>
+      <h4 class="copyright">© Favour Omirin 2024</h4>
+    </footer>
+  </body>
 </html>

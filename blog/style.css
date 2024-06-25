@@ -49,7 +49,6 @@ h2 {
 }
 .background {
   background-color: #ababab;
-  /* width: 520px; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,7 +64,6 @@ h2 {
 }
 .comments-section {
   background-color: #ebebeb;
-  /* padding: 30px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: flex;
@@ -73,51 +71,41 @@ h2 {
   align-items: center;
   align-self: center;
   flex-direction: column;
-  /* padding-left: 150px; */
   text-align: justify;
-  /* max-width: 700px; */
   h2 {
     align-self: flex-start;
     padding-left: 0.5%;
   }
 }
-.comments-section2{
-  /* background-color: #ebebeb; */
-  /* padding: 30px; */
+.comments-section2 {
   position: relative;
- 
+
   border-radius: 8px;
   display: flex;
   padding: 30px;
   align-items: center;
   align-self: center;
   flex-direction: column;
-  /* padding-left: 150px; */
   text-align: justify;
-  /* max-width: 700px; */
   h2 {
     align-self: flex-start;
     padding-left: 0.5%;
   }
 }
-/* Modal styles */
 .modal {
-  /* display: none;  */
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0%;
-  /* opacity: 0; */
-  width: 100%; 
-  height: 100%; 
-  overflow: hidden; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.7); 
-  
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.animate{
-  position: fixed; 
-  z-index: 1; 
+.animate {
+  position: fixed;
+  z-index: 1;
   overflow: hidden;
   left: 0;
   opacity: 0;
@@ -125,16 +113,17 @@ h2 {
   width: 100%;
   animation: jump 1s forwards 0.1s ease-in;
 }
-.name-input, .reply-input {
+.name-input,
+.reply-input {
   box-sizing: border-box;
   max-width: 100%;
   width: 100%;
 }
 
-.name-input:focus, .reply-input:focus {
+.name-input:focus,
+.reply-input:focus {
   outline: none;
 }
-
 
 body.no-scroll {
   overflow: hidden;
@@ -170,20 +159,16 @@ body.no-scroll {
   animation: drop 0.5s forwards;
 }
 
-@keyframes drop{
-  0%{
+@keyframes drop {
+  from {
     opacity: 1;
   }
-  100%{
+  to {
     opacity: 0;
   }
 }
 
 .modal-content {
-  /* background-color: #fefefe;
-  margin: 15% auto; 
-  padding: 20px; */
-  /* border: 1px solid #888; */
   width: 100%;
 }
 
@@ -211,18 +196,19 @@ textarea {
   overflow: hidden;
   font-size: 16px;
 }
-.input2, .input1{
+.input2,
+.input1 {
   max-width: 100%;
   padding-right: 10px;
   overflow: hidden;
   margin: 0;
 }
-.input2 textarea{
+.input2 textarea {
   height: 100px;
-  /* margin-right: -20px; */
 }
 
-#name-input,#comment-input{
+#name-input,
+#comment-input {
   width: 500px;
   padding: 10px;
   padding-right: 20px;
@@ -230,28 +216,25 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
- .reply-input, .name-input{
+.reply-input,
+.name-input {
   width: 300px;
   padding: 10px;
   overflow: hidden;
   margin: 0;
-  /* padding-right: -100px; */
-  /* margin-right: 20px; */
-  /* font-size: 16px; */
   border: 1px solid #ccc;
   border-radius: 5px;
-} 
+}
 #comment-input {
   height: 100px;
 }
-.reply-input{
+.reply-input {
   height: 50px;
 }
 
-.reply{
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+.reply {
   width: 100%;
-  /* opacity: 0.5; */
+
   display: flex;
   padding: 0px;
   margin: -20px;
@@ -259,10 +242,8 @@ textarea {
   align-self: center;
   margin: 0;
   flex-direction: column;
-  /* position: relative; */
 }
 .background button {
-  /* margin-left: 40%; */
   align-self: flex-end;
   width: 90px;
   padding: 10px 20px;
@@ -296,14 +277,13 @@ textarea {
   border-bottom: 1px solid #ccc;
 }
 
-#comments-list li .comment-author, .reply-author {
+#comments-list li .comment-author,
+.reply-author {
   font-weight: bold;
 }
 
-
 #comments-list li .comment-text {
   margin-top: 5px;
-  /* max-width: 70%; */
   padding-right: 50px;
 }
 
@@ -324,12 +304,10 @@ textarea {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* padding: 5px 10px; */
   height: 30px;
   font-weight: 700;
   width: 60px;
   margin-left: -20px;
-  /* align-self: flex-end; */
 }
 
 #comments-list li .reply-button {
@@ -339,18 +317,14 @@ textarea {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* padding: px 10px; */
   height: 30px;
   font-weight: 700;
   width: 60px;
   margin-left: -10px;
-  /* align-self: flex-end; */
 }
 
 #comments-list {
   margin-left: -50px;
-  /* max-width: 90%; */
-  /* padding-right: -25px; */
   margin-top: -20px;
 }
 #comments-list li .delete-button:hover {
@@ -378,24 +352,25 @@ p {
 }
 .header-link-blog {
   display: flex;
-  justify-content: space-between; /* Ensure space between elements */
+  justify-content: space-between;
   align-items: center;
 }
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  /* padding-left: 25%; */
+
   margin: 0px 0;
 }
-.vsc{
+.vsc {
   display: flex;
   flex-direction: column;
-  /* width: auto; */
 }
-#container, #container1, #container2 {
+#container,
+#container1,
+#container2 {
   height: 300px;
-  /* width: 100%; */
+
   overflow-y: scroll;
   align-self: center;
 }
@@ -405,9 +380,10 @@ img {
 
 @media screen and (max-width: 700px) {
   .monaco-editor .view-lines {
-      font-size: 16px;
+    font-size: 16px;
   }
-  .input2, .input1{
+  .input2,
+  .input1 {
     padding-right: 20px;
   }
 }

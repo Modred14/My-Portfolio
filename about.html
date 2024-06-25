@@ -6,7 +6,7 @@
     <title>Favour Omirin -- About</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="@media-style.css" />
-    <link rel="stylesheet" href="@media.css">
+    <link rel="stylesheet" href="@media.css" />
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="schema.js" type="application/ld+json"></script>
     <script src="script.js" defer></script>
@@ -35,7 +35,9 @@
           Send me an email
         </a>
       </section>
-      <div class="menu5" onclick="openSideBar()" id="menu"><p style="font-size: 30px;">☰</p></div>
+      <div class="menu5" onclick="openSideBar()" id="menu">
+        <p style="font-size: 30px">☰</p>
+      </div>
       <div class="menuholder" id="menuholder"></div>
     </header>
     <div class="main">
@@ -44,7 +46,7 @@
         <section class="about-me">
           <section class="image-about">
             <img
-              style="width: 200px; border-radius: 65%; margin-bottom: 0;"
+              style="width: 200px; border-radius: 65%; margin-bottom: 0"
               src="./image2.png"
               alt=""
             />
@@ -74,132 +76,185 @@
         </section>
         <section class="shadow">
           <h1>ABOUT ME 👶</h1>
-          
-            <div>
-              <p id="popo" class="justified-text">
-                My name is Favour David Omirin. People often call me Favour, Modred,
-                or David. You can call me by whichever is okay by you. I'm a web developer in Nigeria, my
-                journey as a web developer has been deeply influenced by my
-                passion for working with JavaScript and its vibrant ecosystem.
-                JavaScript's versatility and the powerful frameworks and
-                libraries that have emerged around it have been a driving force
-                in my development career. I find immense satisfaction in solving
-                complex problems and creating dynamic, user-friendly web
-                applications. My enthusiasm for JavaScript is not just about
-                writing code; it's about being part of a dynamic and
-                ever-evolving community that constantly pushes the boundaries of
-                what is possible on the web.
-              </p>
-            
-              
-            </div><br><p class="justified-text">
-              I'm very proficient in HTML, CSS, JavaScript, and TypeScript. Along with my significant experience with Node.js, I also know a lot about modern front-end frameworks like React and Vue.js.
-              </p>
-              <br> <br>
-              <p class="justified-text">
-              I've committed time to reading documentation on frontend engineering, watching tutorials on YouTube, and practicing a lot to improve my skills in addition to studying frontend engineering at AltSchool Africa, one of the top tech schools in Africa.
-              </p><br><br>
-              <p class="justified-text">
-                I occasionally develop web applications and engage in collaborative projects with friends, aiming to enhance our skills and play around the web. You can check all the projects I have contributed to on my <a onclick="window.open('https://github.com/Modred14?tab=repositories')">GitHub profile</a></p >
-            <br>
-            <br>
-            <p class="justified-text">In addition to being a web developer, my ultimate aspiration is to become a cybersecurity expert. Working as a web developer is a significant step towards achieving this dream, and hopefully one day I will become a cybersecurity expert. <br></p>
-            <br>
-            <h1>TECHNICAL EXPERIENCE</h1>  
-            <p class="justified-text">
-            I confidently develop web applications using JavaScript, HTML, CSS, TypeScript, and Node.js, and I utilize frameworks such as React and Vue.js. Additionally,  I have written quite a few of Python and C#, primarily for educational purposes and not yet for production projects.
-            </p><br><br>
-            <p class="justified-text">
-              This exploration has broadened my understanding of programming paradigms and strengthened my foundational knowledge. My goal is to continue expanding my skills across both frontend development and programming languages, aiming to apply them effectively in future projects and towards achieving my career aspirations in web development and beyond.
+
+          <div>
+            <p id="popo" class="justified-text">
+              My name is Favour David Omirin. People often call me Favour,
+              Modred, or David. You can call me by whichever is okay by you. I'm
+              a web developer in Nigeria, my journey as a web developer has been
+              deeply influenced by my passion for working with JavaScript and
+              its vibrant ecosystem. JavaScript's versatility and the powerful
+              frameworks and libraries that have emerged around it have been a
+              driving force in my development career. I find immense
+              satisfaction in solving complex problems and creating dynamic,
+              user-friendly web applications. My enthusiasm for JavaScript is
+              not just about writing code; it's about being part of a dynamic
+              and ever-evolving community that constantly pushes the boundaries
+              of what is possible on the web.
             </p>
-            <h1>GET IN TOUCH 📫</h1>
-             <p class="justified-text">
-I'm always open to connecting with fellow developers, learners, and enthusiasts. Feel free to reach out to me via email or connect with me on social media:
-<br>
-<ul>
-<li><p class="justified-text"><b>Email:</b> <a href="mailto:favourdomirin@gmail.com" target="_blank">favourdomirin@gmail.com</a></p></li>
-<li><p class="justified-text"><b>Twitter:</b> <a href="https://twitter.com/omirin_favour" target="_blank">omirin_favour</a></p></li>
-<li><p class="justified-text"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/omirin-favour" target="_blank">omirin-favour</a></p> </li>
-</ul><p class="justified-text">Let's learn and grow together! 🌱</p>
-            
-          
-          
-            <script>
-              fetch("../sidebar.html")
-                .then((response) => response.text())
-                .then((html) => {
-                  document.getElementById("menuholder").innerHTML = html;
-                });
-                document.addEventListener("DOMContentLoaded", () => {
-                  const paragraphs =
-                    document.querySelectorAll(".justified-text");
+          </div>
+          <br />
+          <p class="justified-text">
+            I'm very proficient in HTML, CSS, JavaScript, and TypeScript. Along
+            with my significant experience with Node.js, I also know a lot about
+            modern front-end frameworks like React and Vue.js.
+          </p>
+          <br />
+          <br />
+          <p class="justified-text">
+            I've committed time to reading documentation on frontend
+            engineering, watching tutorials on YouTube, and practicing a lot to
+            improve my skills in addition to studying frontend engineering at
+            AltSchool Africa, one of the top tech schools in Africa.
+          </p>
+          <br /><br />
+          <p class="justified-text">
+            I occasionally develop web applications and engage in collaborative
+            projects with friends, aiming to enhance our skills and play around
+            the web. You can check all the projects I have contributed to on my
+            <a
+              onclick="window.open('https://github.com/Modred14?tab=repositories')"
+              >GitHub profile</a
+            >
+          </p>
+          <br />
+          <br />
+          <p class="justified-text">
+            In addition to being a web developer, my ultimate aspiration is to
+            become a cybersecurity expert. Working as a web developer is a
+            significant step towards achieving this dream, and hopefully one day
+            I will become a cybersecurity expert. <br />
+          </p>
+          <br />
+          <h1>TECHNICAL EXPERIENCE</h1>
+          <p class="justified-text">
+            I confidently develop web applications using JavaScript, HTML, CSS,
+            TypeScript, and Node.js, and I utilize frameworks such as React and
+            Vue.js. Additionally, I have written quite a few of Python and C#,
+            primarily for educational purposes and not yet for production
+            projects.
+          </p>
+          <br /><br />
+          <p class="justified-text">
+            This exploration has broadened my understanding of programming
+            paradigms and strengthened my foundational knowledge. My goal is to
+            continue expanding my skills across both frontend development and
+            programming languages, aiming to apply them effectively in future
+            projects and towards achieving my career aspirations in web
+            development and beyond.
+          </p>
+          <h1>GET IN TOUCH 📫</h1>
+          <p class="justified-text">
+            I'm always open to connecting with fellow developers, learners, and
+            enthusiasts. Feel free to reach out to me via email or connect with
+            me on social media:
+            <br />
+          </p>
 
-                  paragraphs.forEach((paragraph) => {
-                    const originalHTML = paragraph.innerHTML;
-                    const tempContainer = document.createElement("div");
-                    tempContainer.innerHTML = originalHTML;
+          <ul>
+            <li>
+              <p class="justified-text">
+                <b>Email:</b>
+                <a href="mailto:favourdomirin@gmail.com" target="_blank"
+                  >favourdomirin@gmail.com</a
+                >
+              </p>
+            </li>
+            <li>
+              <p class="justified-text">
+                <b>Twitter:</b>
+                <a href="https://twitter.com/omirin_favour" target="_blank"
+                  >omirin_favour</a
+                >
+              </p>
+            </li>
+            <li>
+              <p class="justified-text">
+                <b>LinkedIn:</b>
+                <a
+                  href="https://www.linkedin.com/in/omirin-favour"
+                  target="_blank"
+                  >omirin-favour</a
+                >
+              </p>
+            </li>
+          </ul>
+          <p class="justified-text">Let's learn and grow together! 🌱</p>
 
-                    const nodes = Array.from(tempContainer.childNodes);
+          <script>
+            fetch("../sidebar.html")
+              .then((response) => response.text())
+              .then((html) => {
+                document.getElementById("menuholder").innerHTML = html;
+              });
+            document.addEventListener("DOMContentLoaded", () => {
+              const paragraphs = document.querySelectorAll(".justified-text");
 
-                    paragraph.innerHTML = "";
+              paragraphs.forEach((paragraph) => {
+                const originalHTML = paragraph.innerHTML;
+                const tempContainer = document.createElement("div");
+                tempContainer.innerHTML = originalHTML;
 
-                    nodes.forEach((node) => {
-                      if (node.nodeType === Node.TEXT_NODE) {
-                        const words = node.textContent.split(" ");
+                const nodes = Array.from(tempContainer.childNodes);
 
-                        words.forEach((word) => {
-                          if (word.length > 5) {
-                            let hyphenatedWord = "";
-                            for (let i = 0; i < word.length; i++) {
-                              hyphenatedWord += word[i];
-                              if (
-                                word[i] !== "-" &&
-                                (i + 1) % 5 === 0 &&
-                                i < word.length - 1
-                              ) {
-                                hyphenatedWord += "&shy;";
-                              }
-                            }
-                            paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
-                          } else {
-                            paragraph.innerHTML += `<span>${word}</span> `;
+                paragraph.innerHTML = "";
+
+                nodes.forEach((node) => {
+                  if (node.nodeType === Node.TEXT_NODE) {
+                    const words = node.textContent.split(" ");
+
+                    words.forEach((word) => {
+                      if (word.length > 5) {
+                        let hyphenatedWord = "";
+                        for (let i = 0; i < word.length; i++) {
+                          hyphenatedWord += word[i];
+                          if (
+                            word[i] !== "-" &&
+                            (i + 1) % 5 === 0 &&
+                            i < word.length - 1
+                          ) {
+                            hyphenatedWord += "&shy;";
                           }
-                        });
-                      } else if (
-                        node.nodeType === Node.ELEMENT_NODE &&
-                        node.nodeName === "A"
-                      ) {
-                        paragraph.appendChild(node);
-                        const words = node.innerHTML.split(" ");
-
-                        node.innerHTML = "";
-
-                        words.forEach((word) => {
-                          if (word.length > 5) {
-                            let hyphenatedWord = "";
-                            for (let i = 0; i < word.length; i++) {
-                              hyphenatedWord += word[i];
-                              if (
-                                word[i] !== "-" &&
-                                (i + 1) % 5 === 0 &&
-                                i < word.length - 1
-                              ) {
-                                hyphenatedWord += "&shy;";
-                              }
-                            }
-                            node.innerHTML += `<span>${hyphenatedWord}</span> `;
-                          } else {
-                            node.innerHTML += `<span>${word}</span> `;
-                          }
-                        });
+                        }
+                        paragraph.innerHTML += `<span>${hyphenatedWord}</span> `;
                       } else {
-                        paragraph.appendChild(node);
+                        paragraph.innerHTML += `<span>${word}</span> `;
                       }
                     });
-                  });
+                  } else if (
+                    node.nodeType === Node.ELEMENT_NODE &&
+                    node.nodeName === "A"
+                  ) {
+                    paragraph.appendChild(node);
+                    const words = node.innerHTML.split(" ");
+
+                    node.innerHTML = "";
+
+                    words.forEach((word) => {
+                      if (word.length > 5) {
+                        let hyphenatedWord = "";
+                        for (let i = 0; i < word.length; i++) {
+                          hyphenatedWord += word[i];
+                          if (
+                            word[i] !== "-" &&
+                            (i + 1) % 5 === 0 &&
+                            i < word.length - 1
+                          ) {
+                            hyphenatedWord += "&shy;";
+                          }
+                        }
+                        node.innerHTML += `<span>${hyphenatedWord}</span> `;
+                      } else {
+                        node.innerHTML += `<span>${word}</span> `;
+                      }
+                    });
+                  } else {
+                    paragraph.appendChild(node);
+                  }
                 });
-            </script>
-          </div>
+              });
+            });
+          </script>
         </section>
       </section>
     </div>

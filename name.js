@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     word.split("").forEach((letter, index) => {
       const span = document.createElement("span");
       if (letter === " ") {
-        span.innerHTML = "&nbsp;"; // Use a non-breaking space for the space character
+        span.innerHTML = "&nbsp;";
       } else {
         span.innerText = letter;
       }
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentWord = currentWord === fullName ? firstName : fullName;
       animateWord(currentWord);
       cycleWords();
-    }, currentWord.length * 100 + 7500); // Length of word * animation delay + pause time
+    }, currentWord.length * 100 + 7500);
   }
 
   animateWord(currentWord);
@@ -47,7 +47,6 @@ document.getElementById("colorLink").addEventListener("click", function () {
   }, 200);
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const commentForm = document.getElementById("comment-form");
   const nameInput = document.getElementById("name-input");
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentsList = document.getElementById("comments-list");
   const noCommentsText = document.getElementById("no-comments");
 
-  const baseURL = 'https://favour-omirin.onrender.com';
+  const baseURL = "https://favour-omirin.onrender.com";
 
   async function fetchComments() {
     try {
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const comments = await response.json();
       updateComments(comments);
     } catch (error) {
-      console.error('Error fetching comments:', error);
+      console.error("Error fetching comments:", error);
     }
   }
 
@@ -77,9 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sendButton.innerHTML = '<div class="spinner"></div>';
       try {
         const response = await fetch(`${baseURL}/comments`, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ name, text: commentText }),
         });
@@ -90,42 +89,49 @@ document.addEventListener("DOMContentLoaded", () => {
         commentInput.value = "";
         alert("Your comment has been submitted successfully.");
       } catch (error) {
-        console.error('Error submitting comment:', error);
+        console.error("Error submitting comment:", error);
         alert("There was an error submitting your comment. Please try again.");
-      }finally {
-        sendButton.innerHTML = 'Send'; 
+      } finally {
+        sendButton.innerHTML = "Send";
       }
     }
   });
 
   async function deleteComment(index) {
-    const confirmed = confirm("This action will delete this comment. Click Cancel to cancel.");
+    const confirmed = confirm(
+      "This action will delete this comment. Click Cancel to cancel."
+    );
     if (confirmed) {
       try {
         const response = await fetch(`${baseURL}/comments/${index}`, {
-          method: 'DELETE',
+          method: "DELETE",
         });
         if (!response.ok) throw new Error(`Error: ${response.status}`);
         fetchComments();
         alert(`You have successfully deleted the comment.`);
       } catch (error) {
-        console.error('Error deleting comment:', error);
+        console.error("Error deleting comment:", error);
       }
     }
   }
 
   async function deleteReply(commentIndex, replyIndex) {
-    const confirmed = confirm("This action will delete this reply. Click Cancel to cancel.");
+    const confirmed = confirm(
+      "This action will delete this reply. Click Cancel to cancel."
+    );
     if (confirmed) {
       try {
-        const response = await fetch(`${baseURL}/comments/${commentIndex}/replies/${replyIndex}`, {
-          method: 'DELETE',
-        });
+        const response = await fetch(
+          `${baseURL}/comments/${commentIndex}/replies/${replyIndex}`,
+          {
+            method: "DELETE",
+          }
+        );
         if (!response.ok) throw new Error(`Error: ${response.status}`);
         fetchComments();
         alert(`You have successfully deleted the reply.`);
       } catch (error) {
-        console.error('Error deleting reply:', error);
+        console.error("Error deleting reply:", error);
       }
     }
   }
@@ -164,12 +170,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       </div>
     `;
-    document.getElementById(`comment-${index}`).insertAdjacentHTML('beforeend', replyFormHTML);
-    document.getElementById(`modal-${index}`).addEventListener('click', (event) => handleOutsideClick(event, index));
+    document
+      .getElementById(`comment-${index}`)
+      .insertAdjacentHTML("beforeend", replyFormHTML);
+    document
+      .getElementById(`modal-${index}`)
+      .addEventListener("click", (event) => handleOutsideClick(event, index));
   }
   function handleOutsideClick(event, index) {
     const modal = document.getElementById(`modal-${index}`);
-    const content = modal.querySelector('.jmodal-content');
+    const content = modal.querySelector(".jmodal-content");
     if (!content.contains(event.target)) {
       closeModal(index);
     }
@@ -177,15 +187,17 @@ document.addEventListener("DOMContentLoaded", () => {
   async function submitReply(event, index) {
     event.preventDefault();
     const name = document.getElementById(`reply-name-${index}`).value.trim();
-    const replyText = document.getElementById(`reply-text-${index}`).value.trim();
+    const replyText = document
+      .getElementById(`reply-text-${index}`)
+      .value.trim();
     if (name && replyText) {
       const sendButton = event.target.querySelector('button[type="submit"]');
       sendButton.innerHTML = '<div class="spinner"></div>';
       try {
         const response = await fetch(`${baseURL}/comments/${index}/replies`, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ name, text: replyText }),
         });
@@ -194,10 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchComments();
         alert("Your reply has been submitted successfully.");
       } catch (error) {
-        console.error('Error submitting reply:', error);
+        console.error("Error submitting reply:", error);
         alert("There was an error submitting your reply. Please try again.");
-      }finally {
-        sendButton.innerHTML = 'Send'; 
+      } finally {
+        sendButton.innerHTML = "Send";
       }
     }
   }
@@ -208,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.remove();
     });
   }
-  
+
   function updateComments(comments) {
     if (comments.length === 0) {
       noCommentsText.style.display = "block";
@@ -227,13 +239,21 @@ document.addEventListener("DOMContentLoaded", () => {
               <button class="reply-button" onclick="showReplyForm(${index})">Reply</button>
               <button class="delete-button" onclick="deleteComment(${index})">Delete</button>
               <ul class="replies">
-                ${comment.replies ? comment.replies.map((reply, replyIndex) => `
+                ${
+                  comment.replies
+                    ? comment.replies
+                        .map(
+                          (reply, replyIndex) => `
                   <li>
                     <span class="reply-author">${reply.name}:</span>
                     <span class="reply-text">${reply.text}</span>
                     <button class="delete-button" style="display: block; margin-left: -10px; margin-top: -1px;" onclick="deleteReply(${index}, ${replyIndex})">Delete</button>
                   </li>
-                `).join('') : ''}
+                `
+                        )
+                        .join("")
+                    : ""
+                }
               </ul>
             </li>`
         )
@@ -249,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchComments();
 });
 
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
 .spinner {
   border: 2px solid rgba(0, 0, 0, 0.1);

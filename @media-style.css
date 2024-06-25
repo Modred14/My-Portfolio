@@ -2,13 +2,10 @@
   body {
     overflow-x: hidden;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    /* line-height: 1.5; */
+
     background-color: black;
-    /* color:; */
     margin: 0;
     overflow-x: hidden;
-    /* color: black; */
-    /* font-weight: 600; */
     color-scheme: light dark;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -25,9 +22,6 @@
   .my-logo {
     margin-top: -5px;
   }
-  /* .my-logo2{
-    margin-top: -5px;
-  } */
 
   .resume-design {
     display: grid;
@@ -56,9 +50,8 @@
     margin-left: -10px;
     margin-right: -10px;
     padding-top: 65px;
-    /* padding-left: 150px; */
+
     padding-bottom: 0;
-    /* margin: 90px auto; */
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -102,20 +95,11 @@
     border-radius: 8px;
     margin-top: 30px;
     padding: 7%;
-    /* padding-left: 100px;
-      padding-right: 100px; */
-    /* margin-right: 12px; */
     margin-bottom: 30px;
     img {
       max-width: 100%;
       height: auto;
-      /* max-height: 100%; */
-      /* display: flex; */
       margin-top: 20px;
-      /* align-items: center;
-          justify-items: center; */
-      /* padding-left: 25%; */
-      /* margin: 0px 0; */
     }
   }
   .img1,
@@ -124,20 +108,14 @@
     display: inline;
     max-width: 100%;
     height: auto;
-    /* display: inline; */
   }
   .img12,
   .img22,
-  .img32, .img44 {
+  .img32,
+  .img44 {
     display: none;
   }
 
-  /* #popo {
-    margin-bottom: -50px;
-  }
-  #ppp {
-    margin-bottom: -30px;
-  } */
   #inline {
     display: inline;
     p {
@@ -155,11 +133,8 @@
     grid-gap: 0px;
     justify-content: center;
     text-align: justify;
-    /* margin-right: -7%;
-    margin-left: -7%; */
     padding-left: 7%;
     padding-right: 7%;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
     border-radius: 8px;
 
     .bio-about {
@@ -173,13 +148,11 @@
       height: 150px;
       align-self: center;
       left: 50%;
-      /* width: 250px; */
       border-radius: 125px;
     }
 
     .route {
       text-overflow: wrap;
-      /* margin-left: 30px; */
       text-decoration-color: blueviolet;
       text-decoration-thickness: 2px;
       color: blueviolet;
@@ -192,7 +165,6 @@
       color: red;
     }
     img {
-      /* margin-top: 50px; */
       height: 200px;
       width: 200px;
       border-radius: 50%;
@@ -210,18 +182,11 @@
       transition: 0.5s;
     }
   }
-  /* body.android .main .about .about-me .image-about {
-    margin-bottom: -90px;
-  } */
   body.ios .nava {
     font-size: 30px;
   }
-  
-  /* .android .image-about{
-  margin-bottom: -50px;} */
 
   .image-about {
-    /* height: 50px; */
     margin-top: 30px;
     height: auto;
     align-self: center;
@@ -242,8 +207,6 @@
   .blurred {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    /* width: 1800px; */
-    /* padding-right: 70px;  */
     margin-right: -10px;
     z-index: 3500;
   }
@@ -258,7 +221,6 @@
   }
   .resume-style {
     margin-left: 50px;
-    /* margin-right: 50px; */
   }
   .sidebar {
     background-color: #ffffff;
@@ -267,13 +229,12 @@
     align-items: center;
     height: 100vh;
   }
-  .beb{
+  .beb {
     display: grid;
     grid-template-columns: auto auto;
     padding-left: 20px;
-    
   }
-  
+
   .sidebar {
     max-width: 0;
     overflow: hidden;
@@ -286,7 +247,7 @@
     padding-top: 20px;
     box-sizing: border-box;
   }
-  .sidebar .beb{
+  .sidebar .beb {
     padding-left: 0px;
     margin-top: 20px;
   }
@@ -295,7 +256,7 @@
     height: 1px;
     background: #333;
     margin: 20px 0;
-}
+  }
   .sidebar a {
     font-size: 17px;
     font-weight: 700;
@@ -309,34 +270,27 @@
     text-decoration: none;
     text-decoration-color: rgb(0, 174, 58);
     color: black;
-
-    /* padding-top: -100px; */
   }
-  /* .sidebar div:hover {
-    /* background-color: #575757; */
-
-  .sidebar .beb a:hover{
+  .sidebar .beb a:hover {
     background-color: transparent;
   }
-  .header-link{
+  .header-link {
     margin-left: -30px;
   }
   .menu {
-    /* margin-left: -500px; */
     display: block;
     opacity: 100%;
     font-weight: 1000;
     font-size: 30px;
     margin-top: -10px;
   }
-  body.android #menu{
+  body.android #menu {
     font-size: 30px;
   }
-  body.ios #menu{
+  body.ios #menu {
     font-size: 30px;
   }
   .menu5 {
-    /* margin-left: -500px; */
     display: block;
     opacity: 100%;
     font-weight: 1000;
@@ -356,17 +310,12 @@
   .header {
     display: grid;
     grid-template-columns: auto 60px;
-    /* padding: -30px; */
     height: 80px;
-    /* margin-top: -10px; */
     padding-top: -10px;
   }
   #pollor {
     margin-bottom: 0px;
   }
-  /* .my-logo2 {
-    margin-top: -10px;
-  } */
   #relete {
     margin-top: -10px;
   }
@@ -426,7 +375,7 @@
     align-items: center;
     margin-left: 0;
   }
-  td{
+  td {
     margin-left: 0;
     margin-right: 0;
   }
@@ -495,10 +444,6 @@
       width: 0px;
     }
   }
-  /* #name-input,
-  #comment-input {
-    width: 400px;
-  } */
   .resume-style {
     margin-left: 50px;
     margin-right: 30px;
@@ -506,13 +451,11 @@
 
   .resume-style {
     padding-top: 150px;
-    /* width: 650px; */
     padding-bottom: 500px;
   }
 }
 @media screen and (max-width: 700px) {
-  .port-style{
-    /* padding-left: 1%; */
+  .port-style {
     padding-right: 1%;
     margin-left: -4%;
   }
@@ -541,7 +484,6 @@
   .container {
     margin-left: 7%;
     margin-right: 7%;
-
   }
 }
 #inline {
@@ -554,10 +496,6 @@
   }
 }
 @media screen and (max-width: 650px) {
-  /* #name-input,
-  #comment-input {
-    width: 300px;
-  } */
   #inline {
     display: inline;
     p {
@@ -601,7 +539,6 @@
       font-size: 10px;
       margin-bottom: 30px;
       text-overflow: wrap;
-      /* margin-left: 30px; */
     }
   }
 }
@@ -624,10 +561,6 @@
   .home-design {
     font-size: 30px;
   }
-  /* #name-input,
-  #comment-input {
-    width: 250px;
-  } */
   #searchBar {
     display: none;
   }
@@ -653,9 +586,7 @@
     margin-top: -20px;
     flex-direction: column;
     align-items: center;
-    /* white-space: nowrap; */
     padding-top: -150px;
-    /* margin-top: -90px; */
   }
 
   .home-design {
@@ -663,7 +594,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center text inside the p elements */
+    text-align: center;
   }
   .animated-word span {
     display: inline-block;
@@ -678,7 +609,6 @@
   .container {
     margin-left: 7%;
     margin-right: 7%;
-   
   }
 }
 #inline {
@@ -692,10 +622,6 @@
 }
 
 @media screen and (max-width: 440px) {
-  /* #name-input,
-  #comment-input {
-    width: 200px;
-  } */
   #inline {
     display: inline;
     p {

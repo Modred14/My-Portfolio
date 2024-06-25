@@ -41,7 +41,6 @@ function workCo() {
 workCo();
 setInterval(workCo, 5000);
 
-
 function hire() {
   window.location.href = "mailto:favourdomirin@gmail.com";
 }

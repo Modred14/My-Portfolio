@@ -2,21 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Favour Omirin -- Blog</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="@media-style.css" />
-    <link rel="stylesheet" href="@media.css">
+    <link rel="stylesheet" href="@media.css" />
     <link rel="stylesheet" href="./style2.css" />
     <link rel="shortcut icon" href="image.jpg" type="image/x-icon" />
     <script src="sidebar.js" defer></script>
     <script src="./blog/hello.js" defer></script>
     <style>
-      /* *,
-      *::before,
-      *::after {
-  box-sizing: border-box;
-} */
       .highlight {
         background-color: yellow;
       }
@@ -24,7 +22,6 @@
       .hey {
         display: flex;
         justify-content: center;
-        /* margin-top: 20px; */
         margin-bottom: 30px;
       }
       #paginationContainer button {
@@ -52,13 +49,10 @@
       .image-no-search {
         display: flex;
         justify-content: center;
-        /* padding-top: 430px; */
         margin: 0;
         max-width: 100%;
         img {
           width: 500px;
-          /* padding-left: 30px;
-          padding-right: 30px; */
         }
       }
       #paginationContainer .page-number.active {
@@ -71,58 +65,61 @@
         border-radius: 0;
       }
 
+      .about {
+        overflow: hidden;
+        max-width: 100%;
+      }
 
+      .search-container {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
 
+      #searchBar {
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: -30px;
+        height: 35px;
+        width: 100%;
+        max-width: 200px;
+        box-sizing: border-box;
+      }
 
-/* Additional CSS to handle overflow issues */
+      .about,
+      .search-container {
+        overflow: hidden;
+        max-width: 100%;
+      }
 
+      .header2,
+      .main,
+      .menu2,
+      .menu5,
+      .menuholder,
+      .image-no-search,
+      .hey,
+      .justified-text,
+      #paginationContainer,
+      #contentContainer {
+        max-width: 100%;
+        overflow: hidden;
+      }
 
-.about {
-  overflow: hidden; /* Prevent overflow within the about section */
-  max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
-}
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  overflow: hidden; /* Prevent overflow in the search container */
-  max-width: 100%; /* Ensure it doesn't expand beyond the viewport */
-}
-body {
-  overflow-x: hidden; /* Prevent horizontal overflow on the body */
-  margin: 0;
-  padding: 0;
-}
-
-#searchBar {
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
-  margin-left: auto;
-  margin-bottom: 20px;
-  margin-top: -30px;
-  height: 35px;
-  width: 100%; /* Ensure it fits within its container */
-  max-width: 200px; /* Limit the maximum width */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-.about, .search-container {
-  overflow: hidden; /* Prevent overflow within the about section */
-  max-width: 100%; /* Ensure the section doesn't expand beyond the viewport */
-}
-
-.header2, .main, .menu2, .menu5, .menuholder, .image-no-search, .hey, .justified-text, #paginationContainer, #contentContainer {
-  max-width: 100%; /* Ensure all containers do not expand beyond the viewport */
-  overflow: hidden; /* Prevent overflow within these elements */
-}
-
-@media screen and (max-width: 480px) {
-  #searchBar {
-    max-width: 150px; /* Adjust as needed for smaller screens */
-  }
-}
-
+      @media screen and (max-width: 480px) {
+        #searchBar {
+          max-width: 150px;
+        }
+      }
     </style>
   </head>
   <body id="text-contain" class="about-body">
@@ -146,7 +143,9 @@ body {
             Send me an email
           </a>
         </section>
-        <div class="menu5" onclick="openSideBar()" id="menu"><p style="font-size: 30px;">☰</p></div>
+        <div class="menu5" onclick="openSideBar()" id="menu">
+          <p style="font-size: 30px">☰</p>
+        </div>
         <div class="menuholder" id="menuholder"></div>
       </header>
       <div class="main" id="main">
@@ -160,7 +159,7 @@ body {
               oninput="searchAndHighlight()"
             />
           </section>
-          
+
           <section class="justified-text" id="bioContainer"></section>
 
           <div id="contentContainer">
@@ -211,7 +210,7 @@ body {
       `;
 
       const data = [
-      {
+        {
           title: "MY JOURNEY INTO WEB DEVELOPMENT",
           date: "Saturday June 22, 2024",
           readTime: "8 mins read",
@@ -219,7 +218,7 @@ body {
             "Hi there, I'm a Front-end Engineer,(a Computer Programmer). My journey into the tech industry began with a passion for creating visually compelling designs. As a child, I was always drawn to art, spending countless hour...",
           link: "./blog/my-journey-into-web-development.html",
         },
-      {
+        {
           title: "BASICS OF WEB DEVELOPMENT",
           date: "Friday June 14, 2024",
           readTime: "5 mins read",
