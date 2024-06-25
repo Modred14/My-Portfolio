@@ -103,16 +103,7 @@ h2 {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.7);
 }
-.animate {
-  position: fixed;
-  z-index: 1;
-  overflow: hidden;
-  left: 0;
-  opacity: 0;
-  top: -52%;
-  width: 100%;
-  animation: jump 1s forwards 0.1s ease-in;
-}
+
 .name-input,
 .reply-input {
   box-sizing: border-box;
@@ -132,31 +123,44 @@ body.no-scroll {
 .jmodal-content {
   overflow-x: hidden;
 }
+.animate {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  animation: jump 1s forwards ease-in;
+  will-change: transform, opacity; 
+}
+
 @keyframes jump {
   0% {
-    top: -32%;
+    transform: translateY(-52%);
     opacity: 0;
   }
   40% {
-    top: 35%;
+    transform: translateY(60%);
     opacity: 0.5;
   }
   60% {
-    top: 15%;
+    transform: translateY(40%);
     opacity: 0.8;
   }
   80% {
-    top: 30%;
+    transform: translateY(55%);
     opacity: 0.9;
   }
   100% {
-    top: 25%;
+    transform: translateY(50%);
     opacity: 1;
   }
 }
 
 .close-animation {
   animation: drop 0.5s forwards;
+  will-change: opacity;
 }
 
 @keyframes drop {
