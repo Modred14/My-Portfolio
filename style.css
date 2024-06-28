@@ -15,6 +15,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.header-small-button{
+  background-color: rgb(249, 252, 244);
+  width: auto;
+  font-size: 30px;
+  border: none;
+}
+body.ios .header-small-button {
+  font-size: 40px;
+  margin-left: -40px;
+}
+.header-small-button:hover{
+  background-color: rgb(249, 252, 244);
+  color: black;
+}
 .justified-text {
   text-align: justify;
   word-break: break-word;
@@ -270,12 +284,20 @@ p {
     }
   }
 }
+.animation-content{
+  transform: translateY(50%);
+  padding-bottom: 0;
+  align-items: center;
+  display: flex;
+  animation: down 1s forwards;
+  flex-direction: column;
+}
 .home-header {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   font-size: 60px;
   font-weight: 700;
-  height: 91.5vh;
+  height: 100vh;
   margin-bottom: -10px;
   margin-left: -10px;
   margin-right: -10px;
@@ -285,6 +307,14 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+@keyframes down{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(50%);
+  }
 }
 .grid {
   display: grid;
@@ -311,6 +341,7 @@ p {
 .animated-word {
   display: inline-block;
   white-space: nowrap;
+  align-self: center;
 }
 .home-design {
   align-items: center;
@@ -708,7 +739,6 @@ button::before {
 }
 .welcome {
   font-size: 30px;
-  padding-top: 200px;
 }
 @keyframes fadeIn {
   to {

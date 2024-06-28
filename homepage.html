@@ -12,6 +12,7 @@
     <script src="name.js" defer></script>
     <script src="./blog/hello.js" defer></script>
     <script src="sidebar.js" defer></script>
+    <script src="./webkit.js"></script>
   </head>
   <body>
     <header class="header2">
@@ -34,68 +35,74 @@
         </a>
       </section>
       <div class="menu5" onclick="openSideBar()" id="menu">
-        <p style="font-size: 30px">☰</p>
+        <button class="header-small-button"><p>☰</p></button>
       </div>
       <div class="menuholder" id="menuholder"></div>
     </header>
     <div class="main">
       <section class="home">
         <section class="home-header">
-          <p class="welcome">WELCOME TO MY WEBSITE</p>
-          <section class="home-design">
-            <p class="home-header2">Hi there, I'm</p>
-            <p class="animated-word" id="word">FAVOUR OMIRIN</p>
-          </section>
-          <section>
-            <img
-              class="icon2"
-              src="./GitHub.png"
-              onclick="window.open('https://github.com/Modred14', '_blank')"
-              alt=""
-            />
-            <img
-              class="icon"
-              src="./iconmonstr-gmail-4-240.png"
-              onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
-              alt=""
-            />
-            <img
-              class="icon"
-              src="./linkedln.png"
-              onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
-              alt=""
-            />
-            <img
-              class="icon"
-              src="./iconmonstr-instagram-14-240.png"
-              onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
-              alt=""
-            />
-            <img
-              class="icon"
-              src="./iconmonstr-facebook-4-240.png"
-              onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
-              alt=""
-            />
-            <img
-              class="icon"
-              src="./iconmonstr-twitter-4-240.png"
-              onclick="window.open('https://x.com/omirin_favour', '_blank')"
-              alt=""
-            />
-          </section>
-          <section class="home-button">
-            <button onclick="window.location.href='./portfolio.html'">
-              VIEW WORK
-            </button>
-            <button
-              onclick="window.location.href='mailto:favourdomirin@gmail.com'"
-            >
-              HIRE ME
-            </button>
+          <section class="animation-content">
+            <p class="welcome">WELCOME TO MY WEBSITE</p>
+            <section class="home-design">
+              <p class="home-header2">Hi there, I'm</p>
+              <p class="animated-word" id="word">FAVOUR OMIRIN</p>
+            </section>
+
+            <section>
+              <img
+                class="icon2"
+                src="./GitHub.png"
+                onclick="window.open('https://github.com/Modred14', '_blank')"
+                alt=""
+              />
+              <img
+                class="icon"
+                src="./iconmonstr-gmail-4-240.png"
+                onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+                alt=""
+              />
+              <img
+                class="icon"
+                src="./linkedln.png"
+                onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+                alt=""
+              />
+              <img
+                class="icon"
+                src="./iconmonstr-instagram-14-240.png"
+                onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+                alt=""
+              />
+              <img
+                class="icon"
+                src="./iconmonstr-facebook-4-240.png"
+                onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+                alt=""
+              />
+              <img
+                class="icon"
+                src="./iconmonstr-twitter-4-240.png"
+                onclick="window.open('https://x.com/omirin_favour', '_blank')"
+                alt=""
+              />
+            </section>
+            <section class="home-button">
+              <button onclick="window.location.href='./portfolio.html'">
+                VIEW WORK
+              </button>
+              <button
+                onclick="window.location.href='mailto:favourdomirin@gmail.com'"
+              >
+                HIRE ME
+              </button>
+            </section>
           </section>
         </section>
       </section>
+      <!-- <section style="background-color: wheat;height: 100px;width: 100%;">
+
+      </section> -->
     </div>
     <script>
       fetch("../sidebar.html")
@@ -104,5 +111,46 @@
           document.getElementById("menuholder").innerHTML = html;
         });
     </script>
+    <footer>
+      <section>
+        <img
+          class="icon2"
+          src="./GitHub.png"
+          onclick="window.open('https://github.com/Modred14', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-gmail-4-240.png"
+          onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./linkedln.png"
+          onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-instagram-14-240.png"
+          onclick="window.open('https://www.instagram.com/omirinfavour', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-facebook-4-240.png"
+          onclick="window.open('https://www.facebook.com/favour.omirin7', '_blank')"
+          alt=""
+        />
+        <img
+          class="icon"
+          src="./iconmonstr-twitter-4-240.png"
+          onclick="window.open('https://x.com/omirin_favour', '_blank')"
+          alt=""
+        />
+      </section>
+      <h4 class="copyright2">© Favour Omirin 2024</h4>
+    </footer>
   </body>
 </html>
