@@ -477,8 +477,11 @@
   .my-logo,
   .my-logo2 {
     height: 60px;
+    margin-left: 10px;
   }
-
+body.ios .my-logo2 {
+  height: 70px;
+}
   .about,
   .container {
     margin-left: 7%;

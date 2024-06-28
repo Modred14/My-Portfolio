@@ -6,7 +6,10 @@
   
     #menu p{
         color: black;
-        margin-top: -0px;
+        margin-top: 7px;
     }
-    
+    body.ios #menu p{
+        color: black;
+        margin-top: 3px;
+    }
 }
