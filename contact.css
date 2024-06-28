@@ -1,0 +1,12 @@
+#menu p{
+    color: black;
+    
+}
+@media screen and (max-width: 1150px){
+  
+    #menu p{
+        color: black;
+        margin-top: -0px;
+    }
+    
+}

@@ -24,9 +24,13 @@ body {
 body.ios .header-small-button {
   font-size: 0px;
   margin-left: 0px;
+  margin-top: -5px;
+  color: black;
 }
-body.ios .header-small-button p{
-  font-size: 40px
+
+body.ios .header-small-button p, body.ios .menu5 p{
+  font-size: 45px;
+  color: black;
 }
 .header-small-button:hover{
   background-color: rgb(249, 252, 244);
