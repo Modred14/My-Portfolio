@@ -22,8 +22,11 @@ body {
   border: none;
 }
 body.ios .header-small-button {
-  font-size: 40px;
-  margin-left: -40px;
+  font-size: 0px;
+  margin-left: 0px;
+}
+body.ios .header-small-button p{
+  font-size: 40px
 }
 .header-small-button:hover{
   background-color: rgb(249, 252, 244);

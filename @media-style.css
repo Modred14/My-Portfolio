@@ -1,3 +1,11 @@
+@keyframes down2{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(60%);
+  }
+}
 @media screen and (max-width: 1300px) {
   body {
     overflow-x: hidden;
@@ -322,6 +330,11 @@
 }
 
 @media screen and (max-width: 900px) {
+  .animation-content{
+    transform: translateY(50%);
+  animation: down2 1s forwards;
+  }
+  
   .home-design {
     font-size: 45px;
   }
