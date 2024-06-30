@@ -21,7 +21,7 @@
         id="pollor"
         src="./MY LOGO.png"
         alt="my logo"
-        onclick="window.open('./home.html')"
+        onclick="window.location.href ='./home.html'"
       />
       <section class="menu2">
         <a href="home.html" class="header-link">Home</a>
@@ -100,9 +100,195 @@
           </section>
         </section>
       </section>
-      <!-- <section style="background-color: wheat;height: 100px;width: 100%;">
-
-      </section> -->
+      <section class="section-others">
+        <section class="grid-others">
+          <section class="animator">
+            <section class="about-nav" onclick="window.location.href ='./about.html'">
+              <img src="./about-me.jpg" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                MORE ABOUT ME
+              </p>
+              <p
+                style="
+                  display: block;
+                  color: rgb(223, 223, 223);
+                  width: 200px;
+                  margin-left: 20px;
+                  margin-top: 0;
+                  padding-top: 0;
+                  font-size: 30px;
+                  font-weight: 700;
+                "
+              >
+                Credentials
+              </p>
+            </section>
+          </section>
+          <section class="animator">
+            <section class="resume-nav" onclick="window.location.href ='./resume.html'">
+              <img src="./resume-img.png" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                RESUME
+              </p>
+              <p
+                style="
+                  display: block;
+                  color: rgb(223, 223, 223);
+                  width: 200px;
+                  margin-left: 20px;
+                  margin-top: 0;
+                  padding-top: 0;
+                  font-size: 30px;
+                  font-weight: 700;
+                "
+              >
+                Download
+              </p>
+            </section>
+          </section>
+          <section class="animator">
+            <section class="contact-nav" onclick="window.location.href ='./contact.html'">
+              <img src="./contact-img.png" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  width: 200px;
+                  padding-bottom: 0px;
+                  margin-bottom: -22.6px;
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                CONTACT
+              </p>
+              <div>
+                <img
+                  class="icon2"
+                  src="./GitHub.png"
+                  onclick="window.open('https://github.com/Modred14', '_blank')"
+                  alt=""
+                />
+                <img
+                  class="icon"
+                  src="./iconmonstr-gmail-4-240.png"
+                  onclick="window.open('mailto:favourdomirin@gmail.com', '_blank')"
+                  alt=""
+                />
+                <img
+                  class="icon"
+                  src="./linkedln.png"
+                  onclick="window.open('https://www.linkedin.com/in/omirin-favour', '_blank')"
+                  alt=""
+                />
+              </div>
+            </section>
+          </section>
+        </section>
+        <section class="grid-others" style="padding-top: 0">
+          <section class="animator">
+            <section class="portfolio-nav" onclick="window.location.href ='./portfolio.html'">
+              <img src="./portfolio.png" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                PORTFOLIO
+              </p>
+              <p
+                style="
+                  display: block;
+                  color: rgb(223, 223, 223);
+                  width: 200px;
+                  margin-left: 20px;
+                  margin-top: 0;
+                  padding-top: 0;
+                  font-size: 30px;
+                  font-weight: 700;
+                "
+              >
+                Past projects
+              </p>
+            </section>
+          </section>
+          <section class="animator">
+            <section class="blog-nav" onclick="window.location.href ='./blog.html'">
+              <img src="./blog.png" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                BLOG
+              </p>
+              <p
+                style="
+                  display: block;
+                  color: rgb(223, 223, 223);
+                  width: 200px;
+                  margin-left: 20px;
+                  margin-top: 0;
+                  padding-top: 0;
+                  font-size: 30px;
+                  font-weight: 700;
+                "
+              >
+                Read to learn
+              </p>
+            </section>
+          </section>
+          <section class="animator">
+            <section class="email-nav" onclick="window.location.href ='mailto:favourdomirin@gmail.com'">
+              <img src="./email.png" class="kkk" alt="" />
+              <p
+                style="
+                  display: block;
+                  color: rgb(114, 114, 114);
+                  margin-left: 20px;
+                  font-weight: 700;
+                "
+              >
+                EMAIL
+              </p>
+              <p
+                style="
+                  display: block;
+                  color: rgb(223, 223, 223);
+                  width: 200px;
+                  margin-left: 20px;
+                  margin-top: 0;
+                  padding-top: 0;
+                  font-size: 30px;
+                  font-weight: 700;
+                "
+              >
+                Hire me
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
     </div>
     <script>
       fetch("../sidebar.html")
@@ -110,6 +296,25 @@
         .then((html) => {
           document.getElementById("menuholder").innerHTML = html;
         });
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".animator");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
     </script>
     <footer>
       <section>

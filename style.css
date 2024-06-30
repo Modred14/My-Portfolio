@@ -299,12 +299,13 @@ p {
   animation: down 1s forwards;
   flex-direction: column;
 }
+
 .home-header {
   background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   font-size: 60px;
   font-weight: 700;
-  height: 100vh;
+  height: 700px;
   margin-bottom: -10px;
   margin-left: -10px;
   margin-right: -10px;
@@ -317,11 +318,18 @@ p {
 }
 @keyframes down{
   0%{
-    transform: translateY(0%);
+    transform: translateY(0%) scale(0);
   }
   100%{
-    transform: translateY(50%);
+    transform: translateY(40%) scale(1);
   }
+}
+.kkk{
+  max-width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: auto;
+  
 }
 .grid {
   display: grid;
@@ -342,7 +350,7 @@ p {
 .home {
   background-image: url(./code.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 700px;
 }
 
 .animated-word {
@@ -876,5 +884,84 @@ footer {
     align-items: flex-start;
     margin-bottom: 10px;
     color: white;
+  }
+}
+.section-others{
+  background-color: #090909;
+  height: auto;
+}
+.about-nav, .resume-nav,.contact-nav{
+  height: auto;
+  max-width: 350px;
+  border-radius: 20px;
+  border: solid 0.1px rgb(99, 95, 95);
+  background-color: #1b1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  
+}
+.contact-nav div{
+  padding-left: 20px;
+  padding-top: 3.81px;
+  padding-bottom: 20px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  img{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.portfolio-nav,.blog-nav, .email-nav{
+  height: auto;
+  max-width: 350px;
+  border-radius: 20px;
+  border: solid 0.1px rgb(99, 95, 95);
+  background-color: #1b1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+.grid-others{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  padding: 150px;
+  max-width: 100%;
+  padding-bottom: 50px;
+  padding-top: 70px;
+  justify-content: center;
+  align-items: center;
+}
+.grid-other{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+  max-width: 100%;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.animator {
+  opacity: 0; 
+  transition: opacity 0.5s;
+}
+
+.animator.in-view {
+  opacity: 1; 
+  animation: resize 1s forwards;
+}
+@keyframes resize {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .grid-others{
+    display: flex;
+    flex-direction: column;
   }
 }
