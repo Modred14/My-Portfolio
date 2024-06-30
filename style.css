@@ -963,5 +963,14 @@ footer {
   .grid-others{
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow-x: hidden
+  }
+  .portfolio-nav,.blog-nav, .email-nav,.about-nav, .resume-nav,.contact-nav{
+    max-width: 900px;
+   
   }
 }
