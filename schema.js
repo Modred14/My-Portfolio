@@ -2,8 +2,8 @@ const personData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Favour Omirin",
-  url: "https://favouromirin.dev",
-  image: "https://favouromirin.dev/image.jpg",
+  url: "https://favouromirin.netlify.app",
+  image: "https://favouromirin.netlify.app/image.jpg",
   jobTitle: "Frontend Engineer",
   description:
     "👩‍💻👨‍💻Frontend software engineer skilled in JavaScript, CSS, 💻HTML, user-centric interfaces",
